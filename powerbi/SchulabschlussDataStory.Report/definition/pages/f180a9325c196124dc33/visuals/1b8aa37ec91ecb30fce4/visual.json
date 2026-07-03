@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "1b8aa37ec91ecb30fce4",
+  "position": {
+    "x": 10,
+    "y": 320,
+    "z": 1,
+    "height": 280,
+    "width": 280,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Erkenntnis LF2: Kreis-Hotspots bei 15 bis 17 % (Anhalt-Bitterfeld 16,8 %, Pirmasens 16,5 %). Starke Ballung in Sachsen-Anhalt und Thüringen; der Westkreis Pirmasens zeigt, dass es kein reines Ostphänomen ist."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

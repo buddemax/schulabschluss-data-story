@@ -1,0 +1,106 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "ff51e8211dca01a94a1b",
+  "position": {
+    "x": 10,
+    "y": 320,
+    "z": 1,
+    "height": 280,
+    "width": 280,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_ausgaben_schulart"
+                    }
+                  },
+                  "Property": "schulart"
+                }
+              },
+              "queryRef": "fact_ausgaben_schulart.schulart",
+              "nativeQueryRef": "schulart",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_abschluss"
+                    }
+                  },
+                  "Property": "Ausgaben Schulart (DE 2023)"
+                }
+              },
+              "queryRef": "dim_abschluss.Ausgaben Schulart (DE 2023)",
+              "nativeQueryRef": "Ausgaben Schulart (DE 2023)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dim_abschluss"
+                  }
+                },
+                "Property": "Ausgaben Schulart (DE 2023)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3eb19286db6955dc5ee6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_abschluss"
+              }
+            },
+            "Property": "Ausgaben Schulart (DE 2023)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5b90d1f064c8dec53fe5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_ausgaben_schulart"
+              }
+            },
+            "Property": "schulart"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+table fact_bevoelkerung_2023_2024
+	lineageTag: d718b723-48c4-424b-986d-b90191de308a
+
+	column jahr
+		dataType: int64
+		lineageTag: 7612f91b-8bdd-4289-b955-13fb1aa3c58c
+		summarizeBy: none
+		sourceColumn: jahr
+
+	column region_code
+		dataType: string
+		lineageTag: 9f17e827-9fc9-4df2-a936-22c2f185451d
+		summarizeBy: none
+		sourceColumn: region_code
+
+	column region
+		dataType: string
+		lineageTag: 109c8dbf-df95-4703-929c-9ed184de3727
+		summarizeBy: none
+		sourceColumn: region
+
+	column ebene
+		dataType: string
+		lineageTag: 90ceb0a7-0a6d-46fd-a014-eea29081967d
+		summarizeBy: none
+		sourceColumn: ebene
+
+	column bundesland_code
+		dataType: string
+		lineageTag: 79377f44-c774-49fe-9deb-3e8b977a1f09
+		summarizeBy: none
+		sourceColumn: bundesland_code
+
+	column altersgruppe
+		dataType: string
+		lineageTag: c1dac934-1657-40a3-902b-293c7a518a24
+		summarizeBy: none
+		sourceColumn: altersgruppe
+
+	column insgesamt
+		dataType: int64
+		lineageTag: fd4cec3b-e63c-4ecd-b9c4-cf733dbbdbe7
+		summarizeBy: sum
+		sourceColumn: insgesamt
+
+	column maennlich
+		dataType: int64
+		lineageTag: e146962d-6ecd-4eda-872d-6cdb754cf74f
+		summarizeBy: sum
+		sourceColumn: maennlich
+
+	column weiblich
+		dataType: int64
+		lineageTag: 4838cead-84a6-433f-99f4-a546b0452691
+		summarizeBy: sum
+		sourceColumn: weiblich
+
+	partition fact_bevoelkerung_2023_2024 = m
+		mode: import
+		source =
+				let
+				src = Csv.Document(File.Contents(DataFolder & "12411-02-03-4.csv"), [Delimiter=";", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				y = Table.SelectRows(src, each (Text.Trim([Column1]) = "31.12.2023" or Text.Trim([Column1]) = "31.12.2024") and fnEbene([Column2]) <> "?"),
+				r = Table.AddColumn(y, "rec", each [jahr = Int64.From(Text.End(Text.Trim([Column1]), 4)), region_code = Text.Trim([Column2]), region = Text.Trim([Column3]), ebene = fnEbene([Column2]), bundesland_code = fnBlc([Column2]), altersgruppe = Text.Trim([Column4]), insgesamt = fnToInt([Column5]), maennlich = fnToInt([Column6]), weiblich = fnToInt([Column7])]),
+				tbl = Table.FromRecords(r[rec]),
+				typed = Table.TransformColumnTypes(tbl, {{"jahr", Int64.Type}, {"region_code", type text}, {"region", type text}, {"ebene", type text}, {"bundesland_code", type text}, {"altersgruppe", type text}, {"insgesamt", Int64.Type}, {"maennlich", Int64.Type}, {"weiblich", Int64.Type}})
+				in
+				typed
+

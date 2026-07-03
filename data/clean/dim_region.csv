@@ -1,0 +1,524 @@
+region_code;region;ebene;bundesland_code;stadt_land;ost_west
+DG;Deutschland;DE;DG;;
+01;Schleswig-Holstein;BL;01;;West
+01001;Flensburg, kreisfreie Stadt;KR;01;Stadt;West
+01002;Kiel, kreisfreie Stadt;KR;01;Stadt;West
+01003;Lübeck, kreisfreie Stadt, Hansestadt;KR;01;Stadt;West
+01004;Neumünster, kreisfreie Stadt;KR;01;Stadt;West
+01051;Dithmarschen, Kreis;KR;01;Land;West
+01053;Herzogtum Lauenburg, Kreis;KR;01;Land;West
+01054;Nordfriesland, Kreis;KR;01;Land;West
+01055;Ostholstein, Kreis;KR;01;Land;West
+01056;Pinneberg, Kreis;KR;01;Land;West
+01057;Plön, Kreis;KR;01;Land;West
+01058;Rendsburg-Eckernförde, Kreis;KR;01;Land;West
+01059;Schleswig-Flensburg, Kreis;KR;01;Land;West
+01060;Segeberg, Kreis;KR;01;Land;West
+01061;Steinburg, Kreis;KR;01;Land;West
+01062;Stormarn, Kreis;KR;01;Land;West
+02;Hamburg;BL;02;;West
+03;Niedersachsen;BL;03;;West
+031;Braunschweig, Statistische Region;RB;03;;West
+03101;Braunschweig, kreisfreie Stadt;KR;03;Stadt;West
+03102;Salzgitter, kreisfreie Stadt;KR;03;Stadt;West
+03103;Wolfsburg, kreisfreie Stadt;KR;03;Stadt;West
+03151;Gifhorn, Landkreis;KR;03;Land;West
+03152;Göttingen, Landkreis;KR;03;Land;West
+03153;Goslar, Landkreis;KR;03;Land;West
+03154;Helmstedt, Landkreis;KR;03;Land;West
+03155;Northeim, Landkreis;KR;03;Land;West
+03156;Osterode am Harz, Landkreis;KR;03;Land;West
+03157;Peine, Landkreis;KR;03;Land;West
+03158;Wolfenbüttel, Landkreis;KR;03;Land;West
+03159;Göttingen, Landkreis;KR;03;Land;West
+032;Hannover, Statistische Region;RB;03;;West
+03241;Region Hannover, Landkreis;KR;03;Land;West
+03251;Diepholz, Landkreis;KR;03;Land;West
+03252;Hameln-Pyrmont, Landkreis;KR;03;Land;West
+03254;Hildesheim, Landkreis;KR;03;Land;West
+03255;Holzminden, Landkreis;KR;03;Land;West
+03256;Nienburg (Weser), Landkreis;KR;03;Land;West
+03257;Schaumburg, Landkreis;KR;03;Land;West
+033;Lüneburg, Statistische Region;RB;03;;West
+03351;Celle, Landkreis;KR;03;Land;West
+03352;Cuxhaven, Landkreis;KR;03;Land;West
+03353;Harburg, Landkreis;KR;03;Land;West
+03354;Lüchow-Dannenberg, Landkreis;KR;03;Land;West
+03355;Lüneburg, Landkreis;KR;03;Land;West
+03356;Osterholz, Landkreis;KR;03;Land;West
+03357;Rotenburg (Wümme), Landkreis;KR;03;Land;West
+03358;Heidekreis;KR;03;Land;West
+03359;Stade, Landkreis;KR;03;Land;West
+03360;Uelzen, Landkreis;KR;03;Land;West
+03361;Verden, Landkreis;KR;03;Land;West
+034;Weser-Ems, Statistische Region;RB;03;;West
+03401;Delmenhorst, kreisfreie Stadt;KR;03;Stadt;West
+03402;Emden, kreisfreie Stadt;KR;03;Stadt;West
+03403;Oldenburg (Oldenburg), kreisfreie Stadt;KR;03;Stadt;West
+03404;Osnabrück, kreisfreie Stadt;KR;03;Stadt;West
+03405;Wilhelmshaven, kreisfreie Stadt;KR;03;Stadt;West
+03451;Ammerland, Landkreis;KR;03;Land;West
+03452;Aurich, Landkreis;KR;03;Land;West
+03453;Cloppenburg, Landkreis;KR;03;Land;West
+03454;Emsland, Landkreis;KR;03;Land;West
+03455;Friesland, Landkreis;KR;03;Land;West
+03456;Grafschaft Bentheim, Landkreis;KR;03;Land;West
+03457;Leer, Landkreis;KR;03;Land;West
+03458;Oldenburg, Landkreis;KR;03;Land;West
+03459;Osnabrück, Landkreis;KR;03;Land;West
+03460;Vechta, Landkreis;KR;03;Land;West
+03461;Wesermarsch, Landkreis;KR;03;Land;West
+03462;Wittmund, Landkreis;KR;03;Land;West
+04;Bremen;BL;04;;West
+04011;Bremen, kreisfreie Stadt;KR;04;Stadt;West
+04012;Bremerhaven, kreisfreie Stadt;KR;04;Stadt;West
+05;Nordrhein-Westfalen;BL;05;;West
+051;Düsseldorf, Regierungsbezirk;RB;05;;West
+05111;Düsseldorf, kreisfreie Stadt;KR;05;Stadt;West
+05112;Duisburg, kreisfreie Stadt;KR;05;Stadt;West
+05113;Essen, kreisfreie Stadt;KR;05;Stadt;West
+05114;Krefeld, kreisfreie Stadt;KR;05;Stadt;West
+05116;Mönchengladbach, kreisfreie Stadt;KR;05;Stadt;West
+05117;Mülheim an der Ruhr, kreisfreie Stadt;KR;05;Stadt;West
+05119;Oberhausen, kreisfreie Stadt;KR;05;Stadt;West
+05120;Remscheid, kreisfreie Stadt;KR;05;Stadt;West
+05122;Solingen, kreisfreie Stadt;KR;05;Stadt;West
+05124;Wuppertal, kreisfreie Stadt;KR;05;Stadt;West
+05154;Kleve, Kreis;KR;05;Land;West
+05158;Mettmann, Kreis;KR;05;Land;West
+05162;Rhein-Kreis Neuss;KR;05;Land;West
+05166;Viersen, Kreis;KR;05;Land;West
+05170;Wesel, Kreis;KR;05;Land;West
+053;Köln, Regierungsbezirk;RB;05;;West
+05314;Bonn, kreisfreie Stadt;KR;05;Stadt;West
+05315;Köln, kreisfreie Stadt;KR;05;Stadt;West
+05316;Leverkusen, kreisfreie Stadt;KR;05;Stadt;West
+05334;Städteregion Aachen, Kreis;KR;05;Land;West
+05354;Aachen, Kreis;KR;05;Land;West
+05358;Düren, Kreis;KR;05;Land;West
+05362;Rhein-Erft-Kreis;KR;05;Land;West
+05366;Euskirchen, Kreis;KR;05;Land;West
+05370;Heinsberg, Kreis;KR;05;Land;West
+05374;Oberbergischer Kreis;KR;05;Land;West
+05378;Rheinisch-Bergischer Kreis;KR;05;Land;West
+05382;Rhein-Sieg-Kreis;KR;05;Land;West
+055;Münster, Regierungsbezirk;RB;05;;West
+05512;Bottrop, kreisfreie Stadt;KR;05;Stadt;West
+05513;Gelsenkirchen, kreisfreie Stadt;KR;05;Stadt;West
+05515;Münster, kreisfreie Stadt;KR;05;Stadt;West
+05554;Borken, Kreis;KR;05;Land;West
+05558;Coesfeld, Kreis;KR;05;Land;West
+05562;Recklinghausen, Kreis;KR;05;Land;West
+05566;Steinfurt, Kreis;KR;05;Land;West
+05570;Warendorf, Kreis;KR;05;Land;West
+057;Detmold, Regierungsbezirk;RB;05;;West
+05711;Bielefeld, kreisfreie Stadt;KR;05;Stadt;West
+05754;Gütersloh, Kreis;KR;05;Land;West
+05758;Herford, Kreis;KR;05;Land;West
+05762;Höxter, Kreis;KR;05;Land;West
+05766;Lippe, Kreis;KR;05;Land;West
+05770;Minden-Lübbecke, Kreis;KR;05;Land;West
+05774;Paderborn, Kreis;KR;05;Land;West
+059;Arnsberg, Regierungsbezirk;RB;05;;West
+05911;Bochum, kreisfreie Stadt;KR;05;Stadt;West
+05913;Dortmund, kreisfreie Stadt;KR;05;Stadt;West
+05914;Hagen, kreisfreie Stadt;KR;05;Stadt;West
+05915;Hamm, kreisfreie Stadt;KR;05;Stadt;West
+05916;Herne, kreisfreie Stadt;KR;05;Stadt;West
+05954;Ennepe-Ruhr-Kreis;KR;05;Land;West
+05958;Hochsauerlandkreis;KR;05;Land;West
+05962;Märkischer Kreis;KR;05;Land;West
+05966;Olpe, Kreis;KR;05;Land;West
+05970;Siegen-Wittgenstein, Kreis;KR;05;Land;West
+05974;Soest, Kreis;KR;05;Land;West
+05978;Unna, Kreis;KR;05;Land;West
+06;Hessen;BL;06;;West
+064;Darmstadt, Regierungsbezirk;RB;06;;West
+06411;Darmstadt, kreisfreie Stadt, Wissenschaftsstadt;KR;06;Stadt;West
+06412;Frankfurt am Main, kreisfreie Stadt;KR;06;Stadt;West
+06413;Offenbach am Main, kreisfreie Stadt;KR;06;Stadt;West
+06414;Wiesbaden, kreisfreie Stadt, Landeshauptstadt;KR;06;Stadt;West
+06431;Bergstraße, Landkreis;KR;06;Land;West
+06432;Darmstadt-Dieburg, Landkreis;KR;06;Land;West
+06433;Groß-Gerau, Landkreis;KR;06;Land;West
+06434;Hochtaunuskreis;KR;06;Land;West
+06435;Main-Kinzig-Kreis;KR;06;Land;West
+06436;Main-Taunus-Kreis;KR;06;Land;West
+06437;Odenwaldkreis;KR;06;Land;West
+06438;Offenbach, Landkreis;KR;06;Land;West
+06439;Rheingau-Taunus-Kreis;KR;06;Land;West
+06440;Wetteraukreis;KR;06;Land;West
+065;Gießen, Regierungsbezirk;RB;06;;West
+06531;Gießen, Landkreis;KR;06;Land;West
+06532;Lahn-Dill-Kreis;KR;06;Land;West
+06533;Limburg-Weilburg, Landkreis;KR;06;Land;West
+06534;Marburg-Biedenkopf, Landkreis;KR;06;Land;West
+06535;Vogelsbergkreis;KR;06;Land;West
+066;Kassel, Regierungsbezirk;RB;06;;West
+06611;Kassel, kreisfreie Stadt, documenta-Stadt;KR;06;Stadt;West
+06631;Fulda, Landkreis;KR;06;Land;West
+06632;Hersfeld-Rotenburg, Landkreis;KR;06;Land;West
+06633;Kassel, Landkreis;KR;06;Land;West
+06634;Schwalm-Eder-Kreis;KR;06;Land;West
+06635;Waldeck-Frankenberg, Landkreis;KR;06;Land;West
+06636;Werra-Meißner-Kreis;KR;06;Land;West
+07;Rheinland-Pfalz;BL;07;;West
+071;Koblenz, Statistische Region;RB;07;;West
+07111;Koblenz, kreisfreie Stadt;KR;07;Stadt;West
+07131;Ahrweiler, Landkreis;KR;07;Land;West
+07132;Altenkirchen (Westerwald), Landkreis;KR;07;Land;West
+07133;Bad Kreuznach, Landkreis;KR;07;Land;West
+07134;Birkenfeld, Landkreis;KR;07;Land;West
+07135;Cochem-Zell, Landkreis;KR;07;Land;West
+07137;Mayen-Koblenz, Landkreis;KR;07;Land;West
+07138;Neuwied, Landkreis;KR;07;Land;West
+07140;Rhein-Hunsrück-Kreis;KR;07;Land;West
+07141;Rhein-Lahn-Kreis;KR;07;Land;West
+07143;Westerwaldkreis;KR;07;Land;West
+072;Trier, Statistische Region;RB;07;;West
+07211;Trier, kreisfreie Stadt;KR;07;Stadt;West
+07231;Bernkastel-Wittlich, Landkreis;KR;07;Land;West
+07232;Eifelkreis Bitburg-Prüm;KR;07;Land;West
+07233;Vulkaneifel, Landkreis;KR;07;Land;West
+07235;Trier-Saarburg, Landkreis;KR;07;Land;West
+073;Rheinhessen-Pfalz, Statistische Region;RB;07;;West
+07311;Frankenthal (Pfalz), kreisfreie Stadt;KR;07;Stadt;West
+07312;Kaiserslautern, kreisfreie Stadt;KR;07;Stadt;West
+07313;Landau in der Pfalz, kreisfreie Stadt;KR;07;Stadt;West
+07314;Ludwigshafen am Rhein, kreisfreie Stadt;KR;07;Stadt;West
+07315;Mainz, kreisfreie Stadt;KR;07;Stadt;West
+07316;Neustadt an der Weinstraße, kreisfreie Stadt;KR;07;Stadt;West
+07317;Pirmasens, kreisfreie Stadt;KR;07;Stadt;West
+07318;Speyer, kreisfreie Stadt;KR;07;Stadt;West
+07319;Worms, kreisfreie Stadt;KR;07;Stadt;West
+07320;Zweibrücken, kreisfreie Stadt;KR;07;Stadt;West
+07331;Alzey-Worms, Landkreis;KR;07;Land;West
+07332;Bad Dürkheim, Landkreis;KR;07;Land;West
+07333;Donnersbergkreis;KR;07;Land;West
+07334;Germersheim, Landkreis;KR;07;Land;West
+07335;Kaiserslautern, Landkreis;KR;07;Land;West
+07336;Kusel, Landkreis;KR;07;Land;West
+07337;Südliche Weinstraße, Landkreis;KR;07;Land;West
+07338;Rhein-Pfalz-Kreis;KR;07;Land;West
+07339;Mainz-Bingen, Landkreis;KR;07;Land;West
+07340;Südwestpfalz, Landkreis;KR;07;Land;West
+08;Baden-Württemberg;BL;08;;West
+081;Stuttgart, Regierungsbezirk;RB;08;;West
+08111;Stuttgart, Stadtkreis;KR;08;Stadt;West
+08115;Böblingen, Landkreis;KR;08;Land;West
+08116;Esslingen, Landkreis;KR;08;Land;West
+08117;Göppingen, Landkreis;KR;08;Land;West
+08118;Ludwigsburg, Landkreis;KR;08;Land;West
+08119;Rems-Murr-Kreis, Landkreis;KR;08;Land;West
+08121;Heilbronn, Stadtkreis;KR;08;Stadt;West
+08125;Heilbronn, Landkreis;KR;08;Land;West
+08126;Hohenlohekreis, Landkreis;KR;08;Land;West
+08127;Schwäbisch Hall, Landkreis;KR;08;Land;West
+08128;Main-Tauber-Kreis, Landkreis;KR;08;Land;West
+08135;Heidenheim, Landkreis;KR;08;Land;West
+08136;Ostalbkreis, Landkreis;KR;08;Land;West
+082;Karlsruhe, Regierungsbezirk;RB;08;;West
+08211;Baden-Baden, Stadtkreis;KR;08;Stadt;West
+08212;Karlsruhe, Stadtkreis;KR;08;Stadt;West
+08215;Karlsruhe, Landkreis;KR;08;Land;West
+08216;Rastatt, Landkreis;KR;08;Land;West
+08221;Heidelberg, Stadtkreis;KR;08;Stadt;West
+08222;Mannheim, Stadtkreis;KR;08;Stadt;West
+08225;Neckar-Odenwald-Kreis, Landkreis;KR;08;Land;West
+08226;Rhein-Neckar-Kreis, Landkreis;KR;08;Land;West
+08231;Pforzheim, Stadtkreis;KR;08;Stadt;West
+08235;Calw, Landkreis;KR;08;Land;West
+08236;Enzkreis, Landkreis;KR;08;Land;West
+08237;Freudenstadt, Landkreis;KR;08;Land;West
+083;Freiburg, Regierungsbezirk;RB;08;;West
+08311;Freiburg im Breisgau, Stadtkreis;KR;08;Stadt;West
+08315;Breisgau-Hochschwarzwald, Landkreis;KR;08;Land;West
+08316;Emmendingen, Landkreis;KR;08;Land;West
+08317;Ortenaukreis, Landkreis;KR;08;Land;West
+08325;Rottweil, Landkreis;KR;08;Land;West
+08326;Schwarzwald-Baar-Kreis, Landkreis;KR;08;Land;West
+08327;Tuttlingen, Landkreis;KR;08;Land;West
+08335;Konstanz, Landkreis;KR;08;Land;West
+08336;Lörrach, Landkreis;KR;08;Land;West
+08337;Waldshut, Landkreis;KR;08;Land;West
+084;Tübingen, Regierungsbezirk;RB;08;;West
+08415;Reutlingen, Landkreis;KR;08;Land;West
+08416;Tübingen, Landkreis;KR;08;Land;West
+08417;Zollernalbkreis, Landkreis;KR;08;Land;West
+08421;Ulm, Stadtkreis;KR;08;Stadt;West
+08425;Alb-Donau-Kreis, Landkreis;KR;08;Land;West
+08426;Biberach, Landkreis;KR;08;Land;West
+08435;Bodenseekreis, Landkreis;KR;08;Land;West
+08436;Ravensburg, Landkreis;KR;08;Land;West
+08437;Sigmaringen, Landkreis;KR;08;Land;West
+09;Bayern;BL;09;;West
+091;Oberbayern, Regierungsbezirk;RB;09;;West
+09161;Ingolstadt, kreisfreie Stadt;KR;09;Stadt;West
+09162;München, kreisfreie Stadt;KR;09;Stadt;West
+09163;Rosenheim, kreisfreie Stadt;KR;09;Stadt;West
+09171;Altötting, Landkreis;KR;09;Land;West
+09172;Berchtesgadener Land, Landkreis;KR;09;Land;West
+09173;Bad Tölz-Wolfratshausen, Landkreis;KR;09;Land;West
+09174;Dachau, Landkreis;KR;09;Land;West
+09175;Ebersberg, Landkreis;KR;09;Land;West
+09176;Eichstätt, Landkreis;KR;09;Land;West
+09177;Erding, Landkreis;KR;09;Land;West
+09178;Freising, Landkreis;KR;09;Land;West
+09179;Fürstenfeldbruck, Landkreis;KR;09;Land;West
+09180;Garmisch-Partenkirchen, Landkreis;KR;09;Land;West
+09181;Landsberg am Lech, Landkreis;KR;09;Land;West
+09182;Miesbach, Landkreis;KR;09;Land;West
+09183;Mühldorf a.Inn, Landkreis;KR;09;Land;West
+09184;München, Landkreis;KR;09;Land;West
+09185;Neuburg-Schrobenhausen, Landkreis;KR;09;Land;West
+09186;Pfaffenhofen a.d.Ilm, Landkreis;KR;09;Land;West
+09187;Rosenheim, Landkreis;KR;09;Land;West
+09188;Starnberg, Landkreis;KR;09;Land;West
+09189;Traunstein, Landkreis;KR;09;Land;West
+09190;Weilheim-Schongau, Landkreis;KR;09;Land;West
+092;Niederbayern, Regierungsbezirk;RB;09;;West
+09261;Landshut, kreisfreie Stadt;KR;09;Stadt;West
+09262;Passau, kreisfreie Stadt;KR;09;Stadt;West
+09263;Straubing, kreisfreie Stadt;KR;09;Stadt;West
+09271;Deggendorf, Landkreis;KR;09;Land;West
+09272;Freyung-Grafenau, Landkreis;KR;09;Land;West
+09273;Kelheim, Landkreis;KR;09;Land;West
+09274;Landshut, Landkreis;KR;09;Land;West
+09275;Passau, Landkreis;KR;09;Land;West
+09276;Regen, Landkreis;KR;09;Land;West
+09277;Rottal-Inn, Landkreis;KR;09;Land;West
+09278;Straubing-Bogen, Landkreis;KR;09;Land;West
+09279;Dingolfing-Landau, Landkreis;KR;09;Land;West
+093;Oberpfalz, Regierungsbezirk;RB;09;;West
+09361;Amberg, kreisfreie Stadt;KR;09;Stadt;West
+09362;Regensburg, kreisfreie Stadt;KR;09;Stadt;West
+09363;Weiden i.d.OPf., kreisfreie Stadt;KR;09;Stadt;West
+09371;Amberg-Sulzbach, Landkreis;KR;09;Land;West
+09372;Cham, Landkreis;KR;09;Land;West
+09373;Neumarkt i.d.OPf., Landkreis;KR;09;Land;West
+09374;Neustadt a.d.Waldnaab, Landkreis;KR;09;Land;West
+09375;Regensburg, Landkreis;KR;09;Land;West
+09376;Schwandorf, Landkreis;KR;09;Land;West
+09377;Tirschenreuth, Landkreis;KR;09;Land;West
+094;Oberfranken, Regierungsbezirk;RB;09;;West
+09461;Bamberg, kreisfreie Stadt;KR;09;Stadt;West
+09462;Bayreuth, kreisfreie Stadt;KR;09;Stadt;West
+09463;Coburg, kreisfreie Stadt;KR;09;Stadt;West
+09464;Hof, kreisfreie Stadt;KR;09;Stadt;West
+09471;Bamberg, Landkreis;KR;09;Land;West
+09472;Bayreuth, Landkreis;KR;09;Land;West
+09473;Coburg, Landkreis;KR;09;Land;West
+09474;Forchheim, Landkreis;KR;09;Land;West
+09475;Hof, Landkreis;KR;09;Land;West
+09476;Kronach, Landkreis;KR;09;Land;West
+09477;Kulmbach, Landkreis;KR;09;Land;West
+09478;Lichtenfels, Landkreis;KR;09;Land;West
+09479;Wunsiedel i.Fichtelgebirge, Landkreis;KR;09;Land;West
+095;Mittelfranken, Regierungsbezirk;RB;09;;West
+09561;Ansbach, kreisfreie Stadt;KR;09;Stadt;West
+09562;Erlangen, kreisfreie Stadt;KR;09;Stadt;West
+09563;Fürth, kreisfreie Stadt;KR;09;Stadt;West
+09564;Nürnberg, kreisfreie Stadt;KR;09;Stadt;West
+09565;Schwabach, kreisfreie Stadt;KR;09;Stadt;West
+09571;Ansbach, Landkreis;KR;09;Land;West
+09572;Erlangen-Höchstadt, Landkreis;KR;09;Land;West
+09573;Fürth, Landkreis;KR;09;Land;West
+09574;Nürnberger Land, Landkreis;KR;09;Land;West
+09575;Neustadt a.d.Aisch-Bad Windsheim, Landkreis;KR;09;Land;West
+09576;Roth, Landkreis;KR;09;Land;West
+09577;Weißenburg-Gunzenhausen, Landkreis;KR;09;Land;West
+096;Unterfranken, Regierungsbezirk;RB;09;;West
+09661;Aschaffenburg, kreisfreie Stadt;KR;09;Stadt;West
+09662;Schweinfurt, kreisfreie Stadt;KR;09;Stadt;West
+09663;Würzburg, kreisfreie Stadt;KR;09;Stadt;West
+09671;Aschaffenburg, Landkreis;KR;09;Land;West
+09672;Bad Kissingen, Landkreis;KR;09;Land;West
+09673;Rhön-Grabfeld, Landkreis;KR;09;Land;West
+09674;Haßberge, Landkreis;KR;09;Land;West
+09675;Kitzingen, Landkreis;KR;09;Land;West
+09676;Miltenberg, Landkreis;KR;09;Land;West
+09677;Main-Spessart, Landkreis;KR;09;Land;West
+09678;Schweinfurt, Landkreis;KR;09;Land;West
+09679;Würzburg, Landkreis;KR;09;Land;West
+097;Schwaben, Regierungsbezirk;RB;09;;West
+09761;Augsburg, kreisfreie Stadt;KR;09;Stadt;West
+09762;Kaufbeuren, kreisfreie Stadt;KR;09;Stadt;West
+09763;Kempten (Allgäu), kreisfreie Stadt;KR;09;Stadt;West
+09764;Memmingen, kreisfreie Stadt;KR;09;Stadt;West
+09771;Aichach-Friedberg, Landkreis;KR;09;Land;West
+09772;Augsburg, Landkreis;KR;09;Land;West
+09773;Dillingen a.d.Donau, Landkreis;KR;09;Land;West
+09774;Günzburg, Landkreis;KR;09;Land;West
+09775;Neu-Ulm, Landkreis;KR;09;Land;West
+09776;Lindau (Bodensee), Landkreis;KR;09;Land;West
+09777;Ostallgäu, Landkreis;KR;09;Land;West
+09778;Unterallgäu, Landkreis;KR;09;Land;West
+09779;Donau-Ries, Landkreis;KR;09;Land;West
+09780;Oberallgäu, Landkreis;KR;09;Land;West
+10;Saarland;BL;10;;West
+10041;Saarbrücken, Regionalverband;KR;10;Land;West
+10042;Merzig-Wadern, Landkreis;KR;10;Land;West
+10043;Neunkirchen, Landkreis;KR;10;Land;West
+10044;Saarlouis, Landkreis;KR;10;Land;West
+10045;Saarpfalz-Kreis;KR;10;Land;West
+10046;St. Wendel, Landkreis;KR;10;Land;West
+11;Berlin;BL;11;;Berlin
+12;Brandenburg;BL;12;;Ost
+12051;Brandenburg an der Havel, kreisfreie Stadt;KR;12;Stadt;Ost
+12052;Cottbus, kreisfreie Stadt;KR;12;Stadt;Ost
+12053;Frankfurt (Oder), kreisfreie Stadt;KR;12;Stadt;Ost
+12054;Potsdam, kreisfreie Stadt;KR;12;Stadt;Ost
+12060;Barnim, Landkreis;KR;12;Land;Ost
+12061;Dahme-Spreewald, Landkreis;KR;12;Land;Ost
+12062;Elbe-Elster, Landkreis;KR;12;Land;Ost
+12063;Havelland, Landkreis;KR;12;Land;Ost
+12064;Märkisch-Oderland, Landkreis;KR;12;Land;Ost
+12065;Oberhavel, Landkreis;KR;12;Land;Ost
+12066;Oberspreewald-Lausitz, Landkreis;KR;12;Land;Ost
+12067;Oder-Spree, Landkreis;KR;12;Land;Ost
+12068;Ostprignitz-Ruppin, Landkreis;KR;12;Land;Ost
+12069;Potsdam-Mittelmark, Landkreis;KR;12;Land;Ost
+12070;Prignitz, Landkreis;KR;12;Land;Ost
+12071;Spree-Neiße, Landkreis;KR;12;Land;Ost
+12072;Teltow-Fläming, Landkreis;KR;12;Land;Ost
+12073;Uckermark, Landkreis;KR;12;Land;Ost
+13;Mecklenburg-Vorpommern;BL;13;;Ost
+13001;Greifswald, Hansestadt, kreisfreie Stadt;KR;13;Stadt;Ost
+13002;Neubrandenburg, Stadt,  kreisfreie Stadt;KR;13;Stadt;Ost
+13003;Rostock, kreisfreie Stadt;KR;13;Stadt;Ost
+13004;Schwerin, kreisfreie Stadt;KR;13;Stadt;Ost
+13005;Stralsund, Hansestadt,  kreisfreie Stadt;KR;13;Stadt;Ost
+13006;Wismar, Hansestadt,  kreisfreie Stadt;KR;13;Stadt;Ost
+13051;Bad Doberan, Landkreis;KR;13;Land;Ost
+13052;Landkreis Demmin;KR;13;Land;Ost
+13053;Güstrow, Landkreis;KR;13;Land;Ost
+13054;Landkreis Ludwigslust;KR;13;Land;Ost
+13055;Mecklenburg-Strelitz, Landkreis;KR;13;Land;Ost
+13056;Landkreis Müritz;KR;13;Land;Ost
+13057;Nordvorpommern, Landkreis;KR;13;Land;Ost
+13058;Landkreis Nordwestmecklenburg;KR;13;Land;Ost
+13059;Ostvorpommern, Landkreis;KR;13;Land;Ost
+13060;Landkreis Parchim;KR;13;Land;Ost
+13061;Rügen, Landkreis;KR;13;Land;Ost
+13062;Landkreis Uecker-Randow;KR;13;Land;Ost
+13071;Mecklenburgische Seenplatte, Landkreis;KR;13;Land;Ost
+13072;Landkreis Rostock;KR;13;Land;Ost
+13073;Vorpommern-Rügen, Landkreis;KR;13;Land;Ost
+13074;Nordwestmecklenburg, Landkreis;KR;13;Land;Ost
+13075;Vorpommern-Greifswald, Landkreis;KR;13;Land;Ost
+13076;Ludwigslust-Parchim, Landkreis;KR;13;Land;Ost
+14;Sachsen;BL;14;;Ost
+141;Chemnitz, Regierungsbezirk;RB;14;;Ost
+14161;Chemnitz, kreisfreie Stadt;KR;14;Stadt;Ost
+14166;Plauen, kreisfreie Stadt;KR;14;Stadt;Ost
+14167;Zwickau, kreisfreie Stadt;KR;14;Stadt;Ost
+14171;Annaberg, Landkreis;KR;14;Land;Ost
+14173;Chemnitzer Land, Landkreis;KR;14;Land;Ost
+14177;Freiberg, Landkreis;KR;14;Land;Ost
+14178;Vogtlandkreis;KR;14;Land;Ost
+14181;Mittlerer Erzgebirgskreis;KR;14;Land;Ost
+14182;Mittweida, Landkreis;KR;14;Land;Ost
+14188;Stollberg, Landkreis;KR;14;Land;Ost
+14191;Aue-Schwarzenberg, Landkreis;KR;14;Land;Ost
+14193;Zwickauer Land, Landkreis;KR;14;Land;Ost
+142;Dresden, Regierungsbezirk;RB;14;;Ost
+14262;Dresden, kreisfreie Stadt;KR;14;Stadt;Ost
+14263;Görlitz, kreisfreie Stadt;KR;14;Stadt;Ost
+14264;Hoyerswerda, kreisfreie Stadt;KR;14;Stadt;Ost
+14272;Bautzen, Landkreis;KR;14;Land;Ost
+14280;Meißen, Landkreis;KR;14;Land;Ost
+14284;Niederschlesischer Oberlausitzkreis;KR;14;Land;Ost
+14285;Riesa-Großenhain, Landkreis;KR;14;Land;Ost
+14286;Löbau-Zittau, Landkreis;KR;14;Land;Ost
+14287;Sächsische Schweiz, Landkreis;KR;14;Land;Ost
+14290;Weißeritzkreis;KR;14;Land;Ost
+14292;Kamenz, Landkreis;KR;14;Land;Ost
+143;Leipzig, Regierungsbezirk;RB;14;;Ost
+14365;Leipzig, kreisfreie Stadt;KR;14;Stadt;Ost
+14374;Delitzsch, Landkreis;KR;14;Land;Ost
+14375;Döbeln, Landkreis;KR;14;Land;Ost
+14379;Leipziger Land, Landkreis;KR;14;Land;Ost
+14383;Muldentalkreis;KR;14;Land;Ost
+14389;Torgau-Oschatz, Landkreis;KR;14;Land;Ost
+145;Chemnitz, Statistische Region;RB;14;;Ost
+14511;Chemnitz, kreisfreie Stadt;KR;14;Stadt;Ost
+14521;Erzgebirgskreis;KR;14;Land;Ost
+14522;Mittelsachsen, Landkreis;KR;14;Land;Ost
+14523;Vogtlandkreis;KR;14;Land;Ost
+14524;Zwickau, Landkreis;KR;14;Land;Ost
+146;Dresden, Statistische Region;RB;14;;Ost
+14612;Dresden, kreisfreie Stadt;KR;14;Stadt;Ost
+14625;Bautzen, Landkreis;KR;14;Land;Ost
+14626;Görlitz, Landkreis;KR;14;Land;Ost
+14627;Meißen, Landkreis;KR;14;Land;Ost
+14628;Sächsische Schweiz-Osterzgebirge, Landkreis;KR;14;Land;Ost
+147;Leipzig, Statistische Region;RB;14;;Ost
+14713;Leipzig, kreisfreie Stadt;KR;14;Stadt;Ost
+14729;Leipzig, Landkreis;KR;14;Land;Ost
+14730;Nordsachsen, Landkreis;KR;14;Land;Ost
+15;Sachsen-Anhalt;BL;15;;Ost
+15001;Dessau-Roßlau, kreisfreie Stadt;KR;15;Stadt;Ost
+15002;Halle (Saale), kreisfreie Stadt;KR;15;Stadt;Ost
+15003;Magdeburg, kreisfreie Stadt, Landeshauptstadt;KR;15;Stadt;Ost
+15081;Altmarkkreis Salzwedel;KR;15;Land;Ost
+15082;Anhalt-Bitterfeld, Landkreis;KR;15;Land;Ost
+15083;Börde, Landkreis;KR;15;Land;Ost
+15084;Burgenlandkreis;KR;15;Land;Ost
+15085;Harz, Landkreis;KR;15;Land;Ost
+15086;Jerichower Land, Landkreis;KR;15;Land;Ost
+15087;Mansfeld-Südharz, Landkreis;KR;15;Land;Ost
+15088;Saalekreis;KR;15;Land;Ost
+15089;Salzlandkreis;KR;15;Land;Ost
+15090;Stendal, Landkreis;KR;15;Land;Ost
+15091;Wittenberg, Landkreis;KR;15;Land;Ost
+151;Dessau, Statistische Region;RB;15;;Ost
+15101;Dessau, kreisfreie Stadt;KR;15;Stadt;Ost
+15151;Anhalt-Zerbst, Kreis;KR;15;Land;Ost
+15153;Bernburg, Kreis;KR;15;Land;Ost
+15154;Bitterfeld, Kreis;KR;15;Land;Ost
+15159;Köthen, Kreis;KR;15;Land;Ost
+15171;Wittenberg, Kreis;KR;15;Land;Ost
+152;Halle, Statistische Region;RB;15;;Ost
+15202;Halle (Saale), kreisfreie Stadt;KR;15;Stadt;Ost
+15256;Burgenlandkreis;KR;15;Land;Ost
+15260;Mansfelder Land, Kreis;KR;15;Land;Ost
+15261;Merseburg-Querfurt, Kreis;KR;15;Land;Ost
+15265;Saalkreis;KR;15;Land;Ost
+15266;Sangerhausen, Kreis;KR;15;Land;Ost
+15268;Weißenfels, Kreis;KR;15;Land;Ost
+153;Magdeburg, Statistische Region;RB;15;;Ost
+15303;Magdeburg, kreisfreie Stadt;KR;15;Stadt;Ost
+15352;Aschersleben-Staßfurt, Kreis;KR;15;Land;Ost
+15355;Bördekreis;KR;15;Land;Ost
+15357;Halberstadt, Kreis;KR;15;Land;Ost
+15358;Jerichower Land, Kreis;KR;15;Land;Ost
+15362;Ohrekreis;KR;15;Land;Ost
+15363;Stendal, Kreis;KR;15;Land;Ost
+15364;Quedlinburg, Kreis;KR;15;Land;Ost
+15367;Schönebeck, Kreis;KR;15;Land;Ost
+15369;Wernigerode, Kreis;KR;15;Land;Ost
+15370;Altmarkkreis Salzwedel, Kreis;KR;15;Land;Ost
+16;Thüringen;BL;16;;Ost
+16051;Erfurt, kreisfreie Stadt;KR;16;Stadt;Ost
+16052;Gera, kreisfreie Stadt;KR;16;Stadt;Ost
+16053;Jena, kreisfreie Stadt;KR;16;Stadt;Ost
+16054;Suhl, kreisfreie Stadt;KR;16;Stadt;Ost
+16055;Weimar, kreisfreie Stadt;KR;16;Stadt;Ost
+16056;Eisenach, kreisfreie Stadt;KR;16;Stadt;Ost
+16061;Eichsfeld, Landkreis;KR;16;Land;Ost
+16062;Nordhausen, Landkreis;KR;16;Land;Ost
+16063;Wartburgkreis;KR;16;Land;Ost
+16064;Unstrut-Hainich-Kreis;KR;16;Land;Ost
+16065;Kyffhäuserkreis;KR;16;Land;Ost
+16066;Schmalkalden-Meiningen, Landkreis;KR;16;Land;Ost
+16067;Gotha, Landkreis;KR;16;Land;Ost
+16068;Sömmerda, Landkreis;KR;16;Land;Ost
+16069;Hildburghausen, Landkreis;KR;16;Land;Ost
+16070;Ilm-Kreis;KR;16;Land;Ost
+16071;Weimarer Land, Landkreis;KR;16;Land;Ost
+16072;Sonneberg, Landkreis;KR;16;Land;Ost
+16073;Saalfeld-Rudolstadt, Landkreis;KR;16;Land;Ost
+16074;Saale-Holzland-Kreis;KR;16;Land;Ost
+16075;Saale-Orla-Kreis;KR;16;Land;Ost
+16076;Greiz, Landkreis;KR;16;Land;Ost
+16077;Altenburger Land, Landkreis;KR;16;Land;Ost

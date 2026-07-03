@@ -1,0 +1,128 @@
+region_code;bundesland;schulart;jahr;ausgaben_je_schueler
+08;Baden-Württemberg;Grundschulen;2023;7400
+09;Bayern;Grundschulen;2023;9300
+11;Berlin;Grundschulen;2023;12200
+12;Brandenburg;Grundschulen;2023;8000
+04;Bremen;Grundschulen;2023;9100
+02;Hamburg;Grundschulen;2023;12500
+06;Hessen;Grundschulen;2023;9100
+13;Mecklenburg-Vorpommern;Grundschulen;2023;8300
+03;Niedersachsen;Grundschulen;2023;8400
+05;Nordrhein-Westfalen;Grundschulen;2023;7400
+07;Rheinland-Pfalz;Grundschulen;2023;8000
+10;Saarland;Grundschulen;2023;8600
+14;Sachsen;Grundschulen;2023;8100
+15;Sachsen-Anhalt;Grundschulen;2023;7300
+01;Schleswig-Holstein;Grundschulen;2023;8300
+16;Thüringen;Grundschulen;2023;8200
+DG;Deutschland;Grundschulen;2023;8400
+09;Bayern;Hauptschulen;2023;13700
+12;Brandenburg;Schularten mit mehreren Bildungsgängen;2023;11900
+13;Mecklenburg-Vorpommern;Schularten mit mehreren Bildungsgängen;2023;9600
+03;Niedersachsen;Schularten mit mehreren Bildungsgängen;2023;12400
+07;Rheinland-Pfalz;Schularten mit mehreren Bildungsgängen;2023;9800
+14;Sachsen;Schularten mit mehreren Bildungsgängen;2023;9400
+15;Sachsen-Anhalt;Schularten mit mehreren Bildungsgängen;2023;9300
+16;Thüringen;Schularten mit mehreren Bildungsgängen;2023;10700
+DG;Deutschland;Schularten mit mehreren Bildungsgängen;2023;10600
+08;Baden-Württemberg;Realschulen;2023;9100
+09;Bayern;Realschulen;2023;12100
+06;Hessen;Realschulen;2023;9200
+03;Niedersachsen;Realschulen;2023;9000
+05;Nordrhein-Westfalen;Realschulen;2023;8300
+DG;Deutschland;Realschulen;2023;9700
+08;Baden-Württemberg;Gymnasien;2023;11100
+09;Bayern;Gymnasien;2023;13900
+11;Berlin;Gymnasien;2023;14300
+12;Brandenburg;Gymnasien;2023;10200
+04;Bremen;Gymnasien;2023;9900
+02;Hamburg;Gymnasien;2023;11900
+06;Hessen;Gymnasien;2023;9900
+13;Mecklenburg-Vorpommern;Gymnasien;2023;11300
+03;Niedersachsen;Gymnasien;2023;10100
+05;Nordrhein-Westfalen;Gymnasien;2023;9700
+07;Rheinland-Pfalz;Gymnasien;2023;9800
+10;Saarland;Gymnasien;2023;10000
+14;Sachsen;Gymnasien;2023;10500
+15;Sachsen-Anhalt;Gymnasien;2023;10300
+01;Schleswig-Holstein;Gymnasien;2023;9500
+16;Thüringen;Gymnasien;2023;11900
+DG;Deutschland;Gymnasien;2023;10900
+08;Baden-Württemberg;Integrierte Gesamtschulen;2023;10500
+11;Berlin;Integrierte Gesamtschulen;2023;16600
+12;Brandenburg;Integrierte Gesamtschulen;2023;12200
+04;Bremen;Integrierte Gesamtschulen;2023;12300
+02;Hamburg;Integrierte Gesamtschulen;2023;14200
+06;Hessen;Integrierte Gesamtschulen;2023;11000
+03;Niedersachsen;Integrierte Gesamtschulen;2023;11400
+05;Nordrhein-Westfalen;Integrierte Gesamtschulen;2023;10800
+07;Rheinland-Pfalz;Integrierte Gesamtschulen;2023;10400
+10;Saarland;Integrierte Gesamtschulen;2023;10500
+15;Sachsen-Anhalt;Integrierte Gesamtschulen;2023;9800
+01;Schleswig-Holstein;Integrierte Gesamtschulen;2023;11200
+16;Thüringen;Integrierte Gesamtschulen;2023;11500
+DG;Deutschland;Integrierte Gesamtschulen;2023;11600
+08;Baden-Württemberg;Grundschulen;2024;8000
+09;Bayern;Grundschulen;2024;9700
+11;Berlin;Grundschulen;2024;12500
+12;Brandenburg;Grundschulen;2024;8900
+04;Bremen;Grundschulen;2024;10000
+02;Hamburg;Grundschulen;2024;13600
+06;Hessen;Grundschulen;2024;10100
+13;Mecklenburg-Vorpommern;Grundschulen;2024;9000
+03;Niedersachsen;Grundschulen;2024;9100
+05;Nordrhein-Westfalen;Grundschulen;2024;8100
+07;Rheinland-Pfalz;Grundschulen;2024;8300
+10;Saarland;Grundschulen;2024;9200
+14;Sachsen;Grundschulen;2024;8800
+15;Sachsen-Anhalt;Grundschulen;2024;7600
+01;Schleswig-Holstein;Grundschulen;2024;8800
+16;Thüringen;Grundschulen;2024;8500
+DG;Deutschland;Grundschulen;2024;9000
+09;Bayern;Hauptschulen;2024;14500
+09;Bayern;Schularten mit mehreren Bildungsgängen;2024;15500
+12;Brandenburg;Schularten mit mehreren Bildungsgängen;2024;13100
+13;Mecklenburg-Vorpommern;Schularten mit mehreren Bildungsgängen;2024;10300
+03;Niedersachsen;Schularten mit mehreren Bildungsgängen;2024;13600
+07;Rheinland-Pfalz;Schularten mit mehreren Bildungsgängen;2024;10300
+14;Sachsen;Schularten mit mehreren Bildungsgängen;2024;10000
+15;Sachsen-Anhalt;Schularten mit mehreren Bildungsgängen;2024;9400
+16;Thüringen;Schularten mit mehreren Bildungsgängen;2024;10800
+DG;Deutschland;Schularten mit mehreren Bildungsgängen;2024;11700
+08;Baden-Württemberg;Realschulen;2024;9700
+09;Bayern;Realschulen;2024;12800
+06;Hessen;Realschulen;2024;10200
+03;Niedersachsen;Realschulen;2024;9900
+05;Nordrhein-Westfalen;Realschulen;2024;9000
+DG;Deutschland;Realschulen;2024;10400
+08;Baden-Württemberg;Gymnasien;2024;11900
+09;Bayern;Gymnasien;2024;14800
+11;Berlin;Gymnasien;2024;14500
+12;Brandenburg;Gymnasien;2024;11200
+04;Bremen;Gymnasien;2024;11000
+02;Hamburg;Gymnasien;2024;12900
+06;Hessen;Gymnasien;2024;11000
+13;Mecklenburg-Vorpommern;Gymnasien;2024;12100
+03;Niedersachsen;Gymnasien;2024;11200
+05;Nordrhein-Westfalen;Gymnasien;2024;10100
+07;Rheinland-Pfalz;Gymnasien;2024;10200
+10;Saarland;Gymnasien;2024;11000
+14;Sachsen;Gymnasien;2024;11400
+15;Sachsen-Anhalt;Gymnasien;2024;10500
+01;Schleswig-Holstein;Gymnasien;2024;10000
+16;Thüringen;Gymnasien;2024;12200
+DG;Deutschland;Gymnasien;2024;11700
+08;Baden-Württemberg;Integrierte Gesamtschulen;2024;11200
+11;Berlin;Integrierte Gesamtschulen;2024;16800
+12;Brandenburg;Integrierte Gesamtschulen;2024;13600
+04;Bremen;Integrierte Gesamtschulen;2024;13700
+02;Hamburg;Integrierte Gesamtschulen;2024;15400
+06;Hessen;Integrierte Gesamtschulen;2024;12200
+03;Niedersachsen;Integrierte Gesamtschulen;2024;12600
+05;Nordrhein-Westfalen;Integrierte Gesamtschulen;2024;11800
+07;Rheinland-Pfalz;Integrierte Gesamtschulen;2024;11000
+10;Saarland;Integrierte Gesamtschulen;2024;11500
+15;Sachsen-Anhalt;Integrierte Gesamtschulen;2024;10100
+01;Schleswig-Holstein;Integrierte Gesamtschulen;2024;12100
+16;Thüringen;Integrierte Gesamtschulen;2024;11700
+DG;Deutschland;Integrierte Gesamtschulen;2024;12500

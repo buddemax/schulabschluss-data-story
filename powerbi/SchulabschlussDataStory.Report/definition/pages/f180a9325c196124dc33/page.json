@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "f180a9325c196124dc33",
+  "displayName": "LF2 Quote ohne HSA (Kreise)",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

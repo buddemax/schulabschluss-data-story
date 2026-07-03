@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "268d049fa1a94e7866a6",
+  "position": {
+    "x": 300,
+    "y": 20,
+    "z": 2,
+    "height": 280,
+    "width": 280,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Erkenntnis LF7: Die Ausgaben je Schüler steigen mit der Schulart, von der Grundschule (8.400 €) bis zur integrierten Gesamtschule (11.600 €, Deutschland 2023). Grundschule am günstigsten, weiterführende und integrierte Schularten am teuersten."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

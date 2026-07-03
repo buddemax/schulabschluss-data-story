@@ -1,0 +1,21 @@
+table dim_schulart
+	lineageTag: b5b3a3ff-d7e1-449e-8760-5c9733b0a781
+
+	column schulart
+		dataType: string
+		lineageTag: 5194c4ba-1afa-4ac5-aac5-332e6787dd4f
+		summarizeBy: none
+		sourceColumn: schulart
+
+	partition dim_schulart = m
+		mode: import
+		source =
+				let
+				src = Csv.Document(File.Contents(DataFolder & "21111-01-03-4.csv"), [Delimiter=";", Columns=10, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				y = Table.SelectRows(src, each Text.Trim([Column1]) = "2023" and fnEbene([Column2]) <> "?"),
+				sa = Table.Distinct(Table.SelectColumns(Table.TransformColumns(y, {{"Column4", Text.Trim}}), {"Column4"})),
+				ren = Table.Sort(Table.RenameColumns(sa, {{"Column4", "schulart"}}), {{"schulart", Order.Ascending}}),
+				typed = Table.TransformColumnTypes(ren, {{"schulart", type text}})
+				in
+				typed
+

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "3ea8a165cda9a5bafec2",
+  "position": {
+    "x": 300,
+    "y": 20,
+    "z": 2,
+    "height": 280,
+    "width": 280,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Erkenntnis LF3: Es ist beides. Innerhalb der Länder streuen die Kreise stark (Rheinland-Pfalz Standardabweichung 2,84 pp). Der Landesschnitt verdeckt große kommunale Unterschiede: Bildungsrisiko ist auch ein Kreisproblem."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

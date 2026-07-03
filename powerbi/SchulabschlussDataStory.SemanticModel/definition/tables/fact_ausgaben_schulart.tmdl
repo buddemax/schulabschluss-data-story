@@ -1,0 +1,56 @@
+table fact_ausgaben_schulart
+	lineageTag: 9c1a2b3d-4e5f-6071-8293-a4b5c6d7e8f0
+
+	column region_code
+		dataType: string
+		lineageTag: 9c1a2b3d-4e5f-6071-8293-a4b5c6d7e801
+		summarizeBy: none
+		sourceColumn: region_code
+
+	column bundesland
+		dataType: string
+		lineageTag: 9c1a2b3d-4e5f-6071-8293-a4b5c6d7e802
+		summarizeBy: none
+		sourceColumn: bundesland
+
+	column schulart
+		dataType: string
+		lineageTag: 9c1a2b3d-4e5f-6071-8293-a4b5c6d7e803
+		summarizeBy: none
+		sourceColumn: schulart
+
+	column jahr
+		dataType: int64
+		lineageTag: 9c1a2b3d-4e5f-6071-8293-a4b5c6d7e804
+		summarizeBy: sum
+		sourceColumn: jahr
+
+		annotation SummarizationSetBy = Automatic
+
+	column ausgaben_je_schueler
+		dataType: int64
+		lineageTag: 9c1a2b3d-4e5f-6071-8293-a4b5c6d7e805
+		summarizeBy: sum
+		sourceColumn: ausgaben_je_schueler
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_ausgaben_schulart = m
+		mode: import
+		source =
+				let
+				kre = Csv.Document(File.Contents(DataFolder & "21111-02-06-4.csv"), [Delimiter=";", Columns=17, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				blrows = Table.SelectRows(kre, each Text.Trim([Column1]) = "2023" and fnEbene([Column2]) = "BL"),
+				blmap0 = Table.Distinct(Table.SelectColumns(blrows, {"Column3", "Column2"})),
+				blmap = Table.Combine({Table.RenameColumns(blmap0, {{"Column3", "nm"}, {"Column2", "cd"}}), Table.FromRecords({[nm = "Deutschland", cd = "DG"]})}),
+				lookupCode = (g as text) as text => let m = Table.SelectRows(blmap, (z) => Text.Trim(z[nm]) = Text.Trim(g)) in if Table.RowCount(m) > 0 then m{0}[cd] else "",
+				xls = Excel.Workbook(File.Contents(DataFolder & "21711_ausgaben_je_schueler_2024.xlsx"), null, true),
+				sh = xls{[Item = "csv-21711-02", Kind = "Sheet"]}[Data],
+				prom = Table.PromoteHeaders(sh, [PromoteAllScalars=true]),
+				sel = Table.SelectRows(prom, each fnToInt([Jahr]) <> null and fnToInt([Ausgaben_je_Schueler]) <> null),
+				r = Table.AddColumn(sel, "rec", each [region_code = lookupCode([Gebiet]), bundesland = Text.Trim([Gebiet]), schulart = Text.Trim([Schulart]), jahr = fnToInt([Jahr]), ausgaben_je_schueler = fnToInt([Ausgaben_je_Schueler])]),
+				tbl = Table.FromRecords(r[rec]),
+				typed = Table.TransformColumnTypes(tbl, {{"region_code", type text}, {"bundesland", type text}, {"schulart", type text}, {"jahr", Int64.Type}, {"ausgaben_je_schueler", Int64.Type}}, "en-US")
+				in
+				typed
+

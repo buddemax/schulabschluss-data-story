@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "ee958aed0ecfdb0a48d9",
+  "position": {
+    "x": 10,
+    "y": 320,
+    "z": 1,
+    "height": 280,
+    "width": 280,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Erkenntnis LF1: Sachsen-Anhalt führt in beiden Jahren (11,3 % 2022/23 auf 12,7 % 2023/24). Es folgen ostdeutsche Länder, Bremen und Schleswig-Holstein; Bayern am niedrigsten (5,4 %). Der Anteil steigt über die Jahre leicht an."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

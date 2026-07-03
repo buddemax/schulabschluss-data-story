@@ -1,0 +1,88 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "0a3ef5fbafedcdee2a4a",
+  "position": {
+    "x": 310,
+    "y": 20,
+    "z": 2,
+    "height": 560,
+    "width": 600,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "map",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_region"
+                    }
+                  },
+                  "Property": "Kreis"
+                }
+              },
+              "queryRef": "dim_region.Kreis",
+              "nativeQueryRef": "Kreis",
+              "active": true
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_abschluss"
+                    }
+                  },
+                  "Property": "Quote ohne HSA %"
+                }
+              },
+              "queryRef": "dim_abschluss.Quote ohne HSA %",
+              "nativeQueryRef": "Quote ohne HSA %"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "beaca183b689a13a9c3f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_region"
+              }
+            },
+            "Property": "Kreis"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "09cffd7d774d066b2945",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_abschluss"
+              }
+            },
+            "Property": "Quote ohne HSA %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "5c99e1c0de000000aa19",
+  "position": {
+    "x": 300,
+    "y": 210,
+    "z": 6,
+    "height": 110,
+    "width": 300,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_einkommen_kreis"
+                    }
+                  },
+                  "Property": "einkommen_je_ew"
+                }
+              },
+              "queryRef": "fact_einkommen_kreis.einkommen_je_ew",
+              "nativeQueryRef": "einkommen_je_ew",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Between'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

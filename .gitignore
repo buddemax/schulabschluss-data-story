@@ -1,0 +1,19 @@
+# --- Power BI (PBIP) lokale Caches / Maschinen-Settings ---
+# Definition (TMDL/Report) wird versioniert; lokale Caches nicht.
+**/.pbi/
+*.abf
+
+# --- Claude Code lokale Einstellungen ---
+.claude/
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+
+# --- OS / OneDrive ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+~$*

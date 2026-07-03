@@ -1,0 +1,90 @@
+table dim_region
+	lineageTag: 5f472448-c229-4389-b9fc-d73c229f9d47
+
+	column region_code
+		dataType: string
+		lineageTag: 77c24813-c9d0-4004-99ad-12b379a5d4eb
+		summarizeBy: none
+		sourceColumn: region_code
+
+	column region
+		dataType: string
+		lineageTag: 4c0e66ff-d1bf-469f-bbab-61bd033448ad
+		summarizeBy: none
+		sourceColumn: region
+
+	column ebene
+		dataType: string
+		lineageTag: 2b7cc824-01e0-4f02-9d41-51f55e5eb519
+		summarizeBy: none
+		sourceColumn: ebene
+
+	column bundesland_code
+		dataType: string
+		lineageTag: 73c17634-cae9-4c6c-aef2-c23838d3bb18
+		summarizeBy: none
+		sourceColumn: bundesland_code
+
+	column stadt_land
+		dataType: string
+		lineageTag: 0d7d10ad-b189-4fe7-b8dd-8e7bfaf44493
+		summarizeBy: none
+		sourceColumn: stadt_land
+
+	column ost_west
+		dataType: string
+		lineageTag: 0cbb7599-f23b-4447-9957-58b16da55e72
+		summarizeBy: none
+		sourceColumn: ost_west
+
+	column stadtstaat = IF(dim_region[region] IN {"Berlin","Hamburg","Bremen"}, "Stadtstaat", "Flächenland")
+		lineageTag: 8e3b2ab3-0863-489c-b390-50e05f530071
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Land = LOOKUPVALUE(dim_region[region], dim_region[region_code], LEFT(dim_region[region_code],2))
+		lineageTag: 09b47569-5b42-4ced-b37d-ac50e3c95ce8
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Regierungsbezirk = VAR rb = LOOKUPVALUE(dim_region[region], dim_region[region_code], LEFT(dim_region[region_code],3)) RETURN IF(ISBLANK(rb), "ohne Regierungsbezirk", rb)
+		lineageTag: 50b14a7c-099e-48a1-9ae4-4d7a12a743b0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kreis = IF(dim_region[ebene]="KR", dim_region[region], BLANK())
+		lineageTag: 0193cc62-9356-48fe-b87f-3f830695b7d8
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Land Hierarchie'
+		lineageTag: 5c729a08-3459-4541-9d26-09b5142842a8
+
+		level Land
+			lineageTag: 9beaf0f2-599c-4520-aaa6-5e1fd81c01dc
+			column: Land
+
+		level Regierungsbezirk
+			lineageTag: 44d898c0-6002-4eba-8b51-8e2e5a3b1aca
+			column: Regierungsbezirk
+
+		level Kreis
+			lineageTag: c2d5c735-f24d-4105-81ba-3cead3214e11
+			column: Kreis
+
+	partition dim_region = m
+		mode: import
+		source =
+				let
+				src = Csv.Document(File.Contents(DataFolder & "21111-02-06-4.csv"), [Delimiter=";", Columns=17, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				y = Table.SelectRows(src, each Text.Trim([Column1]) = "2023" and fnEbene([Column2]) <> "?"),
+				r = Table.AddColumn(y, "rec", each let c = Text.Trim([Column2]), name = Text.Trim([Column3]), e = fnEbene(c), bl = fnBlc(c), stadt = if Text.Contains(name, "kreisfreie Stadt") or Text.Contains(name, "Stadtkreis") then "Stadt" else if e = "KR" then "Land" else "", ow = if bl = "11" then "Berlin" else if List.Contains({"12", "13", "14", "15", "16"}, bl) then "Ost" else if List.Contains({"KR", "BL", "RB"}, e) then "West" else "" in [region_code = c, region = name, ebene = e, bundesland_code = bl, stadt_land = stadt, ost_west = ow]),
+				tbl = Table.Distinct(Table.FromRecords(r[rec]), {"region_code"}),
+				typed = Table.TransformColumnTypes(tbl, {{"region_code", type text}, {"region", type text}, {"ebene", type text}, {"bundesland_code", type text}, {"stadt_land", type text}, {"ost_west", type text}})
+				in
+				typed
+

@@ -1,0 +1,44 @@
+relationship rel0100000-0000-0000-0000-000000000000
+	fromColumn: fact_abgaenge.region_code
+	toColumn: dim_region.region_code
+
+relationship rel0200000-0000-0000-0000-000000000000
+	fromColumn: fact_abgaenge.jahr
+	toColumn: dim_zeit.jahr
+
+relationship rel0300000-0000-0000-0000-000000000000
+	fromColumn: fact_abgaenge.abschluss_key
+	toColumn: dim_abschluss.abschluss_key
+
+relationship rel0400000-0000-0000-0000-000000000000
+	fromColumn: fact_schule_2023.region_code
+	toColumn: dim_region.region_code
+
+relationship rel0500000-0000-0000-0000-000000000000
+	fromColumn: fact_schule_2023.schulart
+	toColumn: dim_schulart.schulart
+
+relationship rel0600000-0000-0000-0000-000000000000
+	fromColumn: fact_arbeitsmarkt_2025.region_code
+	toColumn: dim_region.region_code
+
+relationship rel0700000-0000-0000-0000-000000000000
+	fromColumn: fact_bevoelkerung_2023_2024.region_code
+	toColumn: dim_region.region_code
+
+relationship rel0800000-0000-0000-0000-000000000000
+	fromColumn: fact_abgaenge_beruflich_2023.region_code
+	toColumn: dim_region.region_code
+
+relationship e206b3e8-50e4-946e-e5c5-f94fdae74b32
+	fromColumn: fact_ausgaben_je_schueler.region_code
+	toColumn: dim_region.region_code
+
+relationship rel0900000-0000-0000-0000-000000000000
+	fromColumn: fact_ausgaben_schulart.region_code
+	toColumn: dim_region.region_code
+
+relationship rel1000000-0000-0000-0000-000000000000
+	fromColumn: fact_einkommen_kreis.region_code
+	toColumn: dim_region.region_code
+

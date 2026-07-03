@@ -1,0 +1,445 @@
+abgangsjahr;bundesland;abschluss;geschlecht;anzahl
+2022;Baden-Württemberg;ohne Hauptschulabschluss;Insgesamt;6919
+2022;Baden-Württemberg;ohne Hauptschulabschluss;männlich;4240
+2022;Baden-Württemberg;ohne Hauptschulabschluss;weiblich;2679
+2022;Baden-Württemberg;Hauptschulabschluss;Insgesamt;16177
+2022;Baden-Württemberg;Hauptschulabschluss;männlich;9648
+2022;Baden-Württemberg;Hauptschulabschluss;weiblich;6529
+2022;Baden-Württemberg;mittlerer Abschluss;Insgesamt;47332
+2022;Baden-Württemberg;mittlerer Abschluss;männlich;24170
+2022;Baden-Württemberg;mittlerer Abschluss;weiblich;23162
+2022;Baden-Württemberg;Fachhochschulreife;Insgesamt;377
+2022;Baden-Württemberg;Fachhochschulreife;männlich;187
+2022;Baden-Württemberg;Fachhochschulreife;weiblich;190
+2022;Baden-Württemberg;allgemeine Hochschulreife;Insgesamt;29381
+2022;Baden-Württemberg;allgemeine Hochschulreife;männlich;13088
+2022;Baden-Württemberg;allgemeine Hochschulreife;weiblich;16293
+2022;Bayern;ohne Hauptschulabschluss;Insgesamt;6205
+2022;Bayern;ohne Hauptschulabschluss;männlich;3901
+2022;Bayern;ohne Hauptschulabschluss;weiblich;2304
+2022;Bayern;Hauptschulabschluss;Insgesamt;25352
+2022;Bayern;Hauptschulabschluss;männlich;15089
+2022;Bayern;Hauptschulabschluss;weiblich;10263
+2022;Bayern;mittlerer Abschluss;Insgesamt;56815
+2022;Bayern;mittlerer Abschluss;männlich;28199
+2022;Bayern;mittlerer Abschluss;weiblich;28616
+2022;Bayern;allgemeine Hochschulreife;Insgesamt;33443
+2022;Bayern;allgemeine Hochschulreife;männlich;15161
+2022;Bayern;allgemeine Hochschulreife;weiblich;18282
+2022;Berlin;ohne Hauptschulabschluss;Insgesamt;2098
+2022;Berlin;ohne Hauptschulabschluss;männlich;1244
+2022;Berlin;ohne Hauptschulabschluss;weiblich;854
+2022;Berlin;Hauptschulabschluss;Insgesamt;4123
+2022;Berlin;Hauptschulabschluss;männlich;2406
+2022;Berlin;Hauptschulabschluss;weiblich;1717
+2022;Berlin;mittlerer Abschluss;Insgesamt;10955
+2022;Berlin;mittlerer Abschluss;männlich;5760
+2022;Berlin;mittlerer Abschluss;weiblich;5195
+2022;Berlin;allgemeine Hochschulreife;Insgesamt;13917
+2022;Berlin;allgemeine Hochschulreife;männlich;6410
+2022;Berlin;allgemeine Hochschulreife;weiblich;7507
+2022;Brandenburg;ohne Hauptschulabschluss;Insgesamt;1549
+2022;Brandenburg;ohne Hauptschulabschluss;männlich;993
+2022;Brandenburg;ohne Hauptschulabschluss;weiblich;556
+2022;Brandenburg;Hauptschulabschluss;Insgesamt;2833
+2022;Brandenburg;Hauptschulabschluss;männlich;1674
+2022;Brandenburg;Hauptschulabschluss;weiblich;1159
+2022;Brandenburg;mittlerer Abschluss;Insgesamt;8426
+2022;Brandenburg;mittlerer Abschluss;männlich;4437
+2022;Brandenburg;mittlerer Abschluss;weiblich;3989
+2022;Brandenburg;Fachhochschulreife;Insgesamt;15
+2022;Brandenburg;Fachhochschulreife;männlich;14
+2022;Brandenburg;Fachhochschulreife;weiblich;1
+2022;Brandenburg;allgemeine Hochschulreife;Insgesamt;8453
+2022;Brandenburg;allgemeine Hochschulreife;männlich;3830
+2022;Brandenburg;allgemeine Hochschulreife;weiblich;4623
+2022;Bremen;ohne Hauptschulabschluss;Insgesamt;632
+2022;Bremen;ohne Hauptschulabschluss;männlich;386
+2022;Bremen;ohne Hauptschulabschluss;weiblich;246
+2022;Bremen;Hauptschulabschluss;Insgesamt;1540
+2022;Bremen;Hauptschulabschluss;männlich;907
+2022;Bremen;Hauptschulabschluss;weiblich;633
+2022;Bremen;mittlerer Abschluss;Insgesamt;2089
+2022;Bremen;mittlerer Abschluss;männlich;1076
+2022;Bremen;mittlerer Abschluss;weiblich;1013
+2022;Bremen;Fachhochschulreife;Insgesamt;219
+2022;Bremen;Fachhochschulreife;männlich;114
+2022;Bremen;Fachhochschulreife;weiblich;105
+2022;Bremen;allgemeine Hochschulreife;Insgesamt;2414
+2022;Bremen;allgemeine Hochschulreife;männlich;1080
+2022;Bremen;allgemeine Hochschulreife;weiblich;1334
+2022;Hamburg;ohne Hauptschulabschluss;Insgesamt;1043
+2022;Hamburg;ohne Hauptschulabschluss;männlich;650
+2022;Hamburg;ohne Hauptschulabschluss;weiblich;393
+2022;Hamburg;Hauptschulabschluss;Insgesamt;2791
+2022;Hamburg;Hauptschulabschluss;männlich;1620
+2022;Hamburg;Hauptschulabschluss;weiblich;1171
+2022;Hamburg;mittlerer Abschluss;Insgesamt;3810
+2022;Hamburg;mittlerer Abschluss;männlich;2077
+2022;Hamburg;mittlerer Abschluss;weiblich;1733
+2022;Hamburg;allgemeine Hochschulreife;Insgesamt;9009
+2022;Hamburg;allgemeine Hochschulreife;männlich;4135
+2022;Hamburg;allgemeine Hochschulreife;weiblich;4874
+2022;Hessen;ohne Hauptschulabschluss;Insgesamt;3561
+2022;Hessen;ohne Hauptschulabschluss;männlich;2206
+2022;Hessen;ohne Hauptschulabschluss;weiblich;1355
+2022;Hessen;Hauptschulabschluss;Insgesamt;9749
+2022;Hessen;Hauptschulabschluss;männlich;5764
+2022;Hessen;Hauptschulabschluss;weiblich;3985
+2022;Hessen;mittlerer Abschluss;Insgesamt;27226
+2022;Hessen;mittlerer Abschluss;männlich;13828
+2022;Hessen;mittlerer Abschluss;weiblich;13398
+2022;Hessen;Fachhochschulreife;Insgesamt;124
+2022;Hessen;Fachhochschulreife;männlich;71
+2022;Hessen;Fachhochschulreife;weiblich;53
+2022;Hessen;allgemeine Hochschulreife;Insgesamt;15725
+2022;Hessen;allgemeine Hochschulreife;männlich;6880
+2022;Hessen;allgemeine Hochschulreife;weiblich;8845
+2022;Mecklenburg-Vorpommern;ohne Hauptschulabschluss;Insgesamt;1407
+2022;Mecklenburg-Vorpommern;ohne Hauptschulabschluss;männlich;880
+2022;Mecklenburg-Vorpommern;ohne Hauptschulabschluss;weiblich;527
+2022;Mecklenburg-Vorpommern;Hauptschulabschluss;Insgesamt;1825
+2022;Mecklenburg-Vorpommern;Hauptschulabschluss;männlich;1055
+2022;Mecklenburg-Vorpommern;Hauptschulabschluss;weiblich;770
+2022;Mecklenburg-Vorpommern;mittlerer Abschluss;Insgesamt;6121
+2022;Mecklenburg-Vorpommern;mittlerer Abschluss;männlich;3182
+2022;Mecklenburg-Vorpommern;mittlerer Abschluss;weiblich;2939
+2022;Mecklenburg-Vorpommern;allgemeine Hochschulreife;Insgesamt;4553
+2022;Mecklenburg-Vorpommern;allgemeine Hochschulreife;männlich;1920
+2022;Mecklenburg-Vorpommern;allgemeine Hochschulreife;weiblich;2633
+2022;Niedersachsen;ohne Hauptschulabschluss;Insgesamt;5086
+2022;Niedersachsen;ohne Hauptschulabschluss;männlich;3029
+2022;Niedersachsen;ohne Hauptschulabschluss;weiblich;2057
+2022;Niedersachsen;Hauptschulabschluss;Insgesamt;10646
+2022;Niedersachsen;Hauptschulabschluss;männlich;6303
+2022;Niedersachsen;Hauptschulabschluss;weiblich;4343
+2022;Niedersachsen;mittlerer Abschluss;Insgesamt;35699
+2022;Niedersachsen;mittlerer Abschluss;männlich;18592
+2022;Niedersachsen;mittlerer Abschluss;weiblich;17107
+2022;Niedersachsen;allgemeine Hochschulreife;Insgesamt;24823
+2022;Niedersachsen;allgemeine Hochschulreife;männlich;11028
+2022;Niedersachsen;allgemeine Hochschulreife;weiblich;13795
+2022;Nordrhein-Westfalen;ohne Hauptschulabschluss;Insgesamt;11385
+2022;Nordrhein-Westfalen;ohne Hauptschulabschluss;männlich;7020
+2022;Nordrhein-Westfalen;ohne Hauptschulabschluss;weiblich;4370
+2022;Nordrhein-Westfalen;Hauptschulabschluss;Insgesamt;27905
+2022;Nordrhein-Westfalen;Hauptschulabschluss;männlich;16490
+2022;Nordrhein-Westfalen;Hauptschulabschluss;weiblich;11415
+2022;Nordrhein-Westfalen;mittlerer Abschluss;Insgesamt;72080
+2022;Nordrhein-Westfalen;mittlerer Abschluss;männlich;37185
+2022;Nordrhein-Westfalen;mittlerer Abschluss;weiblich;34900
+2022;Nordrhein-Westfalen;Fachhochschulreife;Insgesamt;35
+2022;Nordrhein-Westfalen;Fachhochschulreife;männlich;15
+2022;Nordrhein-Westfalen;Fachhochschulreife;weiblich;20
+2022;Nordrhein-Westfalen;allgemeine Hochschulreife;Insgesamt;70570
+2022;Nordrhein-Westfalen;allgemeine Hochschulreife;männlich;31275
+2022;Nordrhein-Westfalen;allgemeine Hochschulreife;weiblich;39295
+2022;Rheinland-Pfalz;ohne Hauptschulabschluss;Insgesamt;2881
+2022;Rheinland-Pfalz;ohne Hauptschulabschluss;männlich;1795
+2022;Rheinland-Pfalz;ohne Hauptschulabschluss;weiblich;1086
+2022;Rheinland-Pfalz;Hauptschulabschluss;Insgesamt;7098
+2022;Rheinland-Pfalz;Hauptschulabschluss;männlich;4271
+2022;Rheinland-Pfalz;Hauptschulabschluss;weiblich;2827
+2022;Rheinland-Pfalz;mittlerer Abschluss;Insgesamt;14908
+2022;Rheinland-Pfalz;mittlerer Abschluss;männlich;7435
+2022;Rheinland-Pfalz;mittlerer Abschluss;weiblich;7473
+2022;Rheinland-Pfalz;allgemeine Hochschulreife;Insgesamt;13614
+2022;Rheinland-Pfalz;allgemeine Hochschulreife;männlich;5859
+2022;Rheinland-Pfalz;allgemeine Hochschulreife;weiblich;7755
+2022;Saarland;ohne Hauptschulabschluss;Insgesamt;658
+2022;Saarland;ohne Hauptschulabschluss;männlich;372
+2022;Saarland;ohne Hauptschulabschluss;weiblich;286
+2022;Saarland;Hauptschulabschluss;Insgesamt;2473
+2022;Saarland;Hauptschulabschluss;männlich;1406
+2022;Saarland;Hauptschulabschluss;weiblich;1067
+2022;Saarland;mittlerer Abschluss;Insgesamt;2647
+2022;Saarland;mittlerer Abschluss;männlich;1371
+2022;Saarland;mittlerer Abschluss;weiblich;1276
+2022;Saarland;allgemeine Hochschulreife;Insgesamt;3048
+2022;Saarland;allgemeine Hochschulreife;männlich;1382
+2022;Saarland;allgemeine Hochschulreife;weiblich;1666
+2022;Sachsen;ohne Hauptschulabschluss;Insgesamt;2775
+2022;Sachsen;ohne Hauptschulabschluss;männlich;1697
+2022;Sachsen;ohne Hauptschulabschluss;weiblich;1078
+2022;Sachsen;Hauptschulabschluss;Insgesamt;2979
+2022;Sachsen;Hauptschulabschluss;männlich;1845
+2022;Sachsen;Hauptschulabschluss;weiblich;1134
+2022;Sachsen;mittlerer Abschluss;Insgesamt;16614
+2022;Sachsen;mittlerer Abschluss;männlich;8566
+2022;Sachsen;mittlerer Abschluss;weiblich;8048
+2022;Sachsen;allgemeine Hochschulreife;Insgesamt;10494
+2022;Sachsen;allgemeine Hochschulreife;männlich;4736
+2022;Sachsen;allgemeine Hochschulreife;weiblich;5758
+2022;Sachsen-Anhalt;ohne Hauptschulabschluss;Insgesamt;2070
+2022;Sachsen-Anhalt;ohne Hauptschulabschluss;männlich;1299
+2022;Sachsen-Anhalt;ohne Hauptschulabschluss;weiblich;771
+2022;Sachsen-Anhalt;Hauptschulabschluss;Insgesamt;2217
+2022;Sachsen-Anhalt;Hauptschulabschluss;männlich;1344
+2022;Sachsen-Anhalt;Hauptschulabschluss;weiblich;873
+2022;Sachsen-Anhalt;mittlerer Abschluss;Insgesamt;9075
+2022;Sachsen-Anhalt;mittlerer Abschluss;männlich;4635
+2022;Sachsen-Anhalt;mittlerer Abschluss;weiblich;4440
+2022;Sachsen-Anhalt;allgemeine Hochschulreife;Insgesamt;4983
+2022;Sachsen-Anhalt;allgemeine Hochschulreife;männlich;2205
+2022;Sachsen-Anhalt;allgemeine Hochschulreife;weiblich;2778
+2022;Schleswig-Holstein;ohne Hauptschulabschluss;Insgesamt;2333
+2022;Schleswig-Holstein;ohne Hauptschulabschluss;männlich;1439
+2022;Schleswig-Holstein;ohne Hauptschulabschluss;weiblich;894
+2022;Schleswig-Holstein;Hauptschulabschluss;Insgesamt;4929
+2022;Schleswig-Holstein;Hauptschulabschluss;männlich;2865
+2022;Schleswig-Holstein;Hauptschulabschluss;weiblich;2064
+2022;Schleswig-Holstein;mittlerer Abschluss;Insgesamt;9964
+2022;Schleswig-Holstein;mittlerer Abschluss;männlich;5020
+2022;Schleswig-Holstein;mittlerer Abschluss;weiblich;4944
+2022;Schleswig-Holstein;allgemeine Hochschulreife;Insgesamt;9398
+2022;Schleswig-Holstein;allgemeine Hochschulreife;männlich;4347
+2022;Schleswig-Holstein;allgemeine Hochschulreife;weiblich;5051
+2022;Thüringen;ohne Hauptschulabschluss;Insgesamt;1660
+2022;Thüringen;ohne Hauptschulabschluss;männlich;1039
+2022;Thüringen;ohne Hauptschulabschluss;weiblich;621
+2022;Thüringen;Hauptschulabschluss;Insgesamt;2587
+2022;Thüringen;Hauptschulabschluss;männlich;1511
+2022;Thüringen;Hauptschulabschluss;weiblich;1076
+2022;Thüringen;mittlerer Abschluss;Insgesamt;8045
+2022;Thüringen;mittlerer Abschluss;männlich;4128
+2022;Thüringen;mittlerer Abschluss;weiblich;3917
+2022;Thüringen;allgemeine Hochschulreife;Insgesamt;5519
+2022;Thüringen;allgemeine Hochschulreife;männlich;2384
+2022;Thüringen;allgemeine Hochschulreife;weiblich;3135
+2022;Deutschland;ohne Hauptschulabschluss;Insgesamt;52262
+2022;Deutschland;ohne Hauptschulabschluss;männlich;32190
+2022;Deutschland;ohne Hauptschulabschluss;weiblich;20077
+2022;Deutschland;Hauptschulabschluss;Insgesamt;125224
+2022;Deutschland;Hauptschulabschluss;männlich;74198
+2022;Deutschland;Hauptschulabschluss;weiblich;51026
+2022;Deutschland;mittlerer Abschluss;Insgesamt;331806
+2022;Deutschland;mittlerer Abschluss;männlich;169661
+2022;Deutschland;mittlerer Abschluss;weiblich;162150
+2022;Deutschland;Fachhochschulreife;Insgesamt;770
+2022;Deutschland;Fachhochschulreife;männlich;401
+2022;Deutschland;Fachhochschulreife;weiblich;369
+2022;Deutschland;allgemeine Hochschulreife;Insgesamt;259344
+2022;Deutschland;allgemeine Hochschulreife;männlich;115720
+2022;Deutschland;allgemeine Hochschulreife;weiblich;143624
+2023;Baden-Württemberg;ohne Hauptschulabschluss;Insgesamt;6920
+2023;Baden-Württemberg;ohne Hauptschulabschluss;männlich;4202
+2023;Baden-Württemberg;ohne Hauptschulabschluss;weiblich;2718
+2023;Baden-Württemberg;Hauptschulabschluss;Insgesamt;16095
+2023;Baden-Württemberg;Hauptschulabschluss;männlich;9566
+2023;Baden-Württemberg;Hauptschulabschluss;weiblich;6529
+2023;Baden-Württemberg;Mittlerer Abschluss;Insgesamt;48465
+2023;Baden-Württemberg;Mittlerer Abschluss;männlich;24839
+2023;Baden-Württemberg;Mittlerer Abschluss;weiblich;23626
+2023;Baden-Württemberg;Fachhochschulreife;Insgesamt;353
+2023;Baden-Württemberg;Fachhochschulreife;männlich;177
+2023;Baden-Württemberg;Fachhochschulreife;weiblich;176
+2023;Baden-Württemberg;allgemeine Hochschulreife;Insgesamt;28632
+2023;Baden-Württemberg;allgemeine Hochschulreife;männlich;12998
+2023;Baden-Württemberg;allgemeine Hochschulreife;weiblich;15634
+2023;Bayern;ohne Hauptschulabschluss;Insgesamt;6474
+2023;Bayern;ohne Hauptschulabschluss;männlich;4003
+2023;Bayern;ohne Hauptschulabschluss;weiblich;2471
+2023;Bayern;Hauptschulabschluss;Insgesamt;26703
+2023;Bayern;Hauptschulabschluss;männlich;15621
+2023;Bayern;Hauptschulabschluss;weiblich;11082
+2023;Bayern;Mittlerer Abschluss;Insgesamt;56447
+2023;Bayern;Mittlerer Abschluss;männlich;28165
+2023;Bayern;Mittlerer Abschluss;weiblich;28282
+2023;Bayern;allgemeine Hochschulreife;Insgesamt;32739
+2023;Bayern;allgemeine Hochschulreife;männlich;14882
+2023;Bayern;allgemeine Hochschulreife;weiblich;17857
+2023;Berlin;ohne Hauptschulabschluss;Insgesamt;2535
+2023;Berlin;ohne Hauptschulabschluss;männlich;1432
+2023;Berlin;ohne Hauptschulabschluss;weiblich;1103
+2023;Berlin;Hauptschulabschluss;Insgesamt;5257
+2023;Berlin;Hauptschulabschluss;männlich;2938
+2023;Berlin;Hauptschulabschluss;weiblich;2319
+2023;Berlin;Mittlerer Abschluss;Insgesamt;10642
+2023;Berlin;Mittlerer Abschluss;männlich;5670
+2023;Berlin;Mittlerer Abschluss;weiblich;4972
+2023;Berlin;Fachhochschulreife;Insgesamt;2
+2023;Berlin;Fachhochschulreife;männlich;1
+2023;Berlin;Fachhochschulreife;weiblich;1
+2023;Berlin;allgemeine Hochschulreife;Insgesamt;14258
+2023;Berlin;allgemeine Hochschulreife;männlich;6705
+2023;Berlin;allgemeine Hochschulreife;weiblich;7553
+2023;Brandenburg;ohne Hauptschulabschluss;Insgesamt;1710
+2023;Brandenburg;ohne Hauptschulabschluss;männlich;1061
+2023;Brandenburg;ohne Hauptschulabschluss;weiblich;649
+2023;Brandenburg;Hauptschulabschluss;Insgesamt;3043
+2023;Brandenburg;Hauptschulabschluss;männlich;1826
+2023;Brandenburg;Hauptschulabschluss;weiblich;1217
+2023;Brandenburg;Mittlerer Abschluss;Insgesamt;8924
+2023;Brandenburg;Mittlerer Abschluss;männlich;4600
+2023;Brandenburg;Mittlerer Abschluss;weiblich;4324
+2023;Brandenburg;allgemeine Hochschulreife;Insgesamt;8574
+2023;Brandenburg;allgemeine Hochschulreife;männlich;3959
+2023;Brandenburg;allgemeine Hochschulreife;weiblich;4615
+2023;Bremen;ohne Hauptschulabschluss;Insgesamt;682
+2023;Bremen;ohne Hauptschulabschluss;männlich;436
+2023;Bremen;ohne Hauptschulabschluss;weiblich;246
+2023;Bremen;Hauptschulabschluss;Insgesamt;1939
+2023;Bremen;Hauptschulabschluss;männlich;1127
+2023;Bremen;Hauptschulabschluss;weiblich;812
+2023;Bremen;Mittlerer Abschluss;Insgesamt;2131
+2023;Bremen;Mittlerer Abschluss;männlich;1084
+2023;Bremen;Mittlerer Abschluss;weiblich;1047
+2023;Bremen;Fachhochschulreife;Insgesamt;275
+2023;Bremen;Fachhochschulreife;männlich;131
+2023;Bremen;Fachhochschulreife;weiblich;144
+2023;Bremen;allgemeine Hochschulreife;Insgesamt;2278
+2023;Bremen;allgemeine Hochschulreife;männlich;1028
+2023;Bremen;allgemeine Hochschulreife;weiblich;1250
+2023;Hamburg;ohne Hauptschulabschluss;Insgesamt;1061
+2023;Hamburg;ohne Hauptschulabschluss;männlich;664
+2023;Hamburg;ohne Hauptschulabschluss;weiblich;397
+2023;Hamburg;Hauptschulabschluss;Insgesamt;2794
+2023;Hamburg;Hauptschulabschluss;männlich;1650
+2023;Hamburg;Hauptschulabschluss;weiblich;1144
+2023;Hamburg;Mittlerer Abschluss;Insgesamt;3990
+2023;Hamburg;Mittlerer Abschluss;männlich;2166
+2023;Hamburg;Mittlerer Abschluss;weiblich;1824
+2023;Hamburg;allgemeine Hochschulreife;Insgesamt;9062
+2023;Hamburg;allgemeine Hochschulreife;männlich;4233
+2023;Hamburg;allgemeine Hochschulreife;weiblich;4829
+2023;Hessen;ohne Hauptschulabschluss;Insgesamt;3557
+2023;Hessen;ohne Hauptschulabschluss;männlich;2141
+2023;Hessen;ohne Hauptschulabschluss;weiblich;1416
+2023;Hessen;Hauptschulabschluss;Insgesamt;9985
+2023;Hessen;Hauptschulabschluss;männlich;5928
+2023;Hessen;Hauptschulabschluss;weiblich;4057
+2023;Hessen;Mittlerer Abschluss;Insgesamt;28256
+2023;Hessen;Mittlerer Abschluss;männlich;14553
+2023;Hessen;Mittlerer Abschluss;weiblich;13703
+2023;Hessen;Fachhochschulreife;Insgesamt;127
+2023;Hessen;Fachhochschulreife;männlich;71
+2023;Hessen;Fachhochschulreife;weiblich;56
+2023;Hessen;allgemeine Hochschulreife;Insgesamt;18470
+2023;Hessen;allgemeine Hochschulreife;männlich;8346
+2023;Hessen;allgemeine Hochschulreife;weiblich;10124
+2023;Mecklenburg-Vorpommern;ohne Hauptschulabschluss;Insgesamt;1401
+2023;Mecklenburg-Vorpommern;ohne Hauptschulabschluss;männlich;844
+2023;Mecklenburg-Vorpommern;ohne Hauptschulabschluss;weiblich;557
+2023;Mecklenburg-Vorpommern;Hauptschulabschluss;Insgesamt;1991
+2023;Mecklenburg-Vorpommern;Hauptschulabschluss;männlich;1175
+2023;Mecklenburg-Vorpommern;Hauptschulabschluss;weiblich;816
+2023;Mecklenburg-Vorpommern;Mittlerer Abschluss;Insgesamt;6381
+2023;Mecklenburg-Vorpommern;Mittlerer Abschluss;männlich;3297
+2023;Mecklenburg-Vorpommern;Mittlerer Abschluss;weiblich;3084
+2023;Mecklenburg-Vorpommern;allgemeine Hochschulreife;Insgesamt;4412
+2023;Mecklenburg-Vorpommern;allgemeine Hochschulreife;männlich;1922
+2023;Mecklenburg-Vorpommern;allgemeine Hochschulreife;weiblich;2490
+2023;Niedersachsen;ohne Hauptschulabschluss;Insgesamt;5895
+2023;Niedersachsen;ohne Hauptschulabschluss;männlich;3578
+2023;Niedersachsen;ohne Hauptschulabschluss;weiblich;2317
+2023;Niedersachsen;Hauptschulabschluss;Insgesamt;10659
+2023;Niedersachsen;Hauptschulabschluss;männlich;6461
+2023;Niedersachsen;Hauptschulabschluss;weiblich;4198
+2023;Niedersachsen;Mittlerer Abschluss;Insgesamt;35512
+2023;Niedersachsen;Mittlerer Abschluss;männlich;18521
+2023;Niedersachsen;Mittlerer Abschluss;weiblich;16991
+2023;Niedersachsen;allgemeine Hochschulreife;Insgesamt;24793
+2023;Niedersachsen;allgemeine Hochschulreife;männlich;10914
+2023;Niedersachsen;allgemeine Hochschulreife;weiblich;13879
+2023;Nordrhein-Westfalen;ohne Hauptschulabschluss;Insgesamt;11835
+2023;Nordrhein-Westfalen;ohne Hauptschulabschluss;männlich;7060
+2023;Nordrhein-Westfalen;ohne Hauptschulabschluss;weiblich;4775
+2023;Nordrhein-Westfalen;Hauptschulabschluss;Insgesamt;28640
+2023;Nordrhein-Westfalen;Hauptschulabschluss;männlich;16630
+2023;Nordrhein-Westfalen;Hauptschulabschluss;weiblich;12010
+2023;Nordrhein-Westfalen;Mittlerer Abschluss;Insgesamt;72650
+2023;Nordrhein-Westfalen;Mittlerer Abschluss;männlich;37600
+2023;Nordrhein-Westfalen;Mittlerer Abschluss;weiblich;35050
+2023;Nordrhein-Westfalen;Fachhochschulreife;Insgesamt;45
+2023;Nordrhein-Westfalen;Fachhochschulreife;männlich;25
+2023;Nordrhein-Westfalen;Fachhochschulreife;weiblich;20
+2023;Nordrhein-Westfalen;allgemeine Hochschulreife;Insgesamt;70660
+2023;Nordrhein-Westfalen;allgemeine Hochschulreife;männlich;32245
+2023;Nordrhein-Westfalen;allgemeine Hochschulreife;weiblich;38415
+2023;Rheinland-Pfalz;ohne Hauptschulabschluss;Insgesamt;3318
+2023;Rheinland-Pfalz;ohne Hauptschulabschluss;männlich;2011
+2023;Rheinland-Pfalz;ohne Hauptschulabschluss;weiblich;1307
+2023;Rheinland-Pfalz;Hauptschulabschluss;Insgesamt;7213
+2023;Rheinland-Pfalz;Hauptschulabschluss;männlich;4353
+2023;Rheinland-Pfalz;Hauptschulabschluss;weiblich;2860
+2023;Rheinland-Pfalz;Mittlerer Abschluss;Insgesamt;15584
+2023;Rheinland-Pfalz;Mittlerer Abschluss;männlich;7872
+2023;Rheinland-Pfalz;Mittlerer Abschluss;weiblich;7712
+2023;Rheinland-Pfalz;allgemeine Hochschulreife;Insgesamt;13035
+2023;Rheinland-Pfalz;allgemeine Hochschulreife;männlich;5831
+2023;Rheinland-Pfalz;allgemeine Hochschulreife;weiblich;7204
+2023;Saarland;ohne Hauptschulabschluss;Insgesamt;850
+2023;Saarland;ohne Hauptschulabschluss;männlich;474
+2023;Saarland;ohne Hauptschulabschluss;weiblich;376
+2023;Saarland;Hauptschulabschluss;Insgesamt;2618
+2023;Saarland;Hauptschulabschluss;männlich;1503
+2023;Saarland;Hauptschulabschluss;weiblich;1115
+2023;Saarland;Mittlerer Abschluss;Insgesamt;3079
+2023;Saarland;Mittlerer Abschluss;männlich;1579
+2023;Saarland;Mittlerer Abschluss;weiblich;1500
+2023;Saarland;allgemeine Hochschulreife;Insgesamt;3034
+2023;Saarland;allgemeine Hochschulreife;männlich;1367
+2023;Saarland;allgemeine Hochschulreife;weiblich;1667
+2023;Sachsen;ohne Hauptschulabschluss;Insgesamt;2769
+2023;Sachsen;ohne Hauptschulabschluss;männlich;1674
+2023;Sachsen;ohne Hauptschulabschluss;weiblich;1095
+2023;Sachsen;Hauptschulabschluss;Insgesamt;3288
+2023;Sachsen;Hauptschulabschluss;männlich;2027
+2023;Sachsen;Hauptschulabschluss;weiblich;1261
+2023;Sachsen;Mittlerer Abschluss;Insgesamt;16896
+2023;Sachsen;Mittlerer Abschluss;männlich;8622
+2023;Sachsen;Mittlerer Abschluss;weiblich;8274
+2023;Sachsen;allgemeine Hochschulreife;Insgesamt;9783
+2023;Sachsen;allgemeine Hochschulreife;männlich;4467
+2023;Sachsen;allgemeine Hochschulreife;weiblich;5316
+2023;Sachsen-Anhalt;ohne Hauptschulabschluss;Insgesamt;2346
+2023;Sachsen-Anhalt;ohne Hauptschulabschluss;männlich;1437
+2023;Sachsen-Anhalt;ohne Hauptschulabschluss;weiblich;909
+2023;Sachsen-Anhalt;Hauptschulabschluss;Insgesamt;2415
+2023;Sachsen-Anhalt;Hauptschulabschluss;männlich;1458
+2023;Sachsen-Anhalt;Hauptschulabschluss;weiblich;957
+2023;Sachsen-Anhalt;Mittlerer Abschluss;Insgesamt;9054
+2023;Sachsen-Anhalt;Mittlerer Abschluss;männlich;4659
+2023;Sachsen-Anhalt;Mittlerer Abschluss;weiblich;4395
+2023;Sachsen-Anhalt;allgemeine Hochschulreife;Insgesamt;5004
+2023;Sachsen-Anhalt;allgemeine Hochschulreife;männlich;2211
+2023;Sachsen-Anhalt;allgemeine Hochschulreife;weiblich;2793
+2023;Schleswig-Holstein;ohne Hauptschulabschluss;Insgesamt;2499
+2023;Schleswig-Holstein;ohne Hauptschulabschluss;männlich;1498
+2023;Schleswig-Holstein;ohne Hauptschulabschluss;weiblich;1001
+2023;Schleswig-Holstein;Hauptschulabschluss;Insgesamt;4942
+2023;Schleswig-Holstein;Hauptschulabschluss;männlich;2845
+2023;Schleswig-Holstein;Hauptschulabschluss;weiblich;2097
+2023;Schleswig-Holstein;Mittlerer Abschluss;Insgesamt;9694
+2023;Schleswig-Holstein;Mittlerer Abschluss;männlich;4884
+2023;Schleswig-Holstein;Mittlerer Abschluss;weiblich;4810
+2023;Schleswig-Holstein;allgemeine Hochschulreife;Insgesamt;9193
+2023;Schleswig-Holstein;allgemeine Hochschulreife;männlich;4207
+2023;Schleswig-Holstein;allgemeine Hochschulreife;weiblich;4986
+2023;Thüringen;ohne Hauptschulabschluss;Insgesamt;1856
+2023;Thüringen;ohne Hauptschulabschluss;männlich;1150
+2023;Thüringen;ohne Hauptschulabschluss;weiblich;706
+2023;Thüringen;Hauptschulabschluss;Insgesamt;2740
+2023;Thüringen;Hauptschulabschluss;männlich;1609
+2023;Thüringen;Hauptschulabschluss;weiblich;1131
+2023;Thüringen;Mittlerer Abschluss;Insgesamt;8656
+2023;Thüringen;Mittlerer Abschluss;männlich;4455
+2023;Thüringen;Mittlerer Abschluss;weiblich;4201
+2023;Thüringen;allgemeine Hochschulreife;Insgesamt;5303
+2023;Thüringen;allgemeine Hochschulreife;männlich;2321
+2023;Thüringen;allgemeine Hochschulreife;weiblich;2982
+2023;Deutschland;ohne Hauptschulabschluss;Insgesamt;55708
+2023;Deutschland;ohne Hauptschulabschluss;männlich;33665
+2023;Deutschland;ohne Hauptschulabschluss;weiblich;22043
+2023;Deutschland;Hauptschulabschluss;Insgesamt;130322
+2023;Deutschland;Hauptschulabschluss;männlich;76717
+2023;Deutschland;Hauptschulabschluss;weiblich;53605
+2023;Deutschland;Mittlerer Abschluss;Insgesamt;336361
+2023;Deutschland;Mittlerer Abschluss;männlich;172566
+2023;Deutschland;Mittlerer Abschluss;weiblich;163795
+2023;Deutschland;Fachhochschulreife;Insgesamt;802
+2023;Deutschland;Fachhochschulreife;männlich;405
+2023;Deutschland;Fachhochschulreife;weiblich;397
+2023;Deutschland;allgemeine Hochschulreife;Insgesamt;259230
+2023;Deutschland;allgemeine Hochschulreife;männlich;117636
+2023;Deutschland;allgemeine Hochschulreife;weiblich;141594

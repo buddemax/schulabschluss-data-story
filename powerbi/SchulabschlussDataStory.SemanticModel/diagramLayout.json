@@ -1,0 +1,168 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 373.94445483101293,
+            "y": 115.26438025477444
+          },
+          "nodeIndex": "dim_abschluss",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 511.4233613238913,
+            "y": 366.53586864295767
+          },
+          "nodeIndex": "dim_region",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1140.5442379971753,
+            "y": 641.24174740822014
+          },
+          "nodeIndex": "dim_schulart",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 661.00728109568183,
+            "y": -50
+          },
+          "nodeIndex": "dim_zeit",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 797.601693332442,
+            "y": 385.26569795939531
+          },
+          "nodeIndex": "fact_abgaenge",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 407.42234059193527,
+            "y": 643.89315712876612
+          },
+          "nodeIndex": "fact_abgaenge_beruflich_2023",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 226.04980967719297
+          },
+          "nodeIndex": "fact_arbeitsmarkt_2025",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1374.5442379971755,
+            "y": 408.94657856438312
+          },
+          "nodeIndex": "fact_ausgaben_je_schueler",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 756.40959784419874,
+            "y": 643.82167197365129
+          },
+          "nodeIndex": "fact_bevoelkerung_2023_2024",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1084.3054094188471,
+            "y": 289.49284526944371
+          },
+          "nodeIndex": "fact_schule_2023",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1608.5442379971755,
+            "y": 396.94657856438306
+          },
+          "nodeIndex": "fact_ausgaben_schulart",
+          "nodeLineageTag": "9c1a2b3d-4e5f-6071-8293-a4b5c6d7e8f0",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 1842.5442379971755,
+            "y": 408.94657856438306
+          },
+          "nodeIndex": "fact_einkommen_kreis",
+          "nodeLineageTag": "e1a2b3c4-0001-4000-8000-000000000101",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Alle Tabellen",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Alle Tabellen",
+  "defaultDiagram": "Alle Tabellen"
+}

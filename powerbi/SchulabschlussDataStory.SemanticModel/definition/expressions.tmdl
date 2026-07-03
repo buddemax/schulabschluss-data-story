@@ -1,0 +1,17 @@
+expression DataFolder = "C:\\Users\\maxot\\OneDrive\\Desktop\\datastory_school\\data\\raw\\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: f546d2c8-9c4f-4169-aaff-e64bb4f824c4
+
+	annotation PBI_ResultType = Text
+
+expression fnToInt = (t as any) as nullable number => let s = if t = null then "" else Text.Trim(Text.From(t)) in if List.Contains({"-", "x", ".", "...", "/", ""}, s) then null else Int64.From(Text.Remove(s, {" ", "."}))
+	lineageTag: a1a1a1a1-0001-4001-8001-000000000001
+
+expression fnToNum = (t as any) as nullable number => let s = if t = null then "" else Text.Trim(Text.From(t)) in if List.Contains({"-", "x", ".", "...", "/", ""}, s) then null else Number.FromText(Text.Replace(Text.Remove(s, {" ", "."}), ",", "."), "en-US")
+	lineageTag: a1a1a1a1-0002-4002-8002-000000000002
+
+expression fnEbene = (code as any) as text => let c = Text.Trim(Text.From(if code = null then "" else code)), dig = Text.Length(c) > 0 and Text.Select(c, {"0".."9"}) = c in if c = "DG" then "DE" else if dig then (if Text.Length(c) = 2 then "BL" else if Text.Length(c) = 3 then "RB" else if Text.Length(c) = 5 then "KR" else "?") else "?"
+	lineageTag: a1a1a1a1-0003-4003-8003-000000000003
+
+expression fnBlc = (code as any) as text => let c = Text.Trim(Text.From(if code = null then "" else code)) in if c = "DG" then "DG" else Text.Start(c, 2)
+	lineageTag: a1a1a1a1-0004-4004-8004-000000000004
+

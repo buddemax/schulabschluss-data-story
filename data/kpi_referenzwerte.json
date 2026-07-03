@@ -1,0 +1,314 @@
+{
+ "LF1_top5_quote_ohne_hsa_BL": {
+  "2022": [
+   [
+    "Sachsen-Anhalt",
+    11.28
+   ],
+   [
+    "Mecklenburg-Vorpommern",
+    10.12
+   ],
+   [
+    "Thüringen",
+    9.32
+   ],
+   [
+    "Bremen",
+    9.17
+   ],
+   [
+    "Schleswig-Holstein",
+    8.76
+   ]
+  ],
+  "2023": [
+   [
+    "Sachsen-Anhalt",
+    12.66
+   ],
+   [
+    "Thüringen",
+    10.06
+   ],
+   [
+    "Schleswig-Holstein",
+    9.94
+   ],
+   [
+    "Mecklenburg-Vorpommern",
+    9.93
+   ],
+   [
+    "Bremen",
+    9.83
+   ]
+  ]
+ },
+ "LF2_top8_kreise_quote_ohne_hsa": [
+  [
+   "Anhalt-Bitterfeld, Landkreis",
+   16.78
+  ],
+  [
+   "Pirmasens, kreisfreie Stadt",
+   16.5
+  ],
+  [
+   "Burgenlandkreis",
+   15.12
+  ],
+  [
+   "Mansfeld-Südharz, Landkreis",
+   14.88
+  ],
+  [
+   "Wittenberg, Landkreis",
+   14.79
+  ],
+  [
+   "Dessau-Roßlau, kreisfreie Stadt",
+   14.78
+  ],
+  [
+   "Halle (Saale), kreisfreie Stadt",
+   14.71
+  ],
+  [
+   "Suhl, kreisfreie Stadt",
+   14.42
+  ]
+ ],
+ "LF3_streuung_top5_BL": [
+  [
+   "07",
+   8.69,
+   2.84,
+   12.71,
+   36
+  ],
+  [
+   "16",
+   10.51,
+   2.66,
+   10.45,
+   22
+  ],
+  [
+   "15",
+   12.71,
+   2.58,
+   8.11,
+   14
+  ],
+  [
+   "12",
+   8.37,
+   2.35,
+   8.81,
+   18
+  ],
+  [
+   "10",
+   8.86,
+   2.33,
+   6.52,
+   6
+  ]
+ ],
+ "LF4_geschlecht_DE2023": {
+  "maennlich": {
+   "quote_ohne_hsa": 8.4,
+   "quote_abitur": 29.34
+  },
+  "weiblich": {
+   "quote_ohne_hsa": 5.78,
+   "quote_abitur": 37.12
+  }
+ },
+ "LF5_schulartmix_DE2023_pct": [
+  [
+   "Grundschulen",
+   35.23
+  ],
+  [
+   "Gymnasien",
+   25.94
+  ],
+  [
+   "Integrierte Gesamtschulen",
+   13.06
+  ],
+  [
+   "Realschulen",
+   8.77
+  ],
+  [
+   "Schularten mit mehreren Bildungsgängen",
+   6.25
+  ],
+  [
+   "Sonderschulen/Förderschulen",
+   3.92
+  ],
+  [
+   "Hauptschulen",
+   3.8
+  ],
+  [
+   "Schulartunabhängige Orientierungsstufe",
+   1.36
+  ]
+ ],
+ "LF6_absolut_top5": [
+  [
+   "Nordrhein-Westfalen",
+   11835,
+   22.94
+  ],
+  [
+   "Baden-Württemberg",
+   6920,
+   21.39
+  ],
+  [
+   "Bayern",
+   6474,
+   17.94
+  ],
+  [
+   "Niedersachsen",
+   5895,
+   25.72
+  ],
+  [
+   "Hessen",
+   3557,
+   19.81
+  ]
+ ],
+ "LF6_relativ_je1000_15_18_top5": [
+  [
+   "Sachsen-Anhalt",
+   2346,
+   41.6
+  ],
+  [
+   "Bremen",
+   681,
+   34.17
+  ],
+  [
+   "Thüringen",
+   1856,
+   33.02
+  ],
+  [
+   "Mecklenburg-Vorpommern",
+   1401,
+   32.98
+  ],
+  [
+   "Saarland",
+   850,
+   32.14
+  ]
+ ],
+ "LF7_ausgaben_je_schulart_DE2023": [
+  [
+   "Integrierte Gesamtschulen",
+   11600
+  ],
+  [
+   "Gymnasien",
+   10900
+  ],
+  [
+   "Schularten mit mehreren Bildungsgängen",
+   10600
+  ],
+  [
+   "Realschulen",
+   9700
+  ],
+  [
+   "Grundschulen",
+   8400
+  ]
+ ],
+ "LF8_korrelation": {
+  "ausgaben_vs_abiturquote_r": 0.611,
+  "p_zweiseitig": 0.012,
+  "n_bundeslaender": 16,
+  "ausgaben_vs_quote_ohne_hsa_r": -0.333,
+  "p_ohne_hsa": 0.208,
+  "ohne_stadtstaaten": {
+   "r_abiturquote": -0.361,
+   "p": 0.225,
+   "r_ohne_hsa": -0.427,
+   "p_ohne_hsa": 0.146,
+   "n": 13
+  },
+  "interpretation": "r=+0.611 (alle 16, p=0.012) ist ein Stadtstaaten-Artefakt; ohne Berlin/Hamburg/Bremen r=-0.361 (n=13, p=0.225, nicht signifikant). Bei n=16 kein robuster Zusammenhang -> keine Kausalaussage."
+ },
+ "LF9_n_kreise": 398,
+ "LF9_risiko_top8": [
+  [
+   "Gelsenkirchen, kreisfreie Stadt",
+   13.0,
+   13.4,
+   17924,
+   8.09
+  ],
+  [
+   "Pirmasens, kreisfreie Stadt",
+   16.5,
+   12.2,
+   21301,
+   7.41
+  ],
+  [
+   "Mansfeld-Südharz, Landkreis",
+   14.9,
+   11.6,
+   21295,
+   6.56
+  ],
+  [
+   "Stendal, Landkreis",
+   13.6,
+   11.5,
+   21358,
+   6.03
+  ],
+  [
+   "Bremerhaven, kreisfreie Stadt",
+   11.4,
+   11.4,
+   19361,
+   6.01
+  ],
+  [
+   "Uckermark, Landkreis",
+   10.3,
+   14.1,
+   21246,
+   5.99
+  ],
+  [
+   "Halle (Saale), kreisfreie Stadt",
+   14.7,
+   8.8,
+   19846,
+   5.9
+  ],
+  [
+   "Gera, kreisfreie Stadt",
+   12.6,
+   12.2,
+   21602,
+   5.84
+  ]
+ ],
+ "LF9_hinweis": "3-dim z-standardisiert (ohne-HSA 2023, Jugend-ALQ 2025, verf. Einkommen 2021 invertiert), n=398 Kreise; Datenstaende unterschiedlich -> Strukturindikator."
+}

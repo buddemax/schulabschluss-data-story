@@ -1,0 +1,447 @@
+region_code;jahr;region;einkommen_je_ew
+DG;2021;Deutschland;24415
+01;2021;Schleswig-Holstein;24888
+01001;2021;Flensburg, kreisfreie Stadt;20282
+01002;2021;Kiel, kreisfreie Stadt;21320
+01003;2021;Lübeck, kreisfreie Stadt, Hansestadt;22419
+01004;2021;Neumünster, kreisfreie Stadt;21167
+01051;2021;Dithmarschen, Kreis;24682
+01053;2021;Herzogtum Lauenburg, Kreis;25507
+01054;2021;Nordfriesland, Kreis;27534
+01055;2021;Ostholstein, Kreis;25622
+01056;2021;Pinneberg, Kreis;26563
+01057;2021;Plön, Kreis;25292
+01058;2021;Rendsburg-Eckernförde, Kreis;25749
+01059;2021;Schleswig-Flensburg, Kreis;24287
+01060;2021;Segeberg, Kreis;25365
+01061;2021;Steinburg, Kreis;24161
+01062;2021;Stormarn, Kreis;27749
+02;2021;Hamburg;26158
+03;2021;Niedersachsen;23375
+031;2021;Braunschweig, Statistische Region;23850
+03101;2021;Braunschweig, kreisfreie Stadt;24203
+03102;2021;Salzgitter, kreisfreie Stadt;21295
+03103;2021;Wolfsburg, kreisfreie Stadt;26379
+03151;2021;Gifhorn, Landkreis;25364
+03153;2021;Goslar, Landkreis;22811
+03154;2021;Helmstedt, Landkreis;24862
+03155;2021;Northeim, Landkreis;23825
+03157;2021;Peine, Landkreis;23686
+03158;2021;Wolfenbüttel, Landkreis;24354
+03159;2021;Göttingen, Landkreis;22638
+032;2021;Hannover, Statistische Region;23330
+03241;2021;Region Hannover, Landkreis;23178
+03241001;2021;Hannover, Landeshauptstadt;22910
+03251;2021;Diepholz, Landkreis;24814
+03252;2021;Hameln-Pyrmont, Landkreis;23439
+03254;2021;Hildesheim, Landkreis;23034
+03255;2021;Holzminden, Landkreis;22784
+03256;2021;Nienburg (Weser), Landkreis;22709
+03257;2021;Schaumburg, Landkreis;23528
+033;2021;Lüneburg;23998
+03351;2021;Celle, Landkreis;22457
+03352;2021;Cuxhaven, Landkreis;23279
+03353;2021;Harburg, Landkreis;26921
+03354;2021;Lüchow-Dannenberg, Landkreis;22327
+03355;2021;Lüneburg, Landkreis;22705
+03356;2021;Osterholz, Landkreis;24605
+03357;2021;Rotenburg (Wümme), Landkreis;24094
+03358;2021;Heidekreis;22313
+03359;2021;Stade, Landkreis;24564
+03360;2021;Uelzen, Landkreis;22824
+03361;2021;Verden, Landkreis;24984
+034;2021;Weser-Ems, Statistische Region;22694
+03401;2021;Delmenhorst, kreisfreie Stadt;20598
+03402;2021;Emden, kreisfreie Stadt;20106
+03403;2021;Oldenburg (Oldenburg), kreisfreie Stadt;21564
+03404;2021;Osnabrück, kreisfreie Stadt;22324
+03405;2021;Wilhelmshaven, kreisfreie Stadt;19950
+03451;2021;Ammerland, Landkreis;23584
+03452;2021;Aurich, Landkreis;22108
+03453;2021;Cloppenburg, Landkreis;22201
+03454;2021;Emsland, Landkreis;23191
+03455;2021;Friesland, Landkreis;22794
+03456;2021;Grafschaft Bentheim, Landkreis;22148
+03457;2021;Leer, Landkreis;21229
+03458;2021;Oldenburg, Landkreis;24773
+03459;2021;Osnabrück, Landkreis;24088
+03460;2021;Vechta, Landkreis;23798
+03461;2021;Wesermarsch, Landkreis;23483
+03462;2021;Wittmund, Landkreis;22404
+04;2021;Bremen;22738
+04011;2021;Bremen, kreisfreie Stadt;23416
+04012;2021;Bremerhaven, kreisfreie Stadt;19361
+05;2021;Nordrhein-Westfalen;23812
+051;2021;Düsseldorf, Regierungsbezirk;23886
+05111;2021;Düsseldorf, kreisfreie Stadt;27851
+05112;2021;Duisburg, kreisfreie Stadt;18829
+05113;2021;Essen, kreisfreie Stadt;22157
+05114;2021;Krefeld, kreisfreie Stadt;23038
+05116;2021;Mönchengladbach, kreisfreie Stadt;22414
+05117;2021;Mülheim an der Ruhr, kreisfreie Stadt;24792
+05119;2021;Oberhausen, kreisfreie Stadt;20413
+05120;2021;Remscheid, kreisfreie Stadt;23340
+05122;2021;Solingen, kreisfreie Stadt;24654
+05124;2021;Wuppertal, kreisfreie Stadt;22131
+05154;2021;Kleve, Kreis;22366
+05158;2021;Mettmann, Kreis;27075
+05162;2021;Rhein-Kreis Neuss;26768
+05166;2021;Viersen, Kreis;25027
+05170;2021;Wesel, Kreis;23990
+053;2021;Köln, Regierungsbezirk;24265
+05314;2021;Bonn, kreisfreie Stadt;24605
+05315;2021;Köln, kreisfreie Stadt;24513
+05316;2021;Leverkusen, kreisfreie Stadt;23534
+05334;2021;Städteregion Aachen, Kreis;22076
+05358;2021;Düren, Kreis;22857
+05362;2021;Rhein-Erft-Kreis;24503
+05366;2021;Euskirchen, Kreis;23265
+05370;2021;Heinsberg, Kreis;22287
+05374;2021;Oberbergischer Kreis;24481
+05378;2021;Rheinisch-Bergischer Kreis;27984
+05382;2021;Rhein-Sieg-Kreis;25615
+055;2021;Münster, Regierungsbezirk;23254
+05512;2021;Bottrop, kreisfreie Stadt;22281
+05513;2021;Gelsenkirchen, kreisfreie Stadt;17924
+05515;2021;Münster, kreisfreie Stadt;24314
+05554;2021;Borken, Kreis;24324
+05558;2021;Coesfeld, Kreis;25504
+05562;2021;Recklinghausen, Kreis;22275
+05566;2021;Steinfurt, Kreis;24169
+05570;2021;Warendorf, Kreis;24890
+057;2021;Detmold, Regierungsbezirk;24254
+05711;2021;Bielefeld, kreisfreie Stadt;23045
+05754;2021;Gütersloh, Kreis;26471
+05758;2021;Herford, Kreis;24444
+05762;2021;Höxter, Kreis;23814
+05766;2021;Lippe, Kreis;24013
+05770;2021;Minden-Lübbecke, Kreis;24202
+05774;2021;Paderborn, Kreis;23305
+059;2021;Arnsberg, Regierungsbezirk;23293
+05911;2021;Bochum, kreisfreie Stadt;21765
+05913;2021;Dortmund, kreisfreie Stadt;21004
+05914;2021;Hagen, kreisfreie Stadt;20862
+05915;2021;Hamm, kreisfreie Stadt;20153
+05916;2021;Herne, kreisfreie Stadt;19243
+05954;2021;Ennepe-Ruhr-Kreis;25642
+05958;2021;Hochsauerlandkreis;25846
+05962;2021;Märkischer Kreis;25296
+05966;2021;Olpe, Kreis;27529
+05970;2021;Siegen-Wittgenstein, Kreis;25272
+05974;2021;Soest, Kreis;24403
+05978;2021;Unna, Kreis;22982
+06;2021;Hessen;25023
+064;2021;Darmstadt, Regierungsbezirk;26032
+06411;2021;Darmstadt, kreisfreie Stadt, Wissenschaftsstadt;24155
+06412;2021;Frankfurt am Main, kreisfreie Stadt;25271
+06413;2021;Offenbach am Main, kreisfreie Stadt;20302
+06414;2021;Wiesbaden, kreisfreie Stadt, Landeshauptstadt;25935
+06431;2021;Bergstraße, Landkreis;26018
+06432;2021;Darmstadt-Dieburg, Landkreis;26337
+06433;2021;Groß-Gerau, Landkreis;23317
+06434;2021;Hochtaunuskreis;33567
+06435;2021;Main-Kinzig-Kreis;25580
+06436;2021;Main-Taunus-Kreis;29819
+06437;2021;Odenwaldkreis;23455
+06438;2021;Offenbach, Landkreis;25869
+06439;2021;Rheingau-Taunus-Kreis;27244
+06440;2021;Wetteraukreis;25702
+065;2021;Gießen, Regierungsbezirk;23192
+06531;2021;Gießen, Landkreis;22155
+06532;2021;Lahn-Dill-Kreis;24007
+06533;2021;Limburg-Weilburg, Landkreis;24182
+06534;2021;Marburg-Biedenkopf, Landkreis;22713
+06535;2021;Vogelsbergkreis;23412
+066;2021;Kassel, Regierungsbezirk;23264
+06611;2021;Kassel, kreisfreie Stadt, documenta-Stadt;21382
+06631;2021;Fulda, Landkreis;24077
+06632;2021;Hersfeld-Rotenburg, Landkreis;23210
+06633;2021;Kassel, Landkreis;24157
+06634;2021;Schwalm-Eder-Kreis;23438
+06635;2021;Waldeck-Frankenberg, Landkreis;23685
+06636;2021;Werra-Meißner-Kreis;22205
+07;2021;Rheinland-Pfalz;24367
+071;2021;Koblenz, Statistische Region;24044
+07111;2021;Koblenz, kreisfreie Stadt;22629
+07131;2021;Ahrweiler, Landkreis;25060
+07132;2021;Altenkirchen (Westerwald), Landkreis;23433
+07133;2021;Bad Kreuznach, Landkreis;23559
+07134;2021;Birkenfeld, Landkreis;22510
+07135;2021;Cochem-Zell, Landkreis;23821
+07137;2021;Mayen-Koblenz, Landkreis;23903
+07138;2021;Neuwied, Landkreis;24299
+07140;2021;Rhein-Hunsrück-Kreis;25155
+07141;2021;Rhein-Lahn-Kreis;23593
+07143;2021;Westerwaldkreis;25259
+072;2021;Trier, Statistische Region;24024
+07211;2021;Trier, kreisfreie Stadt;22947
+07231;2021;Bernkastel-Wittlich, Landkreis;24128
+07232;2021;Eifelkreis Bitburg-Prüm;23517
+07233;2021;Vulkaneifel, Landkreis;23793
+07235;2021;Trier-Saarburg, Landkreis;25166
+073;2021;Rheinhessen-Pfalz, Statistische Region;24690
+07311;2021;Frankenthal (Pfalz), kreisfreie Stadt;23467
+07312;2021;Kaiserslautern, kreisfreie Stadt;20937
+07313;2021;Landau in der Pfalz, kreisfreie Stadt;23193
+07314;2021;Ludwigshafen am Rhein, kreisfreie Stadt;20777
+07315;2021;Mainz, kreisfreie Stadt;24034
+07316;2021;Neustadt an der Weinstraße, kreisfreie Stadt;27871
+07317;2021;Pirmasens, kreisfreie Stadt;21301
+07318;2021;Speyer, kreisfreie Stadt;25949
+07319;2021;Worms, kreisfreie Stadt;23244
+07320;2021;Zweibrücken, kreisfreie Stadt;22146
+07331;2021;Alzey-Worms, Landkreis;24605
+07332;2021;Bad Dürkheim, Landkreis;28171
+07333;2021;Donnersbergkreis;23588
+07334;2021;Germersheim, Landkreis;25227
+07335;2021;Kaiserslautern, Landkreis;23023
+07336;2021;Kusel, Landkreis;23253
+07337;2021;Südliche Weinstraße, Landkreis;25889
+07338;2021;Rhein-Pfalz-Kreis;28438
+07339;2021;Mainz-Bingen, Landkreis;27242
+07340;2021;Südwestpfalz, Landkreis;24861
+08;2021;Baden-Württemberg;26039
+081;2021;Stuttgart, Regierungsbezirk;26678
+08111;2021;Stuttgart, Stadtkreis;26888
+08115;2021;Böblingen, Landkreis;27338
+08116;2021;Esslingen, Landkreis;27106
+08117;2021;Göppingen, Landkreis;25798
+08118;2021;Ludwigsburg, Landkreis;27603
+08119;2021;Rems-Murr-Kreis, Landkreis;26685
+08121;2021;Heilbronn, Stadtkreis;29560
+08125;2021;Heilbronn, Landkreis;26238
+08126;2021;Hohenlohekreis, Landkreis;26137
+08127;2021;Schwäbisch Hall, Landkreis;24984
+08128;2021;Main-Tauber-Kreis, Landkreis;24741
+08135;2021;Heidenheim, Landkreis;24476
+08136;2021;Ostalbkreis, Landkreis;26158
+082;2021;Karlsruhe, Regierungsbezirk;25399
+08211;2021;Baden-Baden, Stadtkreis;31761
+08212;2021;Karlsruhe, Stadtkreis;23832
+08215;2021;Karlsruhe, Landkreis;25606
+08216;2021;Rastatt, Landkreis;25328
+08221;2021;Heidelberg, Stadtkreis;24627
+08222;2021;Mannheim, Stadtkreis;22997
+08225;2021;Neckar-Odenwald-Kreis, Landkreis;23981
+08226;2021;Rhein-Neckar-Kreis, Landkreis;26909
+08231;2021;Pforzheim, Stadtkreis;23814
+08235;2021;Calw, Landkreis;25594
+08236;2021;Enzkreis, Landkreis;27253
+08237;2021;Freudenstadt, Landkreis;26207
+083;2021;Freiburg, Regierungsbezirk;25750
+08311;2021;Freiburg im Breisgau, Stadtkreis;23014
+08315;2021;Breisgau-Hochschwarzwald, Landkreis;26122
+08316;2021;Emmendingen, Landkreis;25074
+08317;2021;Ortenaukreis, Landkreis;24956
+08325;2021;Rottweil, Landkreis;26694
+08326;2021;Schwarzwald-Baar-Kreis, Landkreis;26073
+08327;2021;Tuttlingen, Landkreis;27221
+08335;2021;Konstanz, Landkreis;25969
+08336;2021;Lörrach, Landkreis;27843
+08337;2021;Waldshut, Landkreis;25980
+084;2021;Tübingen, Regierungsbezirk;25933
+08415;2021;Reutlingen, Landkreis;26034
+08416;2021;Tübingen, Landkreis;24797
+08417;2021;Zollernalbkreis, Landkreis;26578
+08421;2021;Ulm, Stadtkreis;27106
+08425;2021;Alb-Donau-Kreis, Landkreis;25389
+08426;2021;Biberach, Landkreis;25827
+08435;2021;Bodenseekreis, Landkreis;27911
+08436;2021;Ravensburg, Landkreis;25446
+08437;2021;Sigmaringen, Landkreis;24393
+09;2021;Bayern;26764
+091;2021;Oberbayern, Regierungsbezirk;29909
+09161;2021;Ingolstadt, kreisfreie Stadt;25585
+09162;2021;München, kreisfreie Stadt;34036
+09163;2021;Rosenheim, kreisfreie Stadt;24234
+09171;2021;Altötting, Landkreis;24869
+09172;2021;Berchtesgadener Land, Landkreis;24636
+09173;2021;Bad Tölz-Wolfratshausen, Landkreis;27866
+09174;2021;Dachau, Landkreis;27294
+09175;2021;Ebersberg, Landkreis;29298
+09176;2021;Eichstätt, Landkreis;25952
+09177;2021;Erding, Landkreis;26835
+09178;2021;Freising, Landkreis;26097
+09179;2021;Fürstenfeldbruck, Landkreis;28257
+09180;2021;Garmisch-Partenkirchen, Landkreis;26652
+09181;2021;Landsberg am Lech, Landkreis;27837
+09182;2021;Miesbach, Landkreis;32044
+09183;2021;Mühldorf a.Inn, Landkreis;24987
+09184;2021;München, Landkreis;33720
+09185;2021;Neuburg-Schrobenhausen, Landkreis;25020
+09186;2021;Pfaffenhofen a.d.Ilm, Landkreis;26836
+09187;2021;Rosenheim, Landkreis;26866
+09188;2021;Starnberg, Landkreis;37515
+09189;2021;Traunstein, Landkreis;26056
+09190;2021;Weilheim-Schongau, Landkreis;26932
+092;2021;Niederbayern, Regierungsbezirk;24756
+09261;2021;Landshut, kreisfreie Stadt;26774
+09262;2021;Passau, kreisfreie Stadt;22572
+09263;2021;Straubing, kreisfreie Stadt;24538
+09271;2021;Deggendorf, Landkreis;25041
+09272;2021;Freyung-Grafenau, Landkreis;23644
+09273;2021;Kelheim, Landkreis;25083
+09274;2021;Landshut, Landkreis;25456
+09275;2021;Passau, Landkreis;23914
+09276;2021;Regen, Landkreis;23738
+09277;2021;Rottal-Inn, Landkreis;24874
+09278;2021;Straubing-Bogen, Landkreis;24755
+09279;2021;Dingolfing-Landau, Landkreis;25836
+093;2021;Oberpfalz, Regierungsbezirk;24561
+09361;2021;Amberg, kreisfreie Stadt;24124
+09362;2021;Regensburg, kreisfreie Stadt;24741
+09363;2021;Weiden i.d.OPf., kreisfreie Stadt;23361
+09371;2021;Amberg-Sulzbach, Landkreis;24750
+09372;2021;Cham, Landkreis;23975
+09373;2021;Neumarkt i.d.OPf., Landkreis;25308
+09374;2021;Neustadt a.d.Waldnaab, Landkreis;23667
+09375;2021;Regensburg, Landkreis;25608
+09376;2021;Schwandorf, Landkreis;23988
+09377;2021;Tirschenreuth, Landkreis;24029
+094;2021;Oberfranken, Regierungsbezirk;24459
+09461;2021;Bamberg, kreisfreie Stadt;24242
+09462;2021;Bayreuth, kreisfreie Stadt;22885
+09463;2021;Coburg, kreisfreie Stadt;26200
+09464;2021;Hof, kreisfreie Stadt;21992
+09471;2021;Bamberg, Landkreis;24444
+09472;2021;Bayreuth, Landkreis;24141
+09473;2021;Coburg, Landkreis;24703
+09474;2021;Forchheim, Landkreis;25894
+09475;2021;Hof, Landkreis;23470
+09476;2021;Kronach, Landkreis;24429
+09477;2021;Kulmbach, Landkreis;25424
+09478;2021;Lichtenfels, Landkreis;23966
+09479;2021;Wunsiedel i.Fichtelgebirge, Landkreis;25569
+095;2021;Mittelfranken, Regierungsbezirk;25440
+09561;2021;Ansbach, kreisfreie Stadt;23278
+09562;2021;Erlangen, kreisfreie Stadt;26299
+09563;2021;Fürth, kreisfreie Stadt;24673
+09564;2021;Nürnberg, kreisfreie Stadt;24057
+09565;2021;Schwabach, kreisfreie Stadt;27909
+09571;2021;Ansbach, Landkreis;24786
+09572;2021;Erlangen-Höchstadt, Landkreis;28871
+09573;2021;Fürth, Landkreis;26995
+09574;2021;Nürnberger Land, Landkreis;27317
+09575;2021;Neustadt a.d.Aisch-Bad Windsheim, Landkreis;24433
+09576;2021;Roth, Landkreis;26067
+09577;2021;Weißenburg-Gunzenhausen, Landkreis;23978
+096;2021;Unterfranken, Regierungsbezirk;24962
+09661;2021;Aschaffenburg, kreisfreie Stadt;25816
+09662;2021;Schweinfurt, kreisfreie Stadt;23217
+09663;2021;Würzburg, kreisfreie Stadt;25186
+09671;2021;Aschaffenburg, Landkreis;26135
+09672;2021;Bad Kissingen, Landkreis;24928
+09673;2021;Rhön-Grabfeld, Landkreis;24574
+09674;2021;Haßberge, Landkreis;23936
+09675;2021;Kitzingen, Landkreis;24699
+09676;2021;Miltenberg, Landkreis;24607
+09677;2021;Main-Spessart, Landkreis;25154
+09678;2021;Schweinfurt, Landkreis;24229
+09679;2021;Würzburg, Landkreis;25275
+097;2021;Schwaben, Regierungsbezirk;25343
+09761;2021;Augsburg, kreisfreie Stadt;21936
+09762;2021;Kaufbeuren, kreisfreie Stadt;24712
+09763;2021;Kempten (Allgäu), kreisfreie Stadt;23996
+09764;2021;Memmingen, kreisfreie Stadt;27105
+09771;2021;Aichach-Friedberg, Landkreis;26908
+09772;2021;Augsburg, Landkreis;26064
+09773;2021;Dillingen a.d.Donau, Landkreis;25935
+09774;2021;Günzburg, Landkreis;25671
+09775;2021;Neu-Ulm, Landkreis;25678
+09776;2021;Lindau (Bodensee), Landkreis;26829
+09777;2021;Ostallgäu, Landkreis;25214
+09778;2021;Unterallgäu, Landkreis;26036
+09779;2021;Donau-Ries, Landkreis;26361
+09780;2021;Oberallgäu, Landkreis;26326
+10;2021;Saarland;22370
+10041;2021;Saarbrücken, Regionalverband;21856
+10042;2021;Merzig-Wadern, Landkreis;20448
+10043;2021;Neunkirchen, Landkreis;21590
+10044;2021;Saarlouis, Landkreis;22869
+10045;2021;Saarpfalz-Kreis;24123
+10046;2021;St. Wendel, Landkreis;23820
+11;2021;Berlin;22658
+12;2021;Brandenburg;22928
+12051;2021;Brandenburg an der Havel, kreisfreie Stadt;20900
+12052;2021;Cottbus, kreisfreie Stadt;21673
+12053;2021;Frankfurt (Oder), kreisfreie Stadt;20627
+12054;2021;Potsdam, kreisfreie Stadt;23049
+12060;2021;Barnim, Landkreis;23172
+12061;2021;Dahme-Spreewald, Landkreis;23446
+12062;2021;Elbe-Elster, Landkreis;21637
+12063;2021;Havelland, Landkreis;23095
+12064;2021;Märkisch-Oderland, Landkreis;23062
+12065;2021;Oberhavel, Landkreis;23922
+12066;2021;Oberspreewald-Lausitz, Landkreis;22436
+12067;2021;Oder-Spree, Landkreis;23211
+12068;2021;Ostprignitz-Ruppin, Landkreis;21588
+12069;2021;Potsdam-Mittelmark, Landkreis;25540
+12070;2021;Prignitz, Landkreis;21872
+12071;2021;Spree-Neiße, Landkreis;22928
+12072;2021;Teltow-Fläming, Landkreis;22621
+12073;2021;Uckermark, Landkreis;21246
+13;2021;Mecklenburg-Vorpommern;21880
+13003;2021;Rostock, kreisfreie Stadt;21142
+13004;2021;Schwerin, kreisfreie Stadt;21821
+13071;2021;Mecklenburgische Seenplatte, Landkreis;21700
+13072;2021;Landkreis Rostock;22900
+13073;2021;Vorpommern-Rügen, Landkreis;21902
+13074;2021;Nordwestmecklenburg, Landkreis;22145
+13075;2021;Vorpommern-Greifswald, Landkreis;20751
+13076;2021;Ludwigslust-Parchim, Landkreis;22838
+14;2021;Sachsen;22120
+145;2021;Chemnitz, Statistische Region;22300
+14511;2021;Chemnitz, kreisfreie Stadt;21998
+14521;2021;Erzgebirgskreis;22088
+14522;2021;Mittelsachsen, Landkreis;22317
+14523;2021;Vogtlandkreis;22171
+14524;2021;Zwickau, Landkreis;22837
+146;2021;Dresden, Statistische Region;22238
+14612;2021;Dresden, kreisfreie Stadt;22009
+14625;2021;Bautzen, Landkreis;22530
+14626;2021;Görlitz, Landkreis;21037
+14627;2021;Meißen, Landkreis;23184
+14628;2021;Sächsische Schweiz-Osterzgebirge, Landkreis;22701
+147;2021;Leipzig, Statistische Region;21704
+14713;2021;Leipzig, kreisfreie Stadt;20545
+14729;2021;Leipzig, Landkreis;23549
+14730;2021;Nordsachsen, Landkreis;22809
+15;2021;Sachsen-Anhalt;21741
+15001;2021;Dessau-Roßlau, kreisfreie Stadt;22346
+15002;2021;Halle (Saale), kreisfreie Stadt;19846
+15003;2021;Magdeburg, kreisfreie Stadt, Landeshauptstadt;20947
+15081;2021;Altmarkkreis Salzwedel;22510
+15082;2021;Anhalt-Bitterfeld, Landkreis;21997
+15083;2021;Börde, Landkreis;22924
+15084;2021;Burgenlandkreis;21778
+15085;2021;Harz, Landkreis;22206
+15086;2021;Jerichower Land, Landkreis;22854
+15087;2021;Mansfeld-Südharz, Landkreis;21295
+15088;2021;Saalekreis;22812
+15089;2021;Salzlandkreis;21189
+15090;2021;Stendal, Landkreis;21358
+15091;2021;Wittenberg, Landkreis;22479
+16;2021;Thüringen;21803
+16051;2021;Erfurt, kreisfreie Stadt;21236
+16052;2021;Gera, kreisfreie Stadt;21602
+16053;2021;Jena, kreisfreie Stadt;21473
+16054;2021;Suhl, kreisfreie Stadt;23868
+16055;2021;Weimar, kreisfreie Stadt;20987
+16056;2021;Eisenach, kreisfreie Stadt;21190
+16061;2021;Eichsfeld, Landkreis;22135
+16062;2021;Nordhausen, Landkreis;21202
+16063;2021;Wartburgkreis;22591
+16064;2021;Unstrut-Hainich-Kreis;21028
+16065;2021;Kyffhäuserkreis;20747
+16066;2021;Schmalkalden-Meiningen, Landkreis;22584
+16067;2021;Gotha, Landkreis;21524
+16068;2021;Sömmerda, Landkreis;21529
+16069;2021;Hildburghausen, Landkreis;22608
+16070;2021;Ilm-Kreis;21278
+16071;2021;Weimarer Land, Landkreis;21808
+16072;2021;Sonneberg, Landkreis;22735
+16073;2021;Saalfeld-Rudolstadt, Landkreis;22207
+16074;2021;Saale-Holzland-Kreis;22157
+16075;2021;Saale-Orla-Kreis;21835
+16076;2021;Greiz, Landkreis;22561
+16077;2021;Altenburger Land, Landkreis;22159

@@ -1,0 +1,128 @@
+table dim_abschluss
+	lineageTag: 3af31ea3-77be-4cb4-9ce9-83875b529feb
+
+	measure 'Quote ohne HSA %' = DIVIDE(CALCULATE(SUM(fact_abgaenge[anzahl]),fact_abgaenge[geschlecht]="insgesamt",dim_abschluss[abschluss_key]="ohne_hauptschulabschluss"),CALCULATE(SUM(fact_abgaenge[anzahl]),fact_abgaenge[geschlecht]="insgesamt"))*100
+		lineageTag: 92e62e4a-2468-44c4-84a7-4f3e7daab8ae
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Abgänge = CALCULATE(SUM(fact_abgaenge[anzahl]),fact_abgaenge[geschlecht]="insgesamt")
+		formatString: 0
+		lineageTag: e4d25b08-3642-497d-b463-536a945a6faf
+
+	measure 'Abgänge ohne HSA' = CALCULATE([Abgänge],dim_abschluss[abschluss_key]="ohne_hauptschulabschluss")
+		formatString: 0
+		lineageTag: cc4cedc1-c00b-460f-a7ca-35ca9d5458b0
+
+	measure 'Abiturquote %' = DIVIDE(CALCULATE([Abgänge],dim_abschluss[abschluss_key]="allgemeine_hochschulreife"),[Abgänge])*100
+		lineageTag: 7164655c-57fa-47d1-8d76-390bad571f3a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Quote ohne HSA (Geschlecht) %' = DIVIDE(CALCULATE(SUM(fact_abgaenge[anzahl]),dim_abschluss[abschluss_key]="ohne_hauptschulabschluss"),CALCULATE(SUM(fact_abgaenge[anzahl])))*100
+		lineageTag: cc801709-45ab-4e0d-9917-42af893885ab
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Abiturquote (Geschlecht) %' = DIVIDE(CALCULATE(SUM(fact_abgaenge[anzahl]),dim_abschluss[abschluss_key]="allgemeine_hochschulreife"),CALCULATE(SUM(fact_abgaenge[anzahl])))*100
+		lineageTag: 0896443b-85db-453c-ad82-37b248606067
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Schüleranteil %' = DIVIDE(SUM(fact_schule_2023[schueler_insg]),CALCULATE(SUM(fact_schule_2023[schueler_insg]),ALL(dim_schulart),dim_schulart[schulart]<>"Insgesamt"))*100
+		lineageTag: 07e732d5-729a-4e84-b902-2f075453e5f3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Bev 15-18' = CALCULATE(SUM(fact_bevoelkerung_2023_2024[insgesamt]),fact_bevoelkerung_2023_2024[altersgruppe]="15 bis unter 18 Jahre",fact_bevoelkerung_2023_2024[jahr]=2023)
+		formatString: 0
+		lineageTag: db77f906-1a80-46e8-aa61-bca200899374
+
+	measure 'Ohne HSA je 1000 (15-18)' = DIVIDE([Abgänge ohne HSA],[Bev 15-18])*1000
+		lineageTag: 3cdc6de5-6abe-41ae-ac63-ccfa6e33d15a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Ausgaben je Schüler Ø' = AVERAGE(fact_ausgaben_je_schueler[ausgaben_je_schueler])
+		lineageTag: 51c82ecf-93f6-4430-b011-bf628e8760cf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Jugend-ALQ Ø' = AVERAGE(fact_arbeitsmarkt_2025[jugend_alq_15_25])
+		lineageTag: f192af56-bae5-418e-ad4c-e5717a60778b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Ausgaben je Schüler (Schulart) Ø' = AVERAGE(fact_ausgaben_schulart[ausgaben_je_schueler])
+		formatString: 0
+		lineageTag: 51c82ecf-93f6-4430-b011-bf628e8760d2
+
+	measure 'Ausgaben Schulart (DE 2023)' = CALCULATE(AVERAGE(fact_ausgaben_schulart[ausgaben_je_schueler]),fact_ausgaben_schulart[bundesland]="Deutschland",fact_ausgaben_schulart[jahr]=2023)
+		lineageTag: 0a0a87fc-6f26-4366-9dc2-9db470c94620
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Ausgaben je Schüler (2023)' = CALCULATE(AVERAGE(fact_ausgaben_je_schueler[ausgaben_je_schueler]),fact_ausgaben_je_schueler[jahr]=2023)
+		lineageTag: f56088ea-f594-44d7-912e-da8d5d5171d6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Risiko-Score = VAR pop = CALCULATETABLE(ADDCOLUMNS(FILTER(VALUES(dim_region[region_code]),NOT ISBLANK([Quote ohne HSA %])&&NOT ISBLANK([Jugend-ALQ Ø])&&NOT ISBLANK([Verf. Einkommen je EW Ø])),"@q",[Quote ohne HSA %],"@a",[Jugend-ALQ Ø],"@e",[Verf. Einkommen je EW Ø]),REMOVEFILTERS(dim_region),dim_region[ebene]="KR") VAR muQ=AVERAGEX(pop,[@q]) VAR sdQ=STDEVX.S(pop,[@q]) VAR muA=AVERAGEX(pop,[@a]) VAR sdA=STDEVX.S(pop,[@a]) VAR muE=AVERAGEX(pop,[@e]) VAR sdE=STDEVX.S(pop,[@e]) RETURN DIVIDE([Quote ohne HSA %]-muQ,sdQ)+DIVIDE([Jugend-ALQ Ø]-muA,sdA)+DIVIDE(muE-[Verf. Einkommen je EW Ø],sdE)
+		lineageTag: a0ec6bf6-1f55-4983-8a0a-2c2034d8dcf1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'StdAbw Quote ohne HSA (Kreise)' = VAR bl = SELECTEDVALUE(dim_region[bundesland_code]) RETURN STDEVX.S(CALCULATETABLE(VALUES(dim_region[region_code]),REMOVEFILTERS(dim_region),dim_region[ebene]="KR",dim_region[bundesland_code]=bl),[Quote ohne HSA %])
+		lineageTag: 54805988-4eb4-4a0e-886a-fb163634c902
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Verf. Einkommen je EW Ø' = AVERAGE(fact_einkommen_kreis[einkommen_je_ew])
+		lineageTag: 9ad6d82d-97dc-467c-8b88-f1311a0c549b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Schüleranteil je Schulart, Basis nur abschlussvergebende weiterführende Schulen (ohne Grundschulen) – Fokus LF5
+	measure 'Schüleranteil ohne Grundschule %' = DIVIDE(SUM(fact_schule_2023[schueler_insg]),CALCULATE(SUM(fact_schule_2023[schueler_insg]),ALL(dim_schulart),dim_schulart[schulart]<>"Insgesamt",dim_schulart[schulart]<>"Grundschulen"))*100
+		lineageTag: b2b2b2b2-0005-4005-8005-000000000005
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column abschluss_key
+		dataType: string
+		lineageTag: b309a523-0fb9-4a93-9edd-fa7a57765fc4
+		summarizeBy: none
+		sourceColumn: abschluss_key
+
+	column label_regio
+		dataType: string
+		lineageTag: dc9a3b44-2588-4171-ae00-538af6ff57c1
+		summarizeBy: none
+		sourceColumn: label_regio
+
+	column label_s09
+		dataType: string
+		lineageTag: 093b01f6-806d-49ee-9b51-ffbc7f690f18
+		summarizeBy: none
+		sourceColumn: label_s09
+
+	column label_statbericht
+		dataType: string
+		lineageTag: 1ddb139c-d144-4e95-9270-8d3ea46be20a
+		summarizeBy: none
+		sourceColumn: label_statbericht
+
+	column rang
+		dataType: int64
+		lineageTag: fc3bf54f-7f36-44ca-9b30-5c8909a550b9
+		summarizeBy: none
+		sourceColumn: rang
+
+	partition dim_abschluss = m
+		mode: import
+		source =
+				let
+				typed = #table(type table [abschluss_key = text, label_regio = text, label_s09 = text, label_statbericht = text, rang = Int64.Type], {{"ohne_hauptschulabschluss", "ohne Hauptschulabschluss", "ohne Ersten Schulabschluss", "ohne Hauptschulabschluss", 1}, {"mit_hauptschulabschluss", "mit Hauptschulabschluss", "Erster Schulabschluss", "Hauptschulabschluss", 2}, {"mittlerer_abschluss", "mittlerer Abschluss", "Mittlerer Schulabschluss", "Mittlerer Abschluss", 3}, {"fachhochschulreife", "Fachhochschulreife", "Fachhochschulreife", "(n/a)", 4}, {"allgemeine_hochschulreife", "allgemeine Hochschulreife", "Allgemeine Hochschulreife", "allgemeine Hochschulreife", 5}})
+				in
+				typed
+

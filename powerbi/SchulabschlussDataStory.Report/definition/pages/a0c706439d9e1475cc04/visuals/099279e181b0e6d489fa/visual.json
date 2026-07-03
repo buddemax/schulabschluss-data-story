@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "099279e181b0e6d489fa",
+  "position": {
+    "x": 10,
+    "y": 320,
+    "z": 1,
+    "height": 280,
+    "width": 280,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Erkenntnis LF5: Der Schulartmix prägt die Abschlüsse. Grundschulen 35,2 %, Gymnasien 25,9 %, Hauptschule nur noch 3,8 %. Der hohe Gymnasialanteil erklärt die hohen Abiturquoten."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

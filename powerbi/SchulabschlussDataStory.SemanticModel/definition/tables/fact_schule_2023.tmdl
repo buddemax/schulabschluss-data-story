@@ -1,0 +1,87 @@
+table fact_schule_2023
+	lineageTag: 072f0d2d-fb54-4930-8b56-cb07ee774560
+
+	column jahr
+		dataType: int64
+		lineageTag: 01b67272-d67b-4cea-b4fa-77d799b266c2
+		summarizeBy: none
+		sourceColumn: jahr
+
+	column region_code
+		dataType: string
+		lineageTag: 41c0f839-044c-456b-9dec-c0e40140996c
+		summarizeBy: none
+		sourceColumn: region_code
+
+	column region
+		dataType: string
+		lineageTag: 29e4c610-f71d-4da0-b242-ddbb9a8cfcd0
+		summarizeBy: none
+		sourceColumn: region
+
+	column ebene
+		dataType: string
+		lineageTag: e92e631b-7b76-4e85-a93a-2e8a7b9827eb
+		summarizeBy: none
+		sourceColumn: ebene
+
+	column bundesland_code
+		dataType: string
+		lineageTag: dad95aef-11e0-471a-b5f6-a89bbb8ddc36
+		summarizeBy: none
+		sourceColumn: bundesland_code
+
+	column schulart
+		dataType: string
+		lineageTag: fe8e35ad-698f-4fe5-ae11-ae9b8e4074c8
+		summarizeBy: none
+		sourceColumn: schulart
+
+	column schulen
+		dataType: int64
+		lineageTag: dcf2911b-14af-4ff0-a910-5ddc55c1f605
+		summarizeBy: sum
+		sourceColumn: schulen
+
+	column schueler_insg
+		dataType: int64
+		lineageTag: 9737da10-2e79-4ee5-974a-d10404e9e66c
+		summarizeBy: sum
+		sourceColumn: schueler_insg
+
+	column schueler_w
+		dataType: int64
+		lineageTag: a29e18c9-c1e3-4680-a370-9383a6ea94d3
+		summarizeBy: sum
+		sourceColumn: schueler_w
+
+	column schueler_ausl
+		dataType: int64
+		lineageTag: 1cc4e16a-a2d0-4c89-a178-4356990f7fef
+		summarizeBy: sum
+		sourceColumn: schueler_ausl
+
+	column klasse_7
+		dataType: int64
+		lineageTag: df79695c-f6c4-4740-bd70-71e351830d23
+		summarizeBy: none
+		sourceColumn: klasse_7
+
+	column jahrgang_11
+		dataType: int64
+		lineageTag: c585d98d-608e-4a49-be7f-a25c8a0c4b57
+		summarizeBy: none
+		sourceColumn: jahrgang_11
+
+	partition fact_schule_2023 = m
+		mode: import
+		source =
+				let
+				src = Csv.Document(File.Contents(DataFolder & "21111-01-03-4.csv"), [Delimiter=";", Columns=10, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				y = Table.SelectRows(src, each Text.Trim([Column1]) = "2023" and fnEbene([Column2]) <> "?"),
+				r = Table.AddColumn(y, "rec", each [jahr = 2023, region_code = Text.Trim([Column2]), region = Text.Trim([Column3]), ebene = fnEbene([Column2]), bundesland_code = fnBlc([Column2]), schulart = Text.Trim([Column4]), schulen = fnToInt([Column5]), schueler_insg = fnToInt([Column6]), schueler_w = fnToInt([Column7]), schueler_ausl = fnToInt([Column8]), klasse_7 = fnToInt([Column9]), jahrgang_11 = fnToInt([Column10])]),
+				tbl = Table.FromRecords(r[rec]),
+				typed = Table.TransformColumnTypes(tbl, {{"jahr", Int64.Type}, {"region_code", type text}, {"region", type text}, {"ebene", type text}, {"bundesland_code", type text}, {"schulart", type text}, {"schulen", Int64.Type}, {"schueler_insg", Int64.Type}, {"schueler_w", Int64.Type}, {"schueler_ausl", Int64.Type}, {"klasse_7", Int64.Type}, {"jahrgang_11", Int64.Type}})
+				in
+				typed
+

@@ -1,0 +1,29 @@
+table dim_zeit
+	lineageTag: 3eb29f2d-905b-4468-9fe9-931997612ab2
+
+	column jahr
+		dataType: int64
+		lineageTag: 6555db32-4c71-4d6e-9b36-51f79dc66901
+		summarizeBy: none
+		sourceColumn: jahr
+
+	column schuljahr
+		dataType: string
+		lineageTag: 2ce38f15-cc26-4555-9bfd-a87d94143520
+		summarizeBy: none
+		sourceColumn: schuljahr
+
+	column kalenderjahr
+		dataType: int64
+		lineageTag: 2a5903e9-48f1-471f-a0d7-f8a9cc52e784
+		summarizeBy: none
+		sourceColumn: kalenderjahr
+
+	partition dim_zeit = m
+		mode: import
+		source =
+				let
+				typed = #table(type table [jahr = Int64.Type, schuljahr = text, kalenderjahr = Int64.Type], {{2022, "2022/23", 2022}, {2023, "2023/24", 2023}, {2025, "-", 2025}, {2024, "-", 2024}})
+				in
+				typed
+

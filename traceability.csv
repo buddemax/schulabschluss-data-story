@@ -1,0 +1,71 @@
+﻿REQ-ID;Quelle;Planschritt;Artefakt;Verifikationsnachweis;Status
+REQ-001;S02-Vision;P6;pptx Fazit + Analyse;Kernthese 'lokal' durch LF3/LF6 belegt;gruen
+REQ-002;S02-Vision/S08;P3-P5;dim_region (Ebenen) + visual_spezifikation;LIVE: 9/9 Visuals gebaut · BL/Kreis-Ebenen via ebene-Filter;gruen
+REQ-003;S02-Vision;P3;dimensionales_schema.md;Modell LIVE geladen · Beziehungen aktiv;gruen
+REQ-004;S02/DS-S42;P1;datenquellen_log.md;alle 6 Quellen offen, kein Login;gruen
+REQ-005;S04-S07;P3/P6;pptx + dimensionales_schema.md;Flow in Story+Schema;gruen
+REQ-006;S04-S07;P6;pptx (Vision/Fazit);Kausalketten-Narrativ;gruen
+REQ-010;S03;P4-P6;analyseabfragen.md + charts/LF1;Befund verifiziert (Referenzwert);gruen
+REQ-011;S03;P4-P6;kpi_referenzwerte.json;Kreis-Hotspots verifiziert;gruen
+REQ-012;S03;P4-P6;charts/LF3;Streuung verifiziert;gruen
+REQ-013;S03;P4-P6;charts/LF4;Geschlechter-Gap verifiziert;gruen
+REQ-014;S03;P4-P6;kpi (Schulartmix);Schulartmix verifiziert;gruen
+REQ-015;S03;P4-P6;kpi (LF5/Bev);Schulartmix/Struktur;gruen
+REQ-016;S03;P4-P6;kpi (LF7);Ausgaben nach Bereich;gruen
+REQ-017;S03;P4-P6;charts/LF8;Korrelation r=+0,61 verifiziert;gruen
+REQ-018;S03;P4-P6;charts/LF9;Risiko-Score verifiziert;gruen
+REQ-020;S08/DR;P1;data/raw/statbericht_allgbild_*.xlsx;P2-Gate PASS;gruen
+REQ-021;S08/DR;P1-P2;fact_abgaenge_kreis_2023.csv;P2-Gate PASS;gruen
+REQ-022;S08/DR;P1-P2;fact_schule_2023.csv;P2-Gate PASS;gruen
+REQ-023;S08/DR;P1-P2;fact_abgaenge_beruflich_2023.csv;P2-Gate PASS;gruen
+REQ-024;S08/DR;P1-P2;fact_arbeitsmarkt_2025.csv + bevoelkerung;P2-Gate PASS;gruen
+REQ-025;S08;P1-P2;fact_ausgaben_je_schueler.csv;P2-Gate PASS;gruen
+REQ-026;S09;P2;dq_report.md;Flensburg 492/6,7% == Quelle;gruen
+REQ-027;S09/§7d;P2;dq_report.md;S09-TabA als illustrativ dokumentiert;gruen
+REQ-028;S08;P3;dimensionales_schema.md;4 Kern-Fakten (Abgaenge/Schule/Arbeitsmarkt/Ausgaben) + 4 Dims · zzgl. 2 dokumentierte Hilfsfakten (Bevoelkerung f. je-1000, beruflich f. Uebergang) -> bewusste Abweichung vom strikten 4+4;gruen
+REQ-030;S10;P3;powerbi/.../fact_abgaenge.tmdl;LIVE in PBI Desktop geladen+Daten (Refresh OK);gruen
+REQ-031;S10;P3;powerbi/.../fact_schule_2023.tmdl;LIVE geladen+Daten;gruen
+REQ-032;S10;P3;powerbi/.../fact_arbeitsmarkt_2025.tmdl;LIVE geladen+Daten;gruen
+REQ-033;S10;P3;powerbi/.../fact_ausgaben_je_schueler.tmdl;LIVE geladen+Daten;gruen
+REQ-034;S10;P2-P3;dim_region.tmdl;LIVE geladen;gruen
+REQ-035;S10;P2-P3;dim_zeit.tmdl;LIVE geladen (jahr-Key) · Beziehung dim_zeit->fact_abgaenge (Zwei-Jahres-Analyse) · andere Fakten sind Einzeljahr/Mehrjahres-Ø ohne Zeit-Join;gruen
+REQ-036;S10;P2-P3;dim_abschluss.tmdl;LIVE geladen;gruen
+REQ-037;S10;P2-P3;dim_schulart.tmdl;LIVE geladen;gruen
+REQ-038;S10/DR;P3;relationships.tmdl + Mermaid;LIVE aktiv: alle Fakten *:1 zu dim_region ueber region_code (Single-Direction-Stern); Ausgaben-Beziehung von m:n-Namensschluessel auf *:1 region_code umgestellt (M6 behoben, DQ9); schulart->dim_schulart; dim_zeit->fact_abgaenge;gruen
+REQ-040;DS-S44-A1;P6;Schulabschluss_DataStory_Praesentation.pptx;Deck fertig (14 Folien) inkl. 14 Sprechernotizen · nur Live-Vortrag 09.07. ausstehend;gelb
+REQ-041;DS-S44-A2;P3;powerbi/SchulabschlussDataStory.pbip;LIVE: PBIP oeffnet+laedt+rendert+SPEICHERT in PBI Desktop (n. Fix $schema/dim_zeit/PBIR);gruen
+REQ-042;DS-S44-A3;P1;datenquellen_log.md;Quellen-Doku vollstaendig;gruen
+REQ-050;DS-S44-B1;P7;Dokumentation.docx Kap.2;Format+Beispiele dokumentiert;gruen
+REQ-051;DS-S44-B1;P2;scripts/p2_*.py + docx Kap.3;P2-Gate PASS · Transformationen dok.;gruen
+REQ-052;DS-S44-B2;P3;dimensionales_schema.md + docx Kap.4;Schema+Mermaid;gruen
+REQ-053;DS-S44-B2;P4;analyseabfragen.md + docx Kap.5;DAX + Referenzwerte dokumentiert;gruen
+REQ-054;DS-S44-B3a;P7;docx Kap.7;Tool-Auswertung Datenbeschaffung;gruen
+REQ-055;DS-S44-B3b;P7;docx Kap.7;Tool-Auswertung Modellierung;gruen
+REQ-056;DS-S44-B3c;P7;docx Kap.7;Tool-Auswertung Abfragesprache;gruen
+REQ-057;DS-S44-B3d;P7;docx Kap.7 + visual_spezifikation.md;Tool-Auswertung Visualisierung;gruen
+REQ-060;DS-S42;P2;qualitaetskennzahlen.md;P2-Gate PASS;gruen
+REQ-061;DR;P2;dq_report.md (DQ1);P2-Gate PASS;gruen
+REQ-062;DR;P2;dq_report.md (DQ2);P2-Gate PASS;gruen
+REQ-063;DR;P2;dq_report.md (DQ3);P2-Gate PASS;gruen
+REQ-064;DR;P2;dq_report.md (DQ4);P2-Gate PASS;gruen
+REQ-065;DR;P2;dq_report.md (DQ5);P2-Gate PASS;gruen
+REQ-066;DR;P1-P2;dq_report.md (DQ6);P2-Gate PASS UTF-8;gruen
+REQ-067;DR;P2;dq_report.md (DQ7);P2-Gate PASS Missing!=0;gruen
+REQ-068;DS-S42;P1;qualitaetskennzahlen.md;Portal-Bewertung;gruen
+REQ-069;DS-S42;P1;datenquellen_log.md;Portale erkundet;gruen
+REQ-070;DS-S44-BW1;alle;alle Artefakte;Detailgrad hoch: 9/9 Visuals + 18 Measures + DQ8/DQ9 dokumentiert;gruen
+REQ-071;DS-S44-BW2;alle;alle Artefakte;Ausfuehrung: Modell LIVE, Visuals verifiziert gg. Referenzwerte, Datenfehler behoben;gruen
+REQ-072;DS-S44-BW3;P5;powerbi (LF1-LF9 live) + 18 Measures + powerbi_aufbauanleitung.md;9/9 Visuals LIVE gebaut+verifiziert (inkl. LF8 Ausgaben×Abitur, Trendlinie) · LF4/LF5/LF7 verfeinert (insgesamt/Deutschland gefiltert) · LF5-Measure korrigiert;gruen
+REQ-073;DS-S44-BW4;P2/P5;dq_report.md (DQ8-DQ11);P2-Gate PASS · behoben: ×10-Dezimalfehler jugend_alq (DQ8/en-US), Ausgaben-Whitespace-Join (DQ10/strip), Jahres-Pooling (DQ11/jahr=2023) · alle gg. Referenzwerte verifiziert;gruen
+REQ-080;ORG-S6;P7;docx Kap.8 (LI1);Berichte adressiert;gruen
+REQ-081;ORG-S6;P5/P7;visual_spezifikation.md + docx (LI2) + charts/ (9 LF + Schema);Gestaltungsregeln · 9/9 LF-Charts + 2 PBI-Screenshots in docx eingebettet;gruen
+REQ-082;ORG-S6;P3/P7;dimensionales_schema.md + docx (LI3);Modellierungsmuster;gruen
+REQ-083;ORG-S6;P7;docx Kap.8 (LI4);Data-Vault-Einordnung;gruen
+REQ-084;ORG-S6;P7;docx Kap.8 (LI5);SSBI adressiert;gruen
+REQ-090;DS-S43;P6;pptx (3 Teile + Sprechernotizen);Deck 3x5min strukturiert, je Folie Sprechernotiz (Budde/Kanto/Ziegler) · Vortrag 09.07.;gelb
+REQ-091;DS-S45;P6;ABGABE_README.md;Termin 09.07. (zukuenftig);gelb
+REQ-092;DS-S42;P1;datenquellen_log.md;nur oeffentliche Daten;gruen
+REQ-093;Auftrag-§9;laufend;traceability.csv;Coverage ~94% gruen · offen nur termin-/teamgebunden (Vortrag 09.07., Moodle-Upload);gruen
+REQ-094;DS-S43/S45;P7;ABGABE_README.md (Chronik);Zwischenpraesentation dokumentiert;gruen
+REQ-095;DS-S43/ORG-S5;P7;ABGABE_README.md (Checkliste);Paket geschnuert · Upload Team;gelb
+REQ-096;ORG-S5;P2;projektplan.md;Priorisierungsrahmen;gruen

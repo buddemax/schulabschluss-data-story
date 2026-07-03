@@ -1,0 +1,81 @@
+table fact_arbeitsmarkt_2025
+	lineageTag: 5b436638-a0dd-4fcb-807c-5ea35032bbf8
+
+	column jahr
+		dataType: int64
+		lineageTag: 9d2fcb04-d416-4139-8ecc-6f92800e88b7
+		summarizeBy: none
+		sourceColumn: jahr
+
+	column region_code
+		dataType: string
+		lineageTag: e0f6aee0-dde3-45cd-8ef2-ee70df76e4b4
+		summarizeBy: none
+		sourceColumn: region_code
+
+	column region
+		dataType: string
+		lineageTag: 3960917c-52d8-4182-9b9d-b24250e3252f
+		summarizeBy: none
+		sourceColumn: region
+
+	column ebene
+		dataType: string
+		lineageTag: 09064278-9f4e-4a40-9eab-e4f30763cefe
+		summarizeBy: none
+		sourceColumn: ebene
+
+	column bundesland_code
+		dataType: string
+		lineageTag: 2079e458-3b1e-4b3f-a07c-4adf6e297d73
+		summarizeBy: none
+		sourceColumn: bundesland_code
+
+	column arbeitslose_insg
+		dataType: int64
+		lineageTag: 5cc0a09a-6819-4e8b-b5fa-6b20444cdf68
+		summarizeBy: sum
+		sourceColumn: arbeitslose_insg
+
+	column arbeitslose_ausl
+		dataType: int64
+		lineageTag: 53e95f0b-3c4a-46d3-93df-6de0618d89f0
+		summarizeBy: sum
+		sourceColumn: arbeitslose_ausl
+
+	column arbeitslose_15_20
+		dataType: int64
+		lineageTag: f9e1cfa8-53a4-4be8-bcc0-8e1abfcfdb24
+		summarizeBy: sum
+		sourceColumn: arbeitslose_15_20
+
+	column arbeitslose_15_25
+		dataType: int64
+		lineageTag: bcf7ed62-645a-4ae5-b5ce-be7bfe4c0f2b
+		summarizeBy: sum
+		sourceColumn: arbeitslose_15_25
+
+	column alq_insg
+		dataType: double
+		lineageTag: ef7f20aa-57eb-4cfe-8cab-6626ba80bce3
+		summarizeBy: none
+		sourceColumn: alq_insg
+
+	column jugend_alq_15_25
+		dataType: double
+		lineageTag: b2bb0abd-30fd-4d14-ab53-a31f3206e377
+		summarizeBy: none
+		sourceColumn: jugend_alq_15_25
+
+	partition fact_arbeitsmarkt_2025 = m
+		mode: import
+		source =
+				let
+				src = Csv.Document(File.Contents(DataFolder & "13211-02-05-4.csv"), [Delimiter=";", Columns=16, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				y = Table.SelectRows(src, each Text.Trim([Column1]) = "2025" and fnEbene([Column2]) <> "?"),
+				r = Table.AddColumn(y, "rec", each [jahr = 2025, region_code = Text.Trim([Column2]), region = Text.Trim([Column3]), ebene = fnEbene([Column2]), bundesland_code = fnBlc([Column2]), arbeitslose_insg = fnToInt([Column4]), arbeitslose_ausl = fnToInt([Column5]), arbeitslose_15_20 = fnToInt([Column7]), arbeitslose_15_25 = fnToInt([Column8]), alq_insg = fnToNum([Column11]), jugend_alq_15_25 = fnToNum([Column16])]),
+				tbl = Table.FromRecords(r[rec]),
+				typed = Table.TransformColumnTypes(tbl, {{"jahr", Int64.Type}, {"region_code", type text}, {"region", type text}, {"ebene", type text}, {"bundesland_code", type text}, {"arbeitslose_insg", Int64.Type}, {"arbeitslose_ausl", Int64.Type}, {"arbeitslose_15_20", Int64.Type}, {"arbeitslose_15_25", Int64.Type}, {"alq_insg", type number}, {"jugend_alq_15_25", type number}}, "en-US")
+				in
+				typed
+

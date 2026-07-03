@@ -1,0 +1,58 @@
+table fact_abgaenge
+	lineageTag: ec1bcf6c-9217-4e89-83e8-6598eefbbdd7
+
+	column region_code
+		dataType: string
+		lineageTag: 8360a33b-3d5f-4e48-a718-b54d3e057003
+		summarizeBy: none
+		sourceColumn: region_code
+
+	column jahr
+		dataType: int64
+		lineageTag: 3b360c57-600f-4792-9f71-bbbde2da17ae
+		summarizeBy: none
+		sourceColumn: jahr
+
+	column abschluss_key
+		dataType: string
+		lineageTag: 8515d71f-c8d9-4419-9228-05fd8a32ed9d
+		summarizeBy: none
+		sourceColumn: abschluss_key
+
+	column geschlecht
+		dataType: string
+		lineageTag: 26d4c5a8-9406-4bd0-a74f-65aabcf7758f
+		summarizeBy: none
+		sourceColumn: geschlecht
+
+	column anzahl
+		dataType: int64
+		lineageTag: 77037b35-4da4-4a21-81b5-a304bf599aba
+		summarizeBy: sum
+		sourceColumn: anzahl
+
+	partition fact_abgaenge = m
+		mode: import
+		source =
+				let
+				src = Csv.Document(File.Contents(DataFolder & "21111-02-06-4.csv"), [Delimiter=";", Columns=17, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				y = Table.SelectRows(src, each Text.Trim([Column1]) = "2023" and fnEbene([Column2]) <> "?"),
+				recs = Table.AddColumn(y, "lst", each let rc = Text.Trim([Column2]), oi = fnToInt([Column6]), ow = fnToInt([Column7]), hi = fnToInt([Column8]), hw = fnToInt([Column9]), mi = fnToInt([Column10]), mw = fnToInt([Column11]), fi = fnToInt([Column14]), fw = fnToInt([Column15]), ai = fnToInt([Column16]), aw = fnToInt([Column17]), mm = (x, w) => if x <> null and w <> null then x - w else null in {[region_code = rc, jahr = 2023, abschluss_key = "ohne_hauptschulabschluss", geschlecht = "insgesamt", anzahl = oi], [region_code = rc, jahr = 2023, abschluss_key = "ohne_hauptschulabschluss", geschlecht = "weiblich", anzahl = ow], [region_code = rc, jahr = 2023, abschluss_key = "ohne_hauptschulabschluss", geschlecht = "maennlich", anzahl = mm(oi, ow)], [region_code = rc, jahr = 2023, abschluss_key = "mit_hauptschulabschluss", geschlecht = "insgesamt", anzahl = hi], [region_code = rc, jahr = 2023, abschluss_key = "mit_hauptschulabschluss", geschlecht = "weiblich", anzahl = hw], [region_code = rc, jahr = 2023, abschluss_key = "mit_hauptschulabschluss", geschlecht = "maennlich", anzahl = mm(hi, hw)], [region_code = rc, jahr = 2023, abschluss_key = "mittlerer_abschluss", geschlecht = "insgesamt", anzahl = mi], [region_code = rc, jahr = 2023, abschluss_key = "mittlerer_abschluss", geschlecht = "weiblich", anzahl = mw], [region_code = rc, jahr = 2023, abschluss_key = "mittlerer_abschluss", geschlecht = "maennlich", anzahl = mm(mi, mw)], [region_code = rc, jahr = 2023, abschluss_key = "fachhochschulreife", geschlecht = "insgesamt", anzahl = fi], [region_code = rc, jahr = 2023, abschluss_key = "fachhochschulreife", geschlecht = "weiblich", anzahl = fw], [region_code = rc, jahr = 2023, abschluss_key = "fachhochschulreife", geschlecht = "maennlich", anzahl = mm(fi, fw)], [region_code = rc, jahr = 2023, abschluss_key = "allgemeine_hochschulreife", geschlecht = "insgesamt", anzahl = ai], [region_code = rc, jahr = 2023, abschluss_key = "allgemeine_hochschulreife", geschlecht = "weiblich", anzahl = aw], [region_code = rc, jahr = 2023, abschluss_key = "allgemeine_hochschulreife", geschlecht = "maennlich", anzahl = mm(ai, aw)]}),
+				tblA = Table.FromRecords(List.Combine(recs[lst])),
+				blrows = Table.SelectRows(src, each fnEbene([Column2]) = "BL"),
+				blmap0 = Table.Distinct(Table.SelectColumns(blrows, {"Column3", "Column2"})),
+				blmap = Table.Combine({Table.RenameColumns(blmap0, {{"Column3", "nm"}, {"Column2", "cd"}}), Table.FromRecords({[nm = "Deutschland", cd = "DG"], [nm = "Zusammen", cd = "DG"]})}),
+				xls = Excel.Workbook(File.Contents(DataFolder & "statbericht_allgbild_2022-23.xlsx"), null, true),
+				sh = xls{[Item = "csv-21111-12", Kind = "Sheet"]}[Data],
+				prom = Table.PromoteHeaders(sh, [PromoteAllScalars=true]),
+				isIns = (v) => Text.Lower(Text.Trim(Text.From(if v = null then "" else v))) = "insgesamt",
+				fb = Table.SelectRows(prom, each isIns([Schulart]) and isIns([Status]) and isIns([Klassenstufe]) and isIns([Abschluss2]) and (isIns([Geschlecht]) or [Geschlecht] = "männlich" or [Geschlecht] = "weiblich")),
+				keyOf = (a) => let s = Text.Lower(Text.Trim(Text.From(if a = null then "" else a))) in if s = "ohne hauptschulabschluss" then "ohne_hauptschulabschluss" else if s = "hauptschulabschluss" or s = "mit hauptschulabschluss" then "mit_hauptschulabschluss" else if s = "mittlerer abschluss" then "mittlerer_abschluss" else if s = "fachhochschulreife" then "fachhochschulreife" else if s = "allgemeine hochschulreife" then "allgemeine_hochschulreife" else null,
+				codeOf = (g) => let m = Table.SelectRows(blmap, (z) => Text.Trim(z[nm]) = Text.Trim(Text.From(if g = null then "" else g))) in if Table.RowCount(m) > 0 then m{0}[cd] else null,
+				b0 = Table.AddColumn(fb, "rec", each let k = keyOf([Abschluss]), code = codeOf([Bundesland]), g0 = Text.Lower(Text.Trim(Text.From([Geschlecht]))), g = if g0 = "männlich" then "maennlich" else g0, a = fnToInt([Absolvierende_und_Abgehende_Anzahl]) in if k = null or code = null then null else [region_code = code, jahr = 2022, abschluss_key = k, geschlecht = g, anzahl = a]),
+				tblB = Table.FromRecords(List.RemoveNulls(b0[rec])),
+				all = Table.Combine({tblA, tblB}),
+				typed = Table.TransformColumnTypes(all, {{"region_code", type text}, {"jahr", Int64.Type}, {"abschluss_key", type text}, {"geschlecht", type text}, {"anzahl", Int64.Type}})
+				in
+				typed
+
