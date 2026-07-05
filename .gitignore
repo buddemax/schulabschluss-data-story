@@ -17,3 +17,6 @@ Thumbs.db
 desktop.ini
 *.tmp
 ~$*
+
+# LibreOffice/Office Sperrdateien
+.~lock.*#
