@@ -1,6 +1,6 @@
 # Power-BI-Projekt (PBIP) – Schulabschluss Data Story
 
-Das semantische Modell (TMDL + Power Query M) wird **direkt im TMDL gepflegt** (maßgebliche Single-Source-of-Truth) und umfasst 20 analytische Measures (+6 Formatierungs-Measures) inkl. 3-dim Risiko-Score/StdAbw/Einkommen, `fact_ausgaben_schulart`, `fact_einkommen_kreis`, region_code-Beziehungen, stadtstaat-Spalte, Region-Hierarchie, LF8-Jahresfilter und Okabe-Ito-Theme. Für eine 1:1-Reproduktion gilt der TMDL-Stand. Sternschema gemäß `dimensionales_schema.md` (Primärquelle S10).
+Das semantische Modell (TMDL + Power Query M) wird **direkt im TMDL gepflegt** (maßgebliche Single-Source-of-Truth) und umfasst 20 analytische Measures (+6 Formatierungs-Measures) inkl. 3-dim Risiko-Score/StdAbw/Einkommen, `fact_ausgaben_schulart`, `fact_einkommen_kreis`, region_code-Beziehungen, stadtstaat-Spalte, Region-Hierarchie, LF8-Jahresfilter und Okabe-Ito-Theme. **Farbvertrag (nach Okabe-Ito/CUD, IBCS, WCAG): Vermillion #D55E00 = Fokus/Risiko, Grau #8C8C8C = Kontext, Blau #0072B2 / Orange #E69F00 = Vergleichspaar; jede Farbe hat berichtsweit eine Bedeutung (CVD- und kontrastgeprüft, s. BEFUNDE §7).** Für eine 1:1-Reproduktion gilt der TMDL-Stand. Sternschema gemäß `dimensionales_schema.md` (Primärquelle S10).
 
 ## Öffnen
 1. **Power BI Desktop** → Datei → Öffnen → `powerbi/SchulabschlussDataStory.pbip`.

@@ -90,3 +90,21 @@ Kleinigkeiten, aber genau die Art Doku↔Artefakt-Abweichung, die eine Note drü
 ## Hinweis zur Werkzeug- und KI-Nutzung
 
 Wir haben zur Aufbereitung, zur Absicherung (Nachrechnung/Testsuite) und beim kritischen Gegenlesen **KI-Werkzeuge** eingesetzt. Die inhaltlichen Entscheidungen – Leitfragen, Modellaufbau, Interpretation, was ehrlich ausgewiesen wird (z. B. das LF8-Nicht-Ergebnis) – liegen bei uns. Die eigentliche BI-Umsetzung (Aufbereitung in Power Query, Sternschema, DAX-Measures, Bericht) steckt vollständig im Power-BI-Projekt und ist reproduzierbar.
+
+
+---
+
+## 7) Farbvertrag – warum diese Farben (Standards statt Willkür)
+
+Wir haben die Farben des gesamten Berichts einmal auf einen dokumentierten **Farbvertrag** gezogen, damit keine Visualisierung willkürlich oder manipulativ wirkt und jede Farbe überall dasselbe bedeutet. Grundlage sind anerkannte Standards: **Okabe-Ito / Color Universal Design** (farbfehlsichtigkeits-sichere Palette), **IBCS** („Farbe nur mit Bedeutung, gleiche Farbe = gleiche Bedeutung"), der **Datawrapper-Farbleitfaden** („Grau ist die wichtigste Farbe – Kontext grau, ein Akzent lenkt"), **WCAG 2.1** (Kontraste) und **ColorBrewer/Tol** (max. ~6–8 Kategorienfarben, keine Regenbogen-Skalen).
+
+| Token | Hex | Bedeutung (überall gleich) |
+|---|---|---|
+| **Fokus/Risiko** | `#D55E00` (Okabe-Ito Vermillion) | die belegte Kernaussage der Seite (Spitzenreiter, Top-10-Risiko) |
+| **Kontext** | `#8C8C8C` (neutrales Grau) | „alle übrigen" – bewusst zurückhaltend |
+| **Vergleich A** | `#0072B2` (Okabe-Ito Blau) | fester Paar-/Rollen-Partner 1 |
+| **Vergleich B** | `#E69F00` (Okabe-Ito Orange) | fester Paar-/Rollen-Partner 2 |
+
+Umsetzung: Die Akzent-/Kontextfarben stecken in acht Formatierungs-Measures (Präfix `Farbe …`, Conditional Formatting „nach Feldwert"); der frühere Uneinheitlichkeits-Rest (zwei Grautöne `#8FB3D0` und `#C9CDD2`) wurde auf das eine Neutralgrau vereinheitlicht. Das Paar Blau/Orange kodiert auf LF4 die beiden **Kennzahlen** (Abiturquote/ohne HSA) und auf LF8 die **Strukturkategorie** Stadtstaat/Flächenland – bewusst **keine** Geschlechter-Stereotypfarben, sondern das farbfehlsichtigkeits-sichere Okabe-Ito-Paar.
+
+**Anti-Manipulation, belegt:** Mengenachsen beginnen bei 0; die Signalfarbe Vermillion steht ausschließlich für die durch Daten belegte Aussage (nie um Harmloses zu dramatisieren); der 16-Farben-Zufall im LF3-Streudiagramm wurde entfernt (jetzt: graue Punkte, nur die im Text genannten Rheinland-Pfalz-Kreise akzentuiert – Farbe trägt Bedeutung, nicht Dekoration); die LF2-Kartenblasen sind neutral, damit die Größe (Menge) nicht doppelt/irreführend eingefärbt wird. **Farbfehlsichtigkeit geprüft:** Deuteranopie- und Protanopie-Simulation aller Kernseiten – Akzent vs. Kontext bleiben unterscheidbar (RGB-Abstand 141/146), das Paar Blau/Orange sowieso (Abstand 254/222); zusätzlich redundante Kodierung durch Sortierung, Position und direkte Beschriftung (Okabe-Ito-Prinzip). Kontraste: Akzent 3,87:1, Neutral 3,36:1 gegen Weiß (WCAG 1.4.11 ≥ 3:1).

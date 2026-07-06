@@ -68,24 +68,6 @@
               "nativeQueryRef": "Abiturquote %"
             }
           ]
-        },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dim_region"
-                    }
-                  },
-                  "Property": "Land"
-                }
-              },
-              "queryRef": "dim_region.Land",
-              "nativeQueryRef": "Land"
-            }
-          ]
         }
       }
     },
@@ -96,37 +78,44 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "position": {
-              "expr": {
-                "Literal": {
-                  "Value": "'BottomCenter'"
+                  "Value": "false"
                 }
               }
             }
           }
         }
       ],
-      "title": [
+      "dataPoint": [
+        {
+          "properties": {}
+        },
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Kreisstreuung: ohne HSA × Abiturquote (2023)'"
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_abschluss"
+                        }
+                      },
+                      "Property": "Farbe Streuung LF3"
+                    }
+                  }
                 }
               }
             }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
           }
         }
       ]

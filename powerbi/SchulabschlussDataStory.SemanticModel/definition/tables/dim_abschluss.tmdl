@@ -89,8 +89,8 @@ table dim_abschluss
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	/// Formatierungs-Measure (nicht analytisch): faerbt in LF1 den fuehrenden Balken
-	/// Sachsen-Anhalt vermillion (#D55E00), die uebrigen gedaempft blau (#8FB3D0).
-	measure 'Farbe Führung LF1' = IF(SELECTEDVALUE(dim_region[region]) = "Sachsen-Anhalt", "#D55E00", "#8FB3D0")
+	/// Sachsen-Anhalt vermillion (#D55E00), die uebrigen gedaempft blau (#8C8C8C).
+	measure 'Farbe Führung LF1' = IF(SELECTEDVALUE(dim_region[region]) = "Sachsen-Anhalt", "#D55E00", "#8C8C8C")
 		lineageTag: b1f0c0de-1a2b-4c3d-9e8f-000000000f01
 
 	/// LF4: Geschlechter-Gap ohne Hauptschulabschluss in Prozentpunkten (Jungen minus Maedchen), DE 2023 via Visual-Filter
@@ -104,32 +104,36 @@ table dim_abschluss
 		lineageTag: b1f0c0de-1a2b-4c3d-9e8f-000000000f03
 
 	/// Formatierungs-Measure: LF9-Scatter, Top-10-Risiko-Kreise vermillion (Score >= 5,5 trennt exakt Platz 10 [5,57] von Platz 11 [5,44]), Rest gedaempft
-	measure 'Farbe Risiko LF9' = IF([Risiko-Score] >= 5.5, "#D55E00", "#8FB3D0")
+	measure 'Farbe Risiko LF9' = IF([Risiko-Score] >= 5.5, "#D55E00", "#8C8C8C")
 		lineageTag: b1f0c0de-1a2b-4c3d-9e8f-000000000f04
 
 	/// Formatierungs-Measure: LF2-Top-15-Balken, Spitzenreiter Anhalt-Bitterfeld akzentuiert
-	measure 'Farbe Hotspot LF2' = IF(SELECTEDVALUE(dim_region[region]) = "Anhalt-Bitterfeld, Landkreis", "#D55E00", "#8FB3D0")
+	measure 'Farbe Hotspot LF2' = IF(SELECTEDVALUE(dim_region[region]) = "Anhalt-Bitterfeld, Landkreis", "#D55E00", "#8C8C8C")
 		lineageTag: b1f0c0de-1a2b-4c3d-9e8f-000000000f05
 
 	/// Formatierungs-Measure: LF5 linkes Diagramm, tragender Balken Grundschulen akzentuiert
-	measure 'Farbe Schulart LF5' = IF(SELECTEDVALUE(dim_schulart[schulart]) = "Grundschulen", "#D55E00", "#8FB3D0")
+	measure 'Farbe Schulart LF5' = IF(SELECTEDVALUE(dim_schulart[schulart]) = "Grundschulen", "#D55E00", "#8C8C8C")
 		lineageTag: b1f0c0de-1a2b-4c3d-9e8f-000000000f06
 
 	/// Formatierungs-Measure: LF5 rechtes Diagramm (ohne Grundschulen), tragender Balken Gymnasien akzentuiert
-	measure 'Farbe Schulart LF5 oG' = IF(SELECTEDVALUE(dim_schulart[schulart]) = "Gymnasien", "#D55E00", "#8FB3D0")
+	measure 'Farbe Schulart LF5 oG' = IF(SELECTEDVALUE(dim_schulart[schulart]) = "Gymnasien", "#D55E00", "#8C8C8C")
 		lineageTag: b1f0c0de-1a2b-4c3d-9e8f-000000000f07
 
 	/// Formatierungs-Measure: LF6 Rangwechsel-Story - Sachsen-Anhalt vermillion, NRW Okabe-Ito-Blau, Rest grau (in beiden Charts)
-	measure 'Farbe Rangwechsel LF6' = SWITCH(SELECTEDVALUE(dim_region[region]), "Sachsen-Anhalt", "#D55E00", "Nordrhein-Westfalen", "#0072B2", "#C9CDD2")
+	measure 'Farbe Rangwechsel LF6' = SWITCH(SELECTEDVALUE(dim_region[region]), "Sachsen-Anhalt", "#D55E00", "Nordrhein-Westfalen", "#0072B2", "#8C8C8C")
 		lineageTag: b1f0c0de-1a2b-4c3d-9e8f-000000000f08
 
 	/// Formatierungs-Measure: LF7 BL-Chart, Spitzenreiter Berlin akzentuiert
-	measure 'Farbe Spitze LF7' = IF(SELECTEDVALUE(dim_region[Land]) = "Berlin", "#D55E00", "#8FB3D0")
+	measure 'Farbe Spitze LF7' = IF(SELECTEDVALUE(dim_region[Land]) = "Berlin", "#D55E00", "#8C8C8C")
 		lineageTag: b1f0c0de-1a2b-4c3d-9e8f-000000000f09
 
 	/// Formatierungs-Measure: LF7 Schulart-Chart, guenstigste Schulart Grundschulen akzentuiert
-	measure 'Farbe Schulart LF7' = IF(SELECTEDVALUE(fact_ausgaben_schulart[schulart]) = "Grundschulen", "#D55E00", "#8FB3D0")
+	measure 'Farbe Schulart LF7' = IF(SELECTEDVALUE(fact_ausgaben_schulart[schulart]) = "Grundschulen", "#D55E00", "#8C8C8C")
 		lineageTag: b1f0c0de-1a2b-4c3d-9e8f-000000000f10
+
+	/// Formatierungs-Measure: LF3-Scatter, die im Text belegten Rheinland-Pfalz-Kreise (bundesland_code 07) vermillion, uebrige neutral
+	measure 'Farbe Streuung LF3' = IF(SELECTEDVALUE(dim_region[bundesland_code]) = "07", "#D55E00", "#8C8C8C")
+		lineageTag: b1f0c0de-1a2b-4c3d-9e8f-000000000f11
 
 	column abschluss_key
 		dataType: string

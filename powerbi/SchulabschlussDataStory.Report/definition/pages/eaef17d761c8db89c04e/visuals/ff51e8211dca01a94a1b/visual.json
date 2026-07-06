@@ -104,26 +104,6 @@
             ]
           }
         }
-      ],
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Ausgaben je Schüler nach Schulart (Deutschland 2023)'"
-                }
-              }
-            }
-          }
-        }
       ]
     }
   }

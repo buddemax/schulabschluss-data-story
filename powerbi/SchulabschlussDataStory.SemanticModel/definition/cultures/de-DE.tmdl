@@ -1,0 +1,53 @@
+cultureInfo de-DE
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "dim_zeit.schuljahr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_zeit",
+			          "ConceptualProperty": "schuljahr"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Schuljahr": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_abschluss.verf__einkommen_je_ew_ø": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_abschluss",
+			          "ConceptualProperty": "Verf. Einkommen je EW Ø"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Einkommen €/EW": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

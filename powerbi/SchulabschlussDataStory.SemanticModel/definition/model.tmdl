@@ -26,3 +26,5 @@ ref table fact_schule_2023
 ref table fact_ausgaben_schulart
 ref table fact_einkommen_kreis
 
+ref cultureInfo de-DE
+
