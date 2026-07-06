@@ -38,7 +38,7 @@ Die GENESIS-Tabelle `21111-0013` ist login-pflichtig, aber **dieselben Daten lie
 | 8 | `statbericht_allgbild_2023-24.xlsx` | destatis.de/.../statistischer-bericht-allgemeinbildende-schulen-**2110100247005**.xlsx?__blob=publicationFile&v=2 | 2026-06-29 | 7.944.121 | **2023** (SJ 2023/24) | `csv-21111-12`, `csv-21111-15` | REQ-020 |
 
 **Relevante Blätter im Bericht:**
-- `csv-21111-12`: allgemeine Tabelle Bundesland × Schulart × Abschluss × Geschlecht (alle 17 BL, inkl. FHR) → **21111-0013-Ersatz**.
+- `csv-21111-12`: allgemeine Tabelle Bundesland × Schulart × Abschluss × Geschlecht (alle 17 BL, inkl. FHR) → **21111-0013-Ersatz**. Speist zusätzlich die Fakttabelle `fact_abgaenge_schulart` (Antwort auf LF5: Abgänge ohne HSA je Schulart, Landesebene 2023 – Förderschulen 42 %).
 - `csv-21111-15`: „Abgehende ohne Hauptschulabschluss" Anzahl + **Quote in Prozent** je Bundesland (fertige KPI für LF1/LF2).
 - (`csv-21111-13`/`-14`: Förderschwerpunkt/Förderschulen – nur 8 bzw. Förderschulen, NICHT als Hauptquelle nutzen.)
 
