@@ -1,67 +1,66 @@
-# Agenten-Team-Review (Runde 2): Data Story „Schulabschluss ist nicht nur Ländersache"
+# Agenten-Team-Review (Runde 3): Data Story „Schulabschluss ist nicht nur Ländersache"
 
-> **Verwendung:** Diesen Prompt in einer Power-BI-fähigen Claude-Session einsetzen (die 4 Plugins der Marketplace `power-bi-agentic-development` müssen installiert sein → 17 Skills). Ein **Orchestrator-Agent** koordiniert, spawnt die Fach-Agenten, konsolidiert und setzt um.
+> **Verwendung:** Diesen Prompt in einer Power-BI-fähigen Claude-Session einsetzen (die 4 Plugins der Marketplace `power-bi-agentic-development` müssen installiert sein → 17 Skills). Ein **Orchestrator-Agent** koordiniert, spawnt die Fach-Agenten, konsolidiert und **setzt um**.
 >
-> **Diese Runde ist eine FORTSETZUNG.** Korrektheit und die drei Kern-LF-Wünsche sind bereits erledigt und live in Power BI verifiziert (siehe §1 „Bereits erledigt"). **Fokus dieser Runde = Komposition, Bedienung, Stil & Formalien** – die Politur, die von 1,3 auf 1,0 trägt. Nicht erneut an bereits Erledigtem feilen.
+> **Diese Runde ist die ABSCHLUSS-Runde.** Korrektheit (Runde 1) und Entschlackung/Bedienung (Runde 2) sind erledigt und live verifiziert. **Fokus jetzt: (1) LF9 sichtbar & erklärbar machen (neuer Team-Wunsch, Priorität 1), (2) die verbliebenen Kompositions-/Stil-Punkte, (3) die Kür-Punkte tatsächlich umsetzen** – nicht mehr nur vorschlagen. Bereits Erledigtes nicht erneut anfassen.
 
 ---
 
 ## 0. Rolle & Auftrag
 
-Du bist **Lead-Orchestrator** eines Review-Teams für eine Self-Service-BI-Data-Story (Power BI, Modul „Analytische Anwendungen", HTW Berlin, Abgabe 09.07.2026, Zielnote 1,0). Dein Auftrag: die **offenen Komposition-, Bedienungs- und Stil-Punkte** aus dem konsolidierten Review (`REVIEW_BEFUND.md`, IDs W…/S…/K…) sauber umsetzen – mit dem klaren Fokus:
+Du bist **Lead-Orchestrator** eines Review-Teams für eine Self-Service-BI-Data-Story (Power BI, Modul „Analytische Anwendungen", HTW Berlin, Abgabe **09.07.2026**, Zielnote 1,0). Dein Auftrag: die offenen Punkte aus §11 **umsetzen** – mit dem Fokus:
 
-> **Beantwortet jedes Diagramm seine Leitfrage klar, ohne Ballast, ohne Widerspruch – und sieht die gesamte Ausarbeitung professionell und aus einem Guss aus?**
+> **Jede Kernaussage muss auf Präsentations-Distanz sichtbar sein (ohne Hovern), jede Kennzahl muss für den Betrachter nachvollziehbar sein (Methodik sichtbar), und die gesamte Ausarbeitung wirkt aus einem Guss.**
 
-Nutze das volle Skill-Set. Arbeite **adversarial**: Wer etwas baut, prüft es nicht selbst – Findings werden von einem zweiten Agenten gegengeprüft, bevor sie als „bestätigt" gelten. **Ground Truth** sind die unabhängig nachgerechneten Referenzwerte (`data/kpi_referenzwerte.json`, `scripts/verify_all.py`, `scripts/mmirror_validate.py`). Grundsatz: **„nicht verifizierbar = FAIL".**
+Arbeite **adversarial**: Wer etwas baut, prüft es nicht selbst – ein zweiter Agent verifiziert am **live gerenderten Bericht** (Screenshot), nicht nur am JSON. **Ground Truth** sind die unabhängig nachgerechneten Referenzwerte (`data/kpi_referenzwerte.json`, `scripts/verify_all.py` – aktuell **96/96 grün**). Grundsatz: **„nicht verifizierbar = FAIL".**
 
 ---
 
 ## 1. Kontext (Ist-Stand)
 
-**Projekt:** 9 Leitfragen (LF1–LF9) entlang des Daten-Flows INPUT → OUTPUT → ÜBERGANG → ERGEBNIS. Sternschema (Kimball): 8 Fakttabellen + 4 Dimensionen, konforme `dim_region` über `region_code` (AGS), 18 analytische DAX-Measures **+ 1 Formatierungs-Measure** (`Farbe Führung LF1`, färbt den Leader-Balken). Barrierearmes Okabe-Ito-Theme. Nur offene Daten (Destatis/Regionalstatistik).
+**Projekt:** 9 Leitfragen (LF1–LF9) entlang INPUT → OUTPUT → ÜBERGANG → ERGEBNIS. Sternschema (Kimball): 8 Fakttabellen + 4 Dimensionen, konforme `dim_region` über `region_code` (AGS), **18 analytische Measures + 1 Formatierungs-Measure** (`Farbe Führung LF1`). Okabe-Ito-Theme, nur offene Daten (Destatis/Regionalstatistik, BA, VGRdL).
 
-**Technischer Zustand (sauber – nicht mehr „reparieren"):**
-- **`.pbip` = `.pbix` synchron** (50 Visuals), **`verify_all` 93/93 grün**, `mmirror` ok. Die eingebetteten Bilder (`charts/pbi/pbi_lf*.png`), DOCX und PPTX wurden aus dem **korrigierten** Bericht neu erzeugt. `.pbip` bleibt Single Source of Truth.
-- **Wichtig zur Vermeidung von Regressionen:** Vor Bearbeitung alte `PBIDesktop`/`msmdsrv`-Instanzen beenden, `.pbip` **frisch** öffnen (lädt die versionierte Quelle), refreshen, Änderungen vornehmen, **speichern (Ctrl+S schreibt ins `.pbip`)**, dann via *Datei → Speichern unter → .pbix* re-exportieren. Nicht aus einer alten In-Memory-Instanz speichern (überschreibt die JSON-Edits).
+**Technischer Zustand (sauber):** `.pbip` = `.pbix` synchron (**45 Visuals**), `verify_all` **96/96 grün**, Bilder/DOCX/PPTX aus dem aktuellen Bericht erzeugt. `.pbip` ist Single Source of Truth.
 
-### Bereits erledigt (NICHT erneut anfassen, nur als Kontext) ✅
-- **Korrektheit vollständig:** `jahr=2023` pro datentragendem Visual gepinnt (12 Visuals: LF1-Balken, LF2-Karte+Balken, LF4 5 KPIs, LF6 abs+rel, LF8-Streu-Y); `ebene='DE'` auf LF4 + LF5-Säulen; `ebene='KR'` auf LF3-Scatter. **LF6-Faktor-2-Fehler behoben** (relativ 41,6 je 1.000 statt ~78). **LF3-Scatter repariert** (Y=Abiturquote %, Serie=`dim_region[Land]`, ebene=KR, jahr). **LF1 Stadtstaat-Default „Flächenland" entfernt** (verdeckte Bremen). Alle Text↔Bild-Widersprüche damit aufgelöst; Werte == Ground Truth.
-- **LF1:** führendes Land **Sachsen-Anhalt vermillion (`#D55E00`)** hervorgehoben (Formatierungs-Measure + bedingte Formatierung „nach Feldwert"), Rest gedämpft blau; Jahres-Slicer blendet Platzhalter `„-"` aus.
-- **LF2:** auf 2023 gepinnt; **toter Schuljahr-Slicer entfernt.**
-- **Land-Slicer LF1/LF4/LF5/LF6/LF7/LF9:** nationale Aggregat-Zeile **„Deutschland" ausgeschlossen.**
-- **LF9:** Tabellen-**Summenzeile aus**; **Einkommens-Slicer-Titel** „Einkommen je Einwohner (€)".
-- **Repo/Doku:** sensible + fremde PDFs entfernt (inkl. History-Rewrite), **Duplikat-PDFs gelöscht**, README-DataFolder-Erklärung vorhanden, die **zwei Slicer-Bugs dokumentiert** (`BEFUNDE_UND_KORREKTUREN.md`).
+### Bereits erledigt (NICHT erneut anfassen) ✅
+- **Korrektheit (Runde 1):** jahr=2023 pro Visual (12×), ebene-Filter (LF3=KR, LF4/LF5=DE), LF6-Faktor-2 behoben (relativ 41,6), LF3-Scatter repariert, LF1-Stadtstaat-Default entfernt; Werte == Ground Truth.
+- **Entschlackung (Runde 2):** 6 redundante Slicer entfernt (LF1 stadtstaat+Land, LF2 stadt_land, LF5 schulart, LF8 stadtstaat, LF9 stadt_land); verbleibende Land-Slicer (LF4/5/6/7/9) Single-Select + Titel „Bundesland"; LF7-Schulart-Chart per NoFilter-Interaktion fest auf Deutschland (W5).
+- **Inhalt (Runde 2):** LF5-Zweitsicht „ohne Grundschule" (Gymnasien ~40 % führen); LF9-Tabelle mit Treiberspalten (Quote ohne HSA, Jugend-ALQ, Einkommen); LF8-Datenpunkt-Labels an (W10); LF3-Seitentitel angeglichen; LF6/LF7-Achsentitel mit Einheit (W4).
+- **W8 belegt statt entschärft:** r(Einkommen, ohne HSA)=−0,489, r(Einkommen, Jugend-ALQ)=−0,590 (n=398), Bayern 5,36 % → als Guards in verify_all (daher 96 Tests).
+- **Stil:** Seitentitel + Erkenntnis-Boxen auf x=24 (S1/S2); LF1-Leader Sachsen-Anhalt vermillion `#D55E00` via Formatierungs-Measure + fx „nach Feldwert"; K3 (LF3-Geister-Interaktion) entfernt.
+- **Repo/Doku:** sensible/fremde PDFs raus (History-Rewrite), Duplikate gelöscht, Slicer-Bugs dokumentiert, `LF3_Boxplot_Anleitung.md` liegt bereit.
 
-**Team-Leitplanken (Richtung respektieren, nicht zurückdrehen):**
-- **LF2:** Blasenkarte (Größe = Rate) ist ein Anti-Pattern (oranger Teppich) → **Choropleth/Flächenfärbung** über **AGS `region_code`** (nicht Name, wegen 9 Doppelnamen) oder farbkodierte kleine Punkte; Top-N-Balken bleibt Hauptaussage.
-- **LF6:** absolut **und** relativ nebeneinander (Rangwechsel NRW ↔ Sachsen-Anhalt) – umgesetzt.
-- **LF1:** Zwei-Jahres-Vergleich über die rechte Linie (`schuljahr` in der Legende = zwei Linien); der **hart gepinnte `jahr=2023` auf dem Balken ist Absicht** (Balken = 2023-Ranking, Linie = Trend – bewusste Arbeitsteilung, nicht „reparieren").
-- **Methodik:** Korrelation ≠ Kausalität, **ökologischer Fehlschluss / Simpson** offen ausgewiesen (Risiko-Score = regionaler Strukturindikator, keine Individualaussage).
+### ⚠️ Bekannte Fallen (aus Runde 1/2 – unbedingt beachten)
+1. **Bedingte Farbe „nach Feldwert" per JSON braucht den `selector`:** `objects.dataPoint`-Eintrag ohne `"selector": {"data":[{"dataViewWildcard":{"matchingOption":1}}]}` wird still ignoriert. Zuverlässig: Measure im Modell anlegen, Farbe in der **GUI** binden (Format → Farbe → **fx** → Formatstil „Feldwert") – das schreibt den Selector korrekt.
+2. **Visual per Ordner-Löschung entfernt → verwaiste `visualInteractions` prüfen!** Ein page.json-Eintrag mit der toten Visual-ID lässt den Bericht normal rendern, aber **„Speichern unter → .pbix" scheitert STILL** (springt ohne Fehlermeldung zur Backstage zurück). Diagnose: `grep -rl "<visual-id>" …/Report/`. Fix: Eintrag aus der page.json entfernen, PBI neu öffnen.
+3. **Workflow je Bearbeitungszyklus:** alte `PBIDesktop`/`msmdsrv`-Prozesse killen → JSON-Edits auf die `.pbip` → PBI **frisch** öffnen → refreshen → live verifizieren (Screenshots) → ggf. GUI-Edits (fx-Farben) → **Ctrl+S** (schreibt .pbip) → *Speichern unter → .pbix* (kanonisch überschreiben). Nie aus einer alten In-Memory-Instanz speichern. OneDrive: `rmtree` scheitert oft → Dateien einzeln löschen, Ordner per PowerShell.
+4. **PDF-Export** stempelt oben mittig „Power BI Desktop" (y≈25–37 pt) → beim Croppen den Textblock **weiß übermalen**, dann Auto-Bounding-Box (Skript-Muster existiert; PDF liegt unter `AppData/Local/Temp/Power BI Desktop/print-job-*/`).
+5. **Guard-Konventionen in `verify_all.py`:** Formatierungs-Measures MÜSSEN mit **`Farbe `** beginnen (werden getrennt gezählt: „18 analytisch + N Formatierung"). Neue **analytische** Measures oder neue **Seiten** erfordern bewusste Guard-Updates (Measure-Zahl, Visual-Zahl .pbix==.pbip, „9 Seiten"-Bild-Guards, crop-Skript `assert len(d)==9` → Seiten-Mapping anpassen). Guards nachziehen = Teil der Aufgabe, still rot lassen = FAIL.
 
-**Kernartefakte:** `powerbi/…SemanticModel` (TMDL/M), `powerbi/…Report` (PBIR), `powerbi/SchulabschlussDataStory.pbix`, `charts/pbi/pbi_lf*.png`, `Schulabschluss_DataStory_Dokumentation.docx`, `Schulabschluss_DataStory_Praesentation.pptx`, `data/`, `scripts/verify_all.py`, **`REVIEW_BEFUND.md`** (Befund-IDs), **`LF3_Boxplot_Anleitung.md`**.
+**Team-Leitplanken (nicht zurückdrehen):** LF1-Balken bewusst auf 2023 gepinnt (Balken=Ranking, Linie=Trend); LF6 absolut+relativ nebeneinander; Okabe-Ito; Korrelation ≠ Kausalität + ökologischer-Fehlschluss-Vorbehalt bleiben.
+
+**Kernartefakte:** `powerbi/…SemanticModel` (TMDL), `powerbi/…Report` (PBIR), `powerbi/SchulabschlussDataStory.pbix`, `charts/pbi/pbi_lf*.png`, `Schulabschluss_DataStory_Dokumentation.docx`, `…_Praesentation.pptx`, `scripts/verify_all.py`, `REVIEW_BEFUND.md`, `LF3_Boxplot_Anleitung.md`.
 
 ---
 
-## 2. Ziele
+## 2. Ziele dieser Runde
 
-1. **Jede Leitfrage** wird durch das **fachlich passendste** Visual beantwortet – Typ und Kodierung **beweisen** die Kernaussage.
-2. **Kein Ballast / keine Überladung** – redundante Slicer/Visuals begründet entfernen oder vereinfachen (§11b, W2/W3).
-3. **Keine Widersprüche** zwischen Diagramm, Erkenntnistext, Zahl (Ground Truth) und Doku/Präsentation; unbelegte Zahlen belegen oder entschärfen (W8).
-4. **Stil & Formalien (gleichrangig zum Inhalt):** einheitliche Formsprache über alle 9 Seiten *und* in DOCX/PPTX – Ausrichtung/Raster, Achsentitel/Einheiten, deutsches Zahlenformat, **eine Akzentfarbe je Visual für die Kernaussage**, Theme statt Inline-Hex. **Das Aussehen zählt so viel wie der Inhalt.**
-5. **Technische Konsistenz halten:** `.pbip` = `.pbix` = Bilder = DOCX/PPTX; **`verify_all` grün** nach jeder Runde.
+1. **LF9 präsentationstauglich (Priorität 1, neuer Team-Wunsch):** Unterschiede zwischen den Kreisen müssen **ohne Hovern** sichtbar sein; die **Berechnung des Risiko-Scores muss für den Betrachter direkt auf der Seite nachvollziehbar** sein (Details §6/LF9 + §11a).
+2. **Verbliebene Komposition** umsetzen: LF4 Card-Wall → Delta-Karten, LF2-Karte umkodieren oder streichen, LF1-Charttyp entscheiden, LF7-Achse auf konforme Dimension (W3/W9).
+3. **Stil-Rest** umsetzen: Akzentfarbe je Visual für die Kernaussage (S3), Slicer-Spalte vereinheitlichen (S4), Abstände/Fluchten (K1), leere Filter-Stubs (K2), Inline-Font → Theme (K5).
+4. **Kür umsetzen** (nicht nur vorschlagen): Einstiegsseite, Quellenzeile je Seite, Slicer-Sync, Drillthrough „Kreissteckbrief" – soweit ohne Login machbar (§11d).
+5. **Konsistenz halten:** `.pbip` = `.pbix` = Bilder = DOCX/PPTX; `verify_all` **grün** (Guards bewusst nachgezogen, nie still rot).
 
 ---
 
 ## 3. Nicht-Ziele & Stop-Bedingungen
 
-- **Kein Redesign um des Redesigns willen**; was eine LF bereits klar beantwortet, bleibt.
-- **Bereits Erledigtes (§1) nicht zurückdrehen** – insb. Korrektheits-Filter, LF1-Leader-Farbe, gepinnte Jahre.
-- **Keine neuen Leitfragen/Analysen/Datenquellen**; Umfang = bestehende 9 LF.
-- **Inhaltliche Ergebnisse/Kernaussagen nicht ändern** (Zahlen sind belegt) – es geht um Darstellung, Klarheit, Form.
-- **Sobald eine LF „grün" ist** (§8): nicht weiterfeilen → nächste LF. Keine kosmetischen Endlosschleifen.
-- **Aggregat-/ökologischer-Fehlschluss-Vorbehalt** bleibt; Korrelation ≠ Kausalität.
+- **Bereits Erledigtes (§1 ✅) nicht zurückdrehen** – insb. Korrektheits-Filter, Slicer-Entschlackung, LF1-Farbe, gepinnte Jahre.
+- **Keine neuen Leitfragen/Analysen/Datenquellen**; inhaltliche Kernaussagen bleiben (Zahlen sind belegt).
+- **Kein Redesign um des Redesigns willen**; sobald eine LF „grün" ist (§8): weiter zur nächsten. Keine kosmetischen Endlosschleifen.
+- **Login-pflichtige Schritte** (AppSource/Deneb, Shape-Map-Aktivierung falls kontogebunden) NICHT versuchen zu automatisieren → als klar beschriebene User-Aktion ausweisen und weiterarbeiten.
 - **Nichts löschen/überschreiben ohne Beleg**; keine Credentials; öffentliches Repo sauber; kein Push halbfertiger Stände.
-- **Deadline 09.07.2026** – „muss" vor „schön".
+- **Deadline 09.07.2026:** Reihenfolge strikt nach §11-Priorität – „muss" (LF9, W3, S3) vor Kür.
 
 ---
 
@@ -69,192 +68,149 @@ Nutze das volle Skill-Set. Arbeite **adversarial**: Wer etwas baut, prüft es ni
 
 | Agent | Fokus | Skills / Agenten |
 |---|---|---|
-| **Orchestrator (du)** | Plan, Fan-out, Konsolidierung, Umsetzung, Abschluss | alle, `pbir-cli`, `semantic-model` |
-| **Modell-Auditor** | Measures/Filter fachlich richtig? DAX, Grain, Mehrfachzählung | `semantic-models:semantic-model` (+ `semantic-model-auditor`), `dax`, `power-query` |
-| **Report-/Design-Kritiker** | Pro Visual: Typ? Kodierung? Ballast? Achsen/Legende/Titel? Theme/Barrierefreiheit? Layout/Raster? | `reports:pbir-cli`, `pbi-report-design`, `review-report`, `modifying-theme-json` |
-| **Visual-Spezialist** | Bessere Visuals wo nativ schwach (Choropleth, Slope/Dumbbell, Boxplot, SVG-KPIs) | `custom-visuals:deneb-visuals`, `svg-visuals`, `python-visuals`, `r-visuals` (+ Reviewer) |
-| **PBI-Desktop-Operator** | Bericht live: neu laden, **jede Seite screenshotten**, DAX-Queries mitschneiden | `pbi-desktop:connect-pbid`, `pbir-cli` (+ `query-listener`) |
-| **Daten-/QA-Wächter** | Wert im Visual == Ground Truth? Rundungen, Widersprüche zum Text | `verify_all.py`, `mmirror_validate.py`, `kpi_referenzwerte.json` |
-| **Story-/Konsistenz-Editor** | Roter Faden, Konsistenz Diagramm ↔ Text ↔ DOCX/PPTX, Doppelungen/Überladung | `review-report`, DOCX/PPTX |
+| **Orchestrator (du)** | Plan, Fan-out, Umsetzung, Abschluss | alle, `pbir-cli`, `semantic-model` |
+| **Modell-Auditor** | neue Measures (Deltas, Farb-Helfer) korrekt? Grain, Filterkontext | `semantic-models:semantic-model` (+ `semantic-model-auditor`), `dax` |
+| **Report-/Design-Kritiker** | Kodierung, Farben, Layout/Raster, Data-Ink, Barrierefreiheit | `reports:pbir-cli`, `pbi-report-design`, `review-report`, `modifying-theme-json` |
+| **Visual-Spezialist** | LF9-Einfärbung, LF2-Karte, Delta-Karten, ggf. SVG-KPIs | `custom-visuals:deneb-visuals`, `svg-visuals`, `python-visuals` (+ Reviewer) |
+| **PBI-Desktop-Operator** | Live laden, fx-Farben in der GUI binden, jede berührte Seite screenshotten, exportieren | `pbi-desktop:connect-pbid`, `pbir-cli` (+ `query-listener`) |
+| **Daten-/QA-Wächter** | Werte == Ground Truth, Guards nachziehen (bewusst, dokumentiert) | `verify_all.py`, `kpi_referenzwerte.json` |
+| **Story-/Konsistenz-Editor** | Methodik-Texte (LF9!), Titel=Aussage, DOCX/PPTX-Abgleich | `review-report`, DOCX/PPTX |
 
-**Adversarial-Regel:** Ersteller ≠ Prüfer; ein Finding gilt erst als bestätigt, wenn ein zweiter Agent es reproduziert.
-
----
-
-## 5. Bewertungsrahmen pro Leitfrage (für JEDE LF gleich)
-
-Fact-Sheet + Urteil je LF. Prüfe: **1** Kernaussage (1 Satz) · **2** Visual-Typ passend? (Vergleich→Balken; Zeit→Linie; Zusammenhang→Streu; Verteilung→**Box**; Geo/Rate→**Choropleth**, nicht Blasengröße; Anteil→Balken) · **3** Kodierung (richtiger Wert auf richtige visuelle Variable; Sortierung so, dass die Antwort sofort sichtbar ist) · **4** Filter nötig & korrekt, keiner überflüssig/irreführend · **5** Measure rechnet genau die Frage · **6** Wert == Ground Truth · **7** Text deckt sich mit Bild · **8** kein Ballast · **9** Barrierefreiheit/Design (Okabe-Ito, Kontrast, Achse ab 0, Titel=Aussage, Einheiten, Quelle).
-
-**Urteil je LF:** `BEHALTEN` / `ANPASSEN (konkret: …)` / `ERSETZEN (durch …)` mit **Begründung + Severity** (blocker/wichtig/kosmetisch) und konkretem Umsetzungsvorschlag.
+**Adversarial-Regel:** Ersteller ≠ Prüfer; ein Umsetzungs-Schritt gilt erst als fertig, wenn ein zweiter Agent ihn am **gerenderten Bericht** (Screenshot) bestätigt hat – nicht nur im JSON (Lektion: JSON-Farb-Edits können still wirkungslos sein, Falle 1).
 
 ---
 
-## 5b. Stil- & Formalien-Checkliste (für JEDE Seite + Doku – gleichrangig zu §5)
+## 5. Bewertungs- & Umsetzungsrahmen (je berührter Seite)
 
-> Zuständig: Report-/Design-Kritiker (`pbi-report-design`, `modifying-theme-json`, `review-report`) + Story-/Konsistenz-Editor. Grundlage: Design-Canon (3-30-300, Hierarchie, Ausrichtung, Farbdisziplin).
+Vor jeder Änderung kurz prüfen, nach jeder Änderung verifizieren:
+**1** Kernaussage in 1 Satz · **2** Ist die Aussage **auf Distanz sichtbar** (Farbe/Sortierung/Beschriftung, ohne Hover/Tooltip)? · **3** Ist jede gezeigte Kennzahl **nachvollziehbar** (Einheit, Bezugsgröße, Methodik erkennbar)? · **4** Filter nötig & korrekt · **5** Wert == Ground Truth · **6** Text deckt sich mit Bild · **7** kein Ballast · **8** Okabe-Ito, Kontrast ≥ 4,5:1, Achse ab 0, Titel = Aussage, Quelle.
 
-**A. Bericht (Power BI) – einheitliche Formsprache über alle 9 Seiten**
-- **Seitentitel** identisch platziert/formatiert; **Erkenntnis-Textboxen** gleiche Position/Breite/Schrift; **eine** Kernaussage je Seite.
-- **Ausrichtung/Raster:** saubere Koordinaten (keine krummen Werte wie `x=9.7264`), **keine Überlappungen**, gefluchtete Visuals, bewusster Weißraum.
-- **Slicer** einheitlich (Stil, Position, Beschriftung, Kopf) – und **nur wo sie wirken**.
-- **Zahlenformat konsistent:** deutsches Komma, gleiche Dezimalstellen je Kennzahl, Tausenderpunkt, **Einheiten** (%, €, pp, „je 1.000"); Achsentitel **mit Einheit**, Mengenachse **ab 0**.
-- **Farbdisziplin:** Okabe-Ito Basis, **eine Akzentfarbe je Visual** für die Kernaussage (führenden Wert hervorheben), Rest zurückhaltend/grau; Kontrast ≥ 4,5:1.
-- **Datenbeschriftungen** nur wo sie helfen; **Legende** konsistent; **Quellenangabe** je Seite.
-
-**B. DOCX/PPTX & Formalien (Abgabe)**
-- Titelseite, Kopf-/Fußzeile, **Seitenzahlen**, Inhaltsverzeichnis; einheitliche **Überschriften-Stile** & Schriftart.
-- **Abbildungen nummeriert** + Bildunterschrift + Quelle; keine abgeschnittenen/verzerrten Bilder.
-- **Rechtschreibung/Grammatik**, einheitliche **Terminologie** durchgängig, deutsches Zahlenformat.
-- Keine Platzhalter; PPTX: Folienmaster konsistent, lesbar, nicht überladen.
-
-**C. Konkrete Norm-Werte**
-- **Design-Identität einmal festlegen** (gilt für alle 9 Seiten): Tonalität „editorial/technical" (gedämpft) + eine Signatur = identischer Kopfbereich (Titel + Erkenntnis-Band) → ein Artefakt.
-- **Raster:** 8-/16-px-Grid, gleiche Abstände (≥16 px) **und** Ränder (24–32 px); Positionen arithmetisch; Ausrichten/Verteilen; Snap-to-Grid.
-- **Detail-Gradient / 3-30-300:** wichtig+grob oben-links, Detail unten-rechts.
-- **Mengengrenzen je Seite:** ≤ 12–15 Visuals, ≤ **4–6** KPIs, ≤ **3** Slicer (Rest in Filterbereich).
-- **Typografie:** Segoe UI / Segoe UI Semibold, max. 2 Größen je Visual; Titel 16–24 pt, Achsen 10–11 pt, min. 12 pt.
-- **Farbe:** gedämpfter Grundton + EINE Akzentfarbe je Visual; Farben aus dem **Theme**; Rot/Grün nur bei echtem Bedeutungs-Encoding.
-- **Data-Ink:** Gitter/Ränder/Schatten/3D minimieren; jedes Element muss sich rechtfertigen.
-- **Titel = Aussage**; Karten/KPIs mit Kontext statt nackter Zahl; Tabellen: Gitter raus, Datenbalken/Sortierung nach Wichtigkeit.
-- **Theme zentral** via `modifying-theme-json`; **Alt-Text** je Visual.
-- **Anti-Patterns (verboten):** KPI-Wände, monochrome Balken ohne Akzent, fehlende Sortierung, Roh-Feldnamen als Titel, Inline-Hex, Off-Grid-Drift, 3D, Doppel-Y-Achse, Riesen-Torten.
-
-**Urteil je Seite:** `Stil OK` / `Stil ANPASSEN (konkret …)` + Severity. **Design-Gate am Schluss** (Identität durchgängig? eine Absicht je Seite? gleiche Abstände/Ränder on-grid? Callouts belegt? Barrierefreiheit ok?) + **Screenshot-Review-Loop** via `pbir-cli`.
+**Stil-Norm (Kurzfassung, gilt weiter):** 8/16-px-Raster, Abstände ≥16 px, Ränder 24–32 px, gefluchtete Kanten; Segoe UI, max. 2 Größen je Visual; **eine Akzentfarbe je Visual** für die Kernaussage, Rest gedämpft; Farben aus Theme statt Inline-Hex; ≤3 Slicer je Seite; Anti-Patterns verboten (KPI-Wände, monochrome Balken ohne Akzent, fehlende Sortierung, Roh-Feldnamen als Titel, Off-Grid, 3D, Doppel-Y, Riesen-Torten).
 
 ---
 
-## 6. Die 9 Leitfragen – Ist-Stand & offene Punkte
+## 6. Die 9 Leitfragen – Ist-Stand & Aufträge dieser Runde
 
-> Pro LF: live screenshotten, Rahmen §5 **und** Stil-Checkliste §5b anwenden. ✅ = erledigt (nicht anfassen), 🟠 = offen.
+> ✅ = erledigt (nicht anfassen) · 🟠 = Auftrag Runde 3.
 
-- **LF1 – Führende Bundesländer ohne Abschluss (22/23 & 23/24).**
-  ✅ Balken auf `jahr=2023` gepinnt; **Sachsen-Anhalt vermillion**; schuljahr-Slicer ohne „-"; Linie zweijährig korrekt.
-  🟠 **stadtstaat- + Land-Slicer entfernen** (nur Jahr-Slicer behalten – Land dupliziert die BL-Achse) *(W2/W1)*; Linien-Chart über 16 diskrete BL → **Slope/Dumbbell** erwägen *(W3)*; Slicer-Stil/-Position vereinheitlichen *(S4)*.
+- **LF1 – Führende Bundesländer ohne Abschluss.**
+  ✅ Balken 2023 + Sachsen-Anhalt vermillion; Jahr-Slicer sauber; Linie zweijährig.
+  🟠 **Charttyp-Entscheidung (W3b):** Linie über 16 diskrete BL → **Dumbbell/Slope** (Deneb, falls ohne Login importierbar per `.pbiviz`-Datei; sonst native Alternative: gruppierte Balken 22/23 vs. 23/24) ODER begründet BEHALTEN („zwei Jahrgänge als Verlauf lesbar") – Entscheidung dokumentieren, nicht endlos iterieren.
 
 - **LF2 – Höchster Anteil ohne HSA (Kreise).**
-  ✅ Karte+Balken auf 2023; toter Schuljahr-Slicer weg.
-  🟠 **stadt_land-Slicer entfernen** *(W2)*; **Bubble-Map → Choropleth** (AGS-Matching) **oder streichen**, Karte/Balken entdoppeln *(W3)*.
+  ✅ 2023 gepinnt, tote Slicer weg.
+  🟠 **W3c:** Bubble-Map (Größe=Rate = Anti-Pattern) → **(a)** native **Shape Map/Choropleth** mit AGS-`region_code` prüfen (wenn ohne Login aktivierbar: umsetzen, sequentielle Füllfarbe, Anhalt-Bitterfeld als dunkelster Wert), **(b)** sonst Karte **streichen** (Top-15-Balken trägt die Aussage allein) und die Bubble-Grenze als **Werkzeug-Grenze** in die Tool-Bewertung schreiben. **S3:** im Top-15-Balken den Spitzenreiter **Anhalt-Bitterfeld** akzentuieren (`Farbe Hotspot LF2`-Measure + GUI-fx, Falle 1 beachten).
 
-- **LF3 – Länder- oder Kreisproblem (Streuung)?**
-  ✅ Scatter repariert (ebene=KR, jahr, Serie=Land); StdAbw-Tabelle korrekt.
-  🟠 **Boxplot** (X=Bundesländer, Y=Quote ohne HSA je Kreis) via **Deneb** – **braucht AppSource-Login (User-Aktion, s. `LF3_Boxplot_Anleitung.md`)** *(B3-Ersatz)*; `page.displayName` „…× Abitur" angleichen *(W4)*; gegenstandslose visualInteraction entfernen *(K3)*.
+- **LF3 – Streuung ohne HSA je Kreis.**
+  ✅ Scatter repariert, Titel angeglichen, K3 raus.
+  🟠 **Boxplot bleibt User-Aktion** (AppSource-Login; `LF3_Boxplot_Anleitung.md`). Falls das Team Deneb inzwischen importiert hat: Boxplot gemäß Anleitung einbauen. Sonst: nichts tun.
 
 - **LF4 – Unterschied Jungen/Mädchen?**
-  ✅ ebene=DE + jahr=2023 gepinnt; `(Geschlecht)`-Measure hier korrekt.
-  🟠 **Card-Wall → max. 2 Delta-Karten** (Gap ohne HSA, Gap Abitur), sinnlose TrendLine=geschlecht raus *(W3)*; Achse ab 0, Einheiten *(S3)*.
+  ✅ ebene=DE + jahr=2023.
+  🟠 **W3a – Card-Wall ersetzen:** die 4–5 Einzel-KPIs durch **≤2 Delta-Karten**: `Gap ohne HSA (pp)` (Jungen−Mädchen) und `Gap Abitur (pp)` (Mädchen−Jungen), als neue **analytische** Measures (DAX aus den vorhandenen `(Geschlecht)`-Measures; Werte gegen GT: ~8,4−5,8=**2,6 pp** bzw. ~37,1−29,3=**7,8 pp** – exakt nachrechnen!). Karten mit Kontext-Untertitel („Jungen 8,4 % vs. Mädchen 5,8 %"). **Guards bewusst nachziehen:** Measure-Zahl 18→20 analytisch (verify_all + powerbi/README konsistent).
 
-- **LF5 – Prägt der Schulartmix die Abschlüsse?**
-  ✅ Säulen auf ebene=DE (kein Ebenen-Mix).
-  🟠 **schulart-Slicer entfernen** (liegt auf der Achse; `ALL(dim_schulart)` bricht die 100%-Lesart) *(W2)*; **„ohne Grundschule"-Zweitsicht** ergänzen (Measure existiert, ungenutzt) *(W6)*; zwei Slicer-Typen vereinheitlichen *(S4)*.
+- **LF5 – Schulartmix.**
+  ✅ Zweitsicht „ohne Grundschule", ebene=DE, Slicer sauber.
+  🟠 **S3:** in beiden Säulencharts den tragenden Balken akzentuieren (links **Grundschulen**, rechts **Gymnasien**) via `Farbe Schulart LF5`-/`Farbe Schulart LF5 oG`-Measures + GUI-fx.
 
-- **LF6 – Relativ statt absolut?**
-  ✅ Faktor-2 behoben (relativ 41,6); beide Charts auf 2023; Land-Slicer ohne Deutschland.
-  🟠 je Chart **Aussage-Titel** („Absolut …"/„Je 1.000 …") + **Achsentitel mit Einheit** *(W4)*; **Slope/Dumbbell** für den Rangwechsel erwägen; leere Filter-Stubs entfernen *(K2)*.
+- **LF6 – Absolut vs. relativ.**
+  ✅ Faktor-2 behoben, Achsentitel mit Einheit.
+  🟠 **S3:** Rangwechsel farblich erzählen: **Sachsen-Anhalt** in beiden Charts vermillion, **NRW** in beiden petrol/blau (`Farbe Rangwechsel LF6`), Rest grau – der Blicksprung zeigt den Kipp-Effekt ohne Lesen. **K2:** leere Filter-Stubs (Advanced ohne Where) aus beiden Chart-JSONs entfernen.
 
-- **LF7 – Verteilung der Bildungsausgaben?**
-  ✅ Werte GT-konform (Schulart- + BL-Chart auf 2023) – **nicht anfassen**.
-  🟠 **Achse → `dim_region[Land]`** statt `fact…[bundesland]` *(W9)*; **Erkenntnistext um BL-Aussage** + Titel schärfen *(W4)*; **Edit-Interactions:** Schulart-Chart fest auf „Deutschland" halten (stille Slicer-Umschaltung) *(W5)*; Land-Slicer single-select + sprechender Titel *(W1)*; €-Achse ab 0 mit Einheit *(S3)*.
+- **LF7 – Bildungsausgaben.**
+  ✅ Werte GT-konform, NoFilter-Interaktion (W5), €-Achsentitel.
+  🟠 **W9:** Category des BL-Charts von `fact_ausgaben_je_schueler[bundesland]` auf **`dim_region[Land]`** umstellen (konforme Dimension). VORSICHT: danach live prüfen, dass alle 16 Balken + identische Werte erscheinen (Beziehung fact→dim_region muss greifen); bei Wertabweichung → zurück und als „bewusst nicht geändert" dokumentieren. **K2:** leere Filter-Platzhalter entfernen (den wirksamen `NOT IN ('Deutschland')`-Filter BEHALTEN).
 
 - **LF8 – Mehr Geld = mehr Abitur?**
-  ✅ Y auf jahr=2023 (kein Jahres-Mix); Farbe=stadtstaat zeigt Confounder.
-  🟠 **Datenpunkt-Labels an** (BE/HH/HB im Bild identifizierbar) *(W10)*; **stadtstaat-Slicer entfernen** (dupliziert Series, kann die Kernaussage wegfiltern) *(W2)*; keine Kausal-Suggestion im Text.
+  ✅ 2023 auf Y, Labels an, Slicer weg.
+  🟠 nur S4/K1-Feinschliff (Layout), sonst nichts.
 
-- **LF9 – Risiko-Kreise (Bildung × ALQ × Einkommen).**
-  ✅ Summenzeile aus; Einkommens-Slicer-Titel; Scatter-Achsen korrekt (ebene=KR).
-  🟠 **stadt_land-Slicer entfernen** (dritter, sinnfreier Slicer) *(W2)*; **Treiberspalten** (Quote ohne HSA, Jugend-ALQ, Einkommen) in die Score-Tabelle *(W6)*; **r-Werte −0,49/−0,59 belegen** (Doku/GT) **oder im Text entschärfen** *(W8)*.
+- **LF9 – Risiko-Kreise (NEUER TEAM-WUNSCH, Priorität 1).**
+  ✅ Treiberspalten, Summenzeile aus, Slicer-Titel, Achsen korrekt.
+  🟠 **Problem laut Team:** Im Streudiagramm sehen alle ~400 Punkte gleich aus – Unterschiede erst beim Hovern erkennbar (präsentationsuntauglich); außerdem ist **nicht ersichtlich, wie der Risiko-Score berechnet wird**. Auftrag (Details §11a):
+  **(a) Punkte nach Risiko-Score einfärben** – Formatierungs-Measure `Farbe Risiko LF9` (z. B. Top-10-Risiko-Kreise vermillion `#D55E00`, Rest gedämpft grau/blau; RANKX über den Score) und in der **GUI** via fx binden (Falle 1!). Alternativ/zusätzlich prüfen: Farbverlauf (Gradient) nach Score – entscheiden, was auf Distanz klarer ist (Panel-Urteil).
+  **(b) Score-Spalte sichtbar machen:** **Datenbalken** auf der Risiko-Score-Spalte der Tabelle (Conditional Formatting → Data bars) – Ranking ohne Lesen erfassbar.
+  **(c) Methodik erklären:** kompakte **Methodik-Textbox** auf der Seite (oder Untertitel der Tabelle): „Risiko-Score = Summe der z-standardisierten Werte aus (1) Quote ohne HSA 2023, (2) Jugend-ALQ 2025, (3) verfügbarem Einkommen 2021 (invertiert). 0 = Bundesschnitt der 398 Kreise; höher = höheres strukturelles Risiko. Kein Individualmaß (ökologischer Fehlschluss)." Zusätzlich die drei Treiber + Score in den **Tooltip** des Scatters legen.
+  **(d) Visual-Frage:** prüfen, ob der Scatter mit (a)–(c) die Frage jetzt trägt; falls das Panel ihn weiterhin für zu unleserlich hält, Alternative: **Top-15-Balken nach Risiko-Score** (gefärbt) als Haupt-Visual + Scatter als Kontext daneben. Entscheidung dokumentieren.
+  Erkenntnistext ggf. anpassen (Gelsenkirchen 8,1; die r-Werte sind belegt und bleiben).
 
 ---
 
 ## 7. Phasen & Meilensteine
 
-**Phase 0 – Setup.** `.pbip` frisch öffnen (alte PBI-Instanzen beenden), refreshen; `verify_all` läuft (soll grün sein). *Kein Sync-Umbau nötig – Stand ist konsistent.*
-**Meilenstein 0:** sauberer, grüner Ausgangsstand.
+**Phase 0 – Setup.** Alte PBI-Instanzen beenden, `.pbip` frisch öffnen, refresh; `verify_all` = 96/96 grün bestätigen.
+**Phase 1 – Kurz-Inventur** nur der berührten Seiten (LF9-Scatter/-Tabelle, LF4-Karten, LF2-Karte, LF6/LF7-Filter-Stubs, Slicer-Positionen aller Seiten) + Screenshots.
+**Phase 2 – Panel-Entscheidungen (adversarial, kurz):** LF9 (a) Top-N vs. Gradient, (d) Scatter vs. Balken; LF1 Charttyp; LF2 Choropleth vs. streichen. Je 2 Bewerter, Entscheidung + Begründung festhalten – dann NICHT mehr aufmachen.
+**Phase 3 – Umsetzung Zyklus A („muss"):** LF9 (a–d) → LF4 Delta-Karten (+ Guard-Update 18→20) → LF2-Entscheidung umsetzen → W9 LF7-Achse → S3-Akzentfarben (LF2/LF5/LF6; alle via Modell-Measure `Farbe …` + GUI-fx) → K2-Stubs. Live verifizieren, **Ctrl+S + .pbix-Export**, `verify_all` grün.
+**Phase 4 – Umsetzung Zyklus B (Stil + Kür):** S4 Slicer-Spalte (rechts bündig, gleiche Breite/x, ein Typ), K1 Abstände/Fluchten (≥16 px, Unterkanten), K5 Font→Theme; dann Kür §11d: **Quellenzeile** je Seite, **Einstiegsseite** (⚠️ Guards + crop-Mapping anpassen: 10 PDF-Seiten, Intro überspringen), **Slicer-Sync** (syncGroup), **Drillthrough Kreissteckbrief** (falls Zeit). Live verifizieren, Export.
+**Phase 5 – Abschluss:** Berichts-PDF exportieren → `charts/pbi/pbi_lf*.png` neu croppen (Falle 4; Seiten-Mapping!) → DOCX (p7) + PPTX (p6) + Präsentations-PDF (LibreOffice headless) neu → `verify_all` **komplett grün** (alle Guard-Änderungen im Commit begründet) → Commit(s) mit klaren Messages → Push → Kurzbericht „vorher → nachher" je berührter LF.
 
-**Phase 1 – Bestandsaufnahme.** Nur für die **offenen** Punkte je LF: Visuals/Slicer/Filter katalogisieren, jede betroffene Seite live screenshotten.
-**Meilenstein 1:** Fact-Sheet der offenen Punkte je LF.
-
-**Phase 2 – Kritische Bewertung (adversarial).** Jeder Fach-Agent bewertet §5 + §5b; zweiter Agent gegenprüft; Werte gegen Ground Truth.
-**Meilenstein 2:** je LF Urteil + gegengeprüfte Findings mit Severity.
-
-**Phase 3 – Konsolidierung.** Findings dedupeln (gegen `REVIEW_BEFUND.md` mappen), priorisieren (wichtig → kosmetisch), in konkrete Änderungen übersetzen, Freigabe-Liste.
-**Meilenstein 3:** priorisierte Aktionsliste (mit „bewusst nicht ändern").
-
-**Phase 4 – Umsetzung (in EINEM gebündelten Bearbeitungs-/Export-Zyklus, um PBI-Zyklen zu sparen).**
-- **4a Bedienung/Ballast:** redundante Slicer entfernen (W2), Land-Slicer single-select + Titel (W1), LF7 Edit-Interactions (W5).
-- **4b Komposition:** LF4 Karten reduzieren, LF1 Charttyp, LF2 Choropleth/streichen (W3); LF5/LF9 fehlende Sichten/Spalten (W6); Titel/Text angleichen (W4); W8 Zahlen belegen/entschärfen; LF7-Achse (W9); LF8-Labels (W10).
-- **4c Stil & Formalien (§5b):** Off-Grid-Titel auf allen 9 Seiten begradigen (S1), Textboxen fluchten (S2), Achsentitel/Einheiten/Akzentfarben weiterer Leader (S3), Slicer-Spalte vereinheitlichen (S4), K1/K2/K3/K5; Theme zentral via `modifying-theme-json`.
-- **Boxplot (LF3):** wenn der User eingeloggt ist / Deneb importiert wurde, gemäß `LF3_Boxplot_Anleitung.md` einbauen; sonst als User-Aktion offenlassen.
-- Danach **DOCX/PPTX + eingebettete Bilder neu erzeugen** (Report-PDF exportieren → `charts/pbi/pbi_lf*.png` neu croppen → p7/p6).
-**Meilenstein 4:** Änderungen umgesetzt, `.pbip` aktualisiert, `.pbix` re-exportiert, Deliverables neu.
-
-**Phase 5 – Verifikation & Abschluss.** `verify_all` grün, `mmirror` ok, Werte == GT, Konsistenz über alle LF, sauberer Commit/Push.
-**Meilenstein 5:** grün, konsistent, gepusht; „vorher → nachher" je berührter LF.
+**Meilenstein-Regel:** Nach jedem Zyklus committen (kein Riesen-Commit am Ende); an jedem Meilenstein kurz berichten.
 
 ---
 
 ## 8. Akzeptanzkriterien / Definition of Done (binär)
 
-Eine LF ist **grün**, wenn: Visual-Typ passt & beweist die Aussage · jeder Filter nötig & korrekt · Measure rechnet die Frage, Wert == GT · Text deckt sich mit Bild · kein Ballast; Titel/Achsen/Einheiten/Quelle/Okabe-Ito ok · **Slicer nur wo sie wirken** · Layout on-grid & gefluchtet.
+Eine berührte LF ist **grün**, wenn: Kernaussage **ohne Hover** auf Distanz erkennbar · Methodik/Einheiten für Betrachter nachvollziehbar · Wert == Ground Truth · Text == Bild · kein Ballast · Akzentfarbe genau EINE je Visual · Layout on-grid/gefluchtet · Screenshot-verifiziert durch zweiten Agenten.
 
-**Gesamtprojekt fertig, wenn:** alle 9 LF grün · `.pbip`=`.pbix`=Bilder=DOCX/PPTX · `verify_all` grün · keine LF-übergreifenden Widersprüche · Stil einheitlich (Design-Gate bestanden) · sauberer Push. *(LF3-Boxplot als einzige mögliche User-Aktion separat vermerkt.)*
+**Gesamt fertig, wenn:** §11a–c vollständig umgesetzt oder je Punkt begründet „bewusst nicht" · §11d so weit wie ohne Login möglich · `.pbip`=`.pbix`=Bilder=DOCX/PPTX · `verify_all` grün (Guard-Änderungen dokumentiert) · gepusht. *(LF3-Boxplot + ggf. LF2-Shape-Map-Login als User-Aktionen ausgewiesen.)*
 
 ---
 
 ## 9. Guardrails & Constraints
 
-- **Single Source of Truth = `.pbip`.** Jede Änderung landet in der Textquelle.
+- **Single Source of Truth = `.pbip`**; jede Änderung landet in der Textquelle.
 - **Ground Truth = unabhängige Nachrechnung**; „nicht verifizierbar = FAIL".
-- **Adversarial:** Ersteller ≠ Prüfer.
-- **Nur offene Daten**; keine Credentials; öffentliches Repo sauber.
-- **Design bleibt** Okabe-Ito; Achsen ab 0; Korrelation ≠ Kausalität; ökologischer-Fehlschluss-Vorbehalt erhalten.
-- **Minimal-invasiv:** nur belegte Schwächen ändern; Bereits-Erledigtes (§1) nicht zurückdrehen; Deadline beachten.
+- **Adversarial:** Ersteller ≠ Prüfer; Verifikation am gerenderten Bericht.
+- **Formatierungs-Measures heißen `Farbe …`** (Guard-Konvention); analytische Measure-/Seiten-Änderungen → Guards bewusst nachziehen (Falle 5).
+- **Nur offene Daten**; keine Credentials/Logins automatisieren; Repo sauber.
+- **Okabe-Ito bleibt**; Achsen ab 0; Korrelation ≠ Kausalität; ökologischer-Fehlschluss-Vorbehalt bleibt (gehört jetzt sogar sichtbar auf die LF9-Seite).
+- **Minimal-invasiv & Deadline 09.07.:** §11-Prioritätsreihenfolge einhalten.
 
 ---
 
 ## 10. Output-Format (Deliverables)
 
-1. **Pro (berührter) LF ein Fact-Sheet + Urteil** (Aussage | Visual | Filter | Wert vs. GT | Ballast? | Urteil | Severity | Vorschlag).
-2. **Konsolidierte Aktionsliste** (priorisiert; mit „bewusst nicht geändert").
-3. **Umsetzungsprotokoll** (was geändert, Vorher/Nachher-Screenshot).
-4. **Abschlussbericht:** Testresultate (verify_all/mmirror), Konsistenz-Nachweis, Commit-Hash.
+1. **Entscheidungsprotokoll** der Panel-Fragen (LF9 a/d, LF1, LF2) mit Begründung.
+2. **Umsetzungsprotokoll** je Punkt (was, wo, Vorher/Nachher-Screenshot).
+3. **Guard-Änderungsliste** (welcher Test, alt→neu, warum).
+4. **Abschlussbericht:** verify_all-Resultat, Konsistenz-Nachweis, Commit-Hashes, verbleibende User-Aktionen (Logins).
 
-**Starte mit Phase 0.** Phasen der Reihe nach, an Meilensteinen kurz berichten, Nicht-Ziele/Stop-Bedingungen §3 respektieren.
+**Starte mit Phase 0.**
 
 ---
 
-## 11. Offene Punkte (Stand: Runde 1 abgeschlossen)
+## 11. Aufgabenliste (Stand: Runde 2 abgeschlossen; Reihenfolge = Priorität)
 
-> Vollständige Details + Begründungen in `REVIEW_BEFUND.md` (IDs). Fast alles unten sind **Report-Klicks / Formatpane** in einem Bearbeitungszyklus.
+### 11a. LF9 sichtbar & erklärbar (NEU, Priorität 1)
+1. **`Farbe Risiko LF9`**-Measure (Formatierungs-Helfer): Top-10 nach `[Risiko-Score]` (RANKX über die KR-Ebene) → `#D55E00`, Rest `#B0BEC8`-artig gedämpft; in der GUI via fx an die Scatter-Punktfarbe binden (Falle 1). Panel-Alternative Gradient prüfen.
+2. **Datenbalken** auf der Risiko-Score-Spalte der LF9-Tabelle.
+3. **Methodik-Textbox** (Formel in Worten, Bezugsgröße, „kein Individualmaß") + Treiber & Score in den Scatter-**Tooltip**.
+4. **Visual-Urteil:** Scatter (aufgewertet) vs. Top-15-Risiko-Balken als Haupt-Visual – entscheiden, umsetzen, dokumentieren.
 
-### 11a. Braucht User-Aktion (Login)
-- **LF3-Boxplot (B3-Ersatz):** echter Boxplot (X=BL, Y=Quote ohne HSA je Kreis) via **Deneb** – der AppSource-Import verlangt Anmeldung mit dem MS-Konto. Fertige Anleitung + Vega-Lite-Spec: **`LF3_Boxplot_Anleitung.md`**. (Der reparierte Scatter + StdAbw-Tabelle decken die Frage bis dahin ab.)
+### 11b. Komposition (wichtig)
+5. **W3a – LF4:** Card-Wall → 2 Delta-Karten (`Gap ohne HSA (pp)`, `Gap Abitur (pp)`; neue analytische Measures, GT-geprüft; Guards 18→20 nachziehen).
+6. **W3c – LF2:** Shape-Map-Choropleth (AGS) ODER Karte streichen + Werkzeug-Grenze dokumentieren; Anhalt-Bitterfeld im Balken akzentuieren.
+7. **W3b – LF1:** Dumbbell/Slope vs. Linie – entscheiden & umsetzen/dokumentieren.
+8. **W9 – LF7:** Achse auf `dim_region[Land]`, live gegen GT verifizieren (bei Abweichung: revertieren + dokumentieren).
 
-### 11b. Offen – Report-Inhalt & Bedienung (WICHTIG)
-- **W2 – Redundante Slicer entfernen:** LF1 (stadtstaat **+** Land), LF2 (stadt_land), LF5 (schulart), LF8 (stadtstaat), LF9 (stadt_land).
-- **W1-Rest – Land-Slicer:** Single-Select + sprechende Titel; LF1-Land-Slicer ganz raus.
-- **W3 – Doppelte/falsch kodierte Visuals:** LF4 Card-Wall → ≤2 Delta-Karten; LF1 Linie → Slope/Dumbbell; LF2 Bubble → Choropleth oder streichen.
-- **W4 – Titel/Text ↔ Inhalt:** LF3-`displayName`; LF7-Text (BL-Aussage) + Titel; LF6 je Chart Aussage-Titel + Achseneinheit.
-- **W5 – LF7 Edit-Interactions:** Schulart-Chart fest auf „Deutschland".
-- **W6 – Fehlende Sichten:** LF5 „ohne Grundschule"-Zweitsicht; LF9 Treiberspalten (Quote/Jugend-ALQ/Einkommen).
-- **W8 – Unbelegte Zahlen:** LF9 r = −0,49/−0,59 und LF1 „Bayern 5,4 %" belegen (GT/Doku) **oder** Text entschärfen.
-- **W9 – LF7-Achse** → `dim_region[Land]`.
-- **W10 – LF8 Datenpunkt-Labels** an (BE/HH/HB sichtbar).
+### 11c. Stil & Formalien
+9. **S3 – Akzentfarben:** LF2 (Anhalt-Bitterfeld), LF5 (Grundschulen/Gymnasien), LF6 (Sachsen-Anhalt + NRW in beiden Charts) – alle via `Farbe …`-Measures + GUI-fx.
+10. **S4 – Slicer-Spalte:** alle Slicer rechts bündig (x=980, w=300), gleiche Kopf-Formatierung, ein Slicer-Typ.
+11. **K1 – Abstände/Fluchten:** ≥16 px zwischen Visuals, gefluchtete Unterkanten, Ränder 24–32 px (v. a. LF3/LF5/LF6/LF7/LF9-Leerbänder schließen).
+12. **K2 – leere Filter-Stubs** (Advanced/Categorical ohne Where) aus LF6/LF7-Visuals entfernen.
+13. **K5 – Inline-Fonts** in Theme-Textklassen überführen (`modifying-theme-json`).
 
-### 11c. Offen – Stil & Formalien
-- **S1 – Off-Grid-Seitentitel** auf allen 9 Seiten begradigen (x=9,726 → 24, ganzzahlige w/h), systemisch.
-- **S2 – Textboxen fluchten** (Titel vs. Erkenntnis, gemeinsamer linker Rand/Breite).
-- **S3 – Achsentitel + Einheiten** (%/€), Achse ab 0, deutsches Komma, **Akzentfarbe für weitere Leader** (bisher nur LF1).
-- **S4 – Slicer-Spalte vereinheitlichen** (rechts bündig, gleiche Breite, ein Slicer-Typ).
-- **K1** Chart-Abstände/Leerbänder (≥16px, gefluchtete Kanten) · **K2** leere Filter-Stubs entfernen · **K3** LF3 gegenstandslose visualInteraction · **K5** Inline-Font → Theme-Textklasse.
+### 11d. Kür (umsetzen, soweit ohne Login)
+14. **Quellenzeile** unten auf jeder Seite (Destatis/Regionalstatistik 21111; BA-Statistik 2025; VGRdL 2021 – je Seite passend).
+15. **Einstiegsseite** vor LF1: These, Fluss INPUT→OUTPUT→ÜBERGANG→ERGEBNIS, Navigations-Buttons zu den Blöcken. ⚠️ Danach: crop-Mapping (10 Seiten, Intro skippen) + „9 Seiten"-Guards bewusst anpassen.
+16. **Land-Slicer synchronisieren** (syncGroup über LF4/5/6/7/9) + identische Position.
+17. **Drillthrough „Kreissteckbrief"** (Kreis → Quote, Risiko-Score, Jugend-ALQ, Einkommen) – falls Zeit vor Deadline.
+18. **Beruflich-Tabelle**: in einem Visual nutzen ODER Übergangs-Stufe im Deck streichen – entscheiden + konsistent machen (Doku/PPTX).
 
-### 11d. Kür (Aufwand/Nutzen – optional)
-- Schlagzeile oben + Quellenzeile unten je Seite (deckt sich mit §5b/C).
-- Einstiegsseite vor LF1 (These, INPUT→OUTPUT→ÜBERGANG→ERGEBNIS, Navigations-Buttons).
-- Land-Slicer report-weit gleiche Position + **synchronisiert**.
-- Drillthrough „Kreissteckbrief" (Rechtsklick → Quote, Risiko-Score, ALQ, Einkommen).
-- Beruflich-Tabelle in einem Visual nutzen **oder** Übergangs-Stufe aus dem Deck streichen.
-- LF2: Shape-Map-Choropleth; sonst „Top-15-Bubbles" als **Werkzeug-Grenze** in die Tool-Bewertung schreiben.
+### 11e. User-Aktionen (Login – NICHT automatisieren)
+- **LF3-Boxplot** via Deneb/AppSource (`LF3_Boxplot_Anleitung.md`).
+- Falls native Shape Map ein kontogebundenes Feature-Flag verlangt: LF2-Choropleth ebenfalls als User-Aktion ausweisen und Alternative (Karte streichen) umsetzen.
 
-### 11e. Außerhalb Power BI
-- ✅ Sensible/fremde PDFs raus (History-Rewrite), Duplikat-PDFs gelöscht, README-DataFolder, Slicer-Bugs dokumentiert.
-- **Offen:** prüfen, ob die **Rohdaten** dem Repo vollständig beiliegen (bzw. Bezugsweg dokumentiert ist).
+### 11f. Abschluss (immer)
+- Berichts-PDF → PNGs neu croppen → DOCX/PPTX/Präsentations-PDF neu bauen → `verify_all` grün → committen → pushen → Kurzbericht.
