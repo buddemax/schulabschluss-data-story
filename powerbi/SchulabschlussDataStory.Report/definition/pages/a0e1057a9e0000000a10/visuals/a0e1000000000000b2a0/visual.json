@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "a0e1000000000000b2a0",
+  "position": {
+    "x": 324,
+    "y": 300,
+    "z": 1300,
+    "height": 170,
+    "width": 284,
+    "tabOrder": 1300
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "2 · OUTPUT",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Abschlüsse: Wer verlässt die Schule ohne Hauptschulabschluss – wo, und wie groß sind die Unterschiede?",
+                    "textStyle": {
+                      "fontSize": "10pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

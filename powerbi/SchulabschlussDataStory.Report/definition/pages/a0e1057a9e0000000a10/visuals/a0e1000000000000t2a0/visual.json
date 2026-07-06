@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "a0e1000000000000t2a0",
+  "position": {
+    "x": 24,
+    "y": 150,
+    "z": 1100,
+    "height": 80,
+    "width": 1000,
+    "tabOrder": 1100
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "These: Ob Jugendliche die Schule ohne Hauptschulabschluss verlassen, entscheidet sich nicht nur zwischen den Bundesländern, sondern vor allem zwischen den Kreisen – und hängt eng mit Arbeitsmarkt und Einkommen zusammen.",
+                    "textStyle": {
+                      "fontSize": "14pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

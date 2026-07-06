@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "79c517a0308302d76186",
   "position": {
-    "x": 0,
+    "x": 24,
     "y": 272.5,
     "z": 0,
-    "height": 447.5,
-    "width": 487.5,
+    "height": 423.5,
+    "width": 460,
     "tabOrder": 0
   },
   "visual": {
@@ -69,6 +69,42 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {}
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_abschluss"
+                        }
+                      },
+                      "Property": "Farbe Schulart LF5"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
+        }
+      ]
     }
   },
   "filterConfig": {
@@ -144,20 +180,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "07495260772c427f38e3",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_abschluss"
-              }
-            },
-            "Property": "Schüleranteil %"
-          }
-        },
-        "type": "Advanced"
       },
       {
         "name": "ef79c517a0308302d7",

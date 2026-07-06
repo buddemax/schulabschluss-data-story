@@ -5,7 +5,7 @@
     "x": 535,
     "y": 178.75,
     "z": 0,
-    "height": 541.25,
+    "height": 517.2,
     "width": 427.5,
     "tabOrder": 0
   },
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fact_ausgaben_je_schueler"
+                      "Entity": "dim_region"
                     }
                   },
-                  "Property": "bundesland"
+                  "Property": "Land"
                 }
               },
-              "queryRef": "fact_ausgaben_je_schueler.bundesland",
-              "nativeQueryRef": "bundesland",
+              "queryRef": "dim_region.Land",
+              "nativeQueryRef": "Land",
               "active": true
             }
           ]
@@ -71,33 +71,6 @@
       }
     },
     "objects": {
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Ausgaben je Schüler nach Bundesland (2023)'"
-                }
-              }
-            },
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
       "valueAxis": [
         {
           "properties": {
@@ -193,20 +166,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "dabaeb88100a5a20feb1",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_abschluss"
-              }
-            },
-            "Property": "Ausgaben je Schüler (2023)"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

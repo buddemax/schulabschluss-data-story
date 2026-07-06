@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "a0e1000000000000b3a0",
+  "position": {
+    "x": 624,
+    "y": 300,
+    "z": 1400,
+    "height": 170,
+    "width": 284,
+    "tabOrder": 1400
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "3 · ÜBERGANG",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Von der Schule in Ausbildung und Arbeitsmarkt: Was bedeutet der fehlende Abschluss für den nächsten Schritt?",
+                    "textStyle": {
+                      "fontSize": "10pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

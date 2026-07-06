@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "a713d6a1881712fdcb67",
   "position": {
-    "x": 10,
+    "x": 24,
     "y": 160,
     "z": 0,
-    "height": 558.75,
-    "width": 643.75,
+    "height": 536,
+    "width": 640,
     "tabOrder": 0
   },
   "visual": {
@@ -69,6 +69,42 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {}
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_abschluss"
+                        }
+                      },
+                      "Property": "Farbe Hotspot LF2"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
+        }
+      ]
     }
   },
   "filterConfig": {

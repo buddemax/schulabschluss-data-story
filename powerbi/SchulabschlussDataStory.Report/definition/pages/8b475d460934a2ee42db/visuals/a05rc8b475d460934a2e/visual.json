@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "a05rc8b475d460934a2e",
+  "position": {
+    "x": 24,
+    "y": 700,
+    "z": 8500,
+    "height": 18,
+    "width": 1100,
+    "tabOrder": 8500
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Quellen: Regionalstatistik (21111: Abgänger 2023/24); Bevölkerung 15–17 Jahre (Fortschreibung 2023) als Bezugsgröße.",
+                    "textStyle": {
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

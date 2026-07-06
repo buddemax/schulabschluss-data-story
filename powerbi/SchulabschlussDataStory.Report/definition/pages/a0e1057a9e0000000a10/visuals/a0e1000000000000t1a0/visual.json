@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "a0e1000000000000t1a0",
+  "position": {
+    "x": 24,
+    "y": 24,
+    "z": 1000,
+    "height": 100,
+    "width": 1180,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Schulabschluss ist nicht nur Ländersache",
+                    "textStyle": {
+                      "fontSize": "26pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Eine Self-Service-BI-Data-Story mit offenen Daten – neun Leitfragen von den Bildungsausgaben bis zum Arbeitsmarkt.",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

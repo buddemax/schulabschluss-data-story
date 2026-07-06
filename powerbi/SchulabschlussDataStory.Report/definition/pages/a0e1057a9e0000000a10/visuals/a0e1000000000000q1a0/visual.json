@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "a0e1000000000000q1a0",
+  "position": {
+    "x": 24,
+    "y": 700,
+    "z": 1700,
+    "height": 18,
+    "width": 1100,
+    "tabOrder": 1700
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Datenbasis: ausschließlich offene amtliche Daten – Statistische Ämter des Bundes und der Länder (Regionalstatistik 21111), Bundesagentur für Arbeit (2025), VGRdL (2021).",
+                    "textStyle": {
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

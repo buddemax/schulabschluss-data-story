@@ -64,6 +64,10 @@ check("LF4 ohne HSA m>w (8,40 vs 5,78)", abs(gq("maennlich","ohne_hauptschulabsc
       f"m {gq('maennlich','ohne_hauptschulabschluss'):.2f} / w {gq('weiblich','ohne_hauptschulabschluss'):.2f}")
 check("LF4 Abitur w>m (37,12 vs 29,34)", abs(gq("weiblich","allgemeine_hochschulreife")-37.12)<0.1 and abs(gq("maennlich","allgemeine_hochschulreife")-29.34)<0.1,
       f"w {gq('weiblich','allgemeine_hochschulreife'):.2f} / m {gq('maennlich','allgemeine_hochschulreife'):.2f}")
+# W3a: die beiden Delta-Karten-Werte exakt aus den Rohdaten (Runde 3)
+_g1=gq("maennlich","ohne_hauptschulabschluss")-gq("weiblich","ohne_hauptschulabschluss")
+_g2=gq("weiblich","allgemeine_hochschulreife")-gq("maennlich","allgemeine_hochschulreife")
+check("W3a/LF4 Delta-Karten belegt: Gap ohne HSA ~2,6 pp / Gap Abitur ~7,8 pp", abs(_g1-2.62)<0.05 and abs(_g2-7.79)<0.05, f"{_g1:.2f} pp / {_g2:.2f} pp")
 # LF5 schulartmix
 sch = rd("fact_schule_2023.csv"); sde=[r for r in sch if r["ebene"]=="DE" and r["schulart"]!="Insgesamt" and num(r["schueler_insg"])]
 tot = sum(num(r["schueler_insg"]) for r in sde); shares={r["schulart"]:100*num(r["schueler_insg"])/tot for r in sde}
@@ -197,7 +201,8 @@ def _rd(n): return z.read(n).decode("utf-8","ignore")
 pmeta=json.loads(_rd("Report/definition/pages/pages.json")); order=pmeta["pageOrder"]
 def _pj(pid): return json.loads(_rd(f"Report/definition/pages/{pid}/page.json"))
 pages=[_pj(pid).get("displayName","") for pid in order]
-check(".pbix 9 Seiten LF1→LF9 in Reihenfolge", len(pages)==9 and all(pages[i].startswith(f"LF{i+1}") for i in range(9)), " | ".join(p[:6] for p in pages))
+# Seit Runde 3: Einstiegsseite "Überblick & Leseführung" vor LF1 (Kür-Punkt 15)
+check(".pbix 10 Seiten: Überblick + LF1→LF9 in Reihenfolge", len(pages)==10 and pages[0].startswith("Überblick") and all(pages[i+1].startswith(f"LF{i+1}") for i in range(9)), " | ".join(p[:6] for p in pages))
 rf=_rd("Report/definition/report.json")
 _jahrv=sum(1 for n in _names if n.endswith("visual.json") and '"Property": "jahr"' in _rd(n) and "2023L" in _rd(n))
 check(".pbix: Jahr=2023 pro Visual gepinnt (ersetzt report-weiten Filter; >=10 Visuals)", _jahrv>=10, f"{_jahrv} Visuals")
@@ -237,7 +242,8 @@ tdir=os.path.join(PBI,"SchulabschlussDataStory.SemanticModel","definition","tabl
 da=open(os.path.join(tdir,"dim_abschluss.tmdl"),encoding="utf-8").read()
 nmeas=len(re.findall(r"^\tmeasure ",da,re.M))
 _fmtmeas=len(re.findall(r"^\tmeasure 'Farbe ",da,re.M))  # reine Formatierungs-Helfer (nicht analytisch)
-check("TMDL: 18 analytische Measures + Formatierungs-Helfer (LF7/LF9-Risiko/LF3-StdAbw/Einkommen/LF5-ohne-GS)", nmeas-_fmtmeas==18 and _fmtmeas>=1, f"analytisch={nmeas-_fmtmeas}, formatierung={_fmtmeas}")
+check("TMDL: 20 analytische Measures + Formatierungs-Helfer (inkl. LF4-Gap-Measures, Runde 3)", nmeas-_fmtmeas==20 and _fmtmeas>=6, f"analytisch={nmeas-_fmtmeas}, formatierung={_fmtmeas}")
+check("TMDL: LF4-Gap-Measures vorhanden (W3a)", "measure 'Gap ohne HSA (pp)'" in da and "measure 'Gap Abitur (pp)'" in da)
 check("TMDL: LF9 Risiko-Score-Measure (z-standardisiert) vorhanden", "measure 'Risiko-Score'" in da or "measure Risiko-Score" in da)
 check("TMDL: LF9 Risiko-Score ist 3-dimensional (inkl. Einkommen)", "Verf. Einkommen je EW" in da and "Risiko-Score" in da)
 check("TMDL: LF3 StdAbw-Measure (Kreis-Streuung) vorhanden", "StdAbw Quote ohne HSA (Kreise)" in da and "STDEVX.S" in da)
@@ -362,7 +368,7 @@ check("Schema-MD: DWH-Deliverables (Bus-Matrix, Additivität, SCD, Hierarchie) d
 _aa=open(os.path.join(ROOT,"analyseabfragen.md"),encoding="utf-8").read()
 _pbr=open(os.path.join(PBI,"README.md"),encoding="utf-8").read()
 _auf=open(os.path.join(ROOT,"powerbi_aufbauanleitung.md"),encoding="utf-8").read()
-check("Nebendoku: Measure-Zahl aktuell (18, kein 16/11-Rest)", "16 DAX-Measures" not in _aa and "16 Measures" not in _pbr and "11 Measures" not in _auf and "18 Measures" in _pbr)
+check("Nebendoku: Measure-Zahl aktuell (20, kein 16/18-Rest)", "16 DAX-Measures" not in _aa and "18 Measures" not in _pbr and "11 Measures" not in _auf and "20 Measures" in _pbr and "20 analytische" in _pbr)
 check("powerbi/README listet fact_einkommen_kreis (8 Fakttabellen)", "fact_einkommen_kreis" in _pbr and "8 Fakttabellen" in _pbr)
 check("analyseabfragen ohne veralteten 2-dim-Rest ('Pirmasens 6,19')", "Pirmasens Risiko-Score 6,19" not in _aa)
 check("DOCX: OLAP/MDX-Reflexion + Bus-Matrix vorhanden", ("MDX" in dxml and "OLAP" in dxml and "Bus-Matrix" in dxml))

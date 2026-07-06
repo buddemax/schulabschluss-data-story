@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "ab501234abs00000aa66",
   "position": {
-    "x": 10,
+    "x": 24,
     "y": 240,
     "z": 1000,
-    "height": 480,
-    "width": 440,
+    "height": 456,
+    "width": 410,
     "tabOrder": 1000
   },
   "visual": {
@@ -71,33 +71,6 @@
       }
     },
     "objects": {
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Absolut: Abgänge ohne Hauptschulabschluss'"
-                }
-              }
-            },
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
       "valueAxis": [
         {
           "properties": {
@@ -115,6 +88,40 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {}
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_abschluss"
+                        }
+                      },
+                      "Property": "Farbe Rangwechsel LF6"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
           }
         }
       ]
@@ -175,34 +182,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "300fd411e2712ec18cf6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_region"
-              }
-            },
-            "Property": "region"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d8e505ee221be4913405",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_abschluss"
-              }
-            },
-            "Property": "Abgänge ohne HSA"
-          }
-        },
-        "type": "Advanced"
       },
       {
         "name": "jfab501234abs00000",

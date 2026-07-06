@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "a05rc9ae4b1f97100921",
+  "position": {
+    "x": 24,
+    "y": 700,
+    "z": 8500,
+    "height": 18,
+    "width": 1100,
+    "tabOrder": 8500
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Quellen: Statistisches Bundesamt (Ausgaben je Schüler/-in 2023); Regionalstatistik (Abiturquote, Abgangsjahr 2023/24).",
+                    "textStyle": {
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

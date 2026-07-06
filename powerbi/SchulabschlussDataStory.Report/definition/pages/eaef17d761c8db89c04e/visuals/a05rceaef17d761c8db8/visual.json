@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "a05rceaef17d761c8db8",
+  "position": {
+    "x": 24,
+    "y": 700,
+    "z": 8500,
+    "height": 18,
+    "width": 1100,
+    "tabOrder": 8500
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Quelle: Statistisches Bundesamt, Bildungsausgaben: Ausgaben je Schüler/-in nach Schulart und Bundesland, Berichtsjahr 2023.",
+                    "textStyle": {
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
