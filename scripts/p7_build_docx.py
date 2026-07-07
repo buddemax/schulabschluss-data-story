@@ -295,12 +295,17 @@ P("LF8 – Mehr Ausgaben je Schüler, bessere Abschlüsse?",bold=True)
 PL("Was wir zunächst sahen:","Auf den ersten Blick scheint der Zusammenhang zu bestehen: Über alle 16 "
    "Bundesländer korrelieren höhere Ausgaben je Schüler mit höheren Abiturquoten (r = +0,61, p = 0,012).")
 pic("pbi/pbi_lf8.png",cap="Abb. 9 (LF8): Berichtsseite LF8 – Ausgaben je Schüler und Abiturquote je Bundesland "
-    "(2023). Die Stadtstaaten sind farblich abgesetzt; sie treiben die scheinbar positive Trendlinie.")
+    "(2023). Die Stadtstaaten sind farblich abgesetzt; sie treiben die scheinbar positive Trendlinie. Ein "
+    "Stadtstaat/Flächenland-Slicer blendet Gruppen aus und macht den Confounder umschaltbar.")
 PL("Was wir tatsächlich herausgefunden haben:","Dieser Eindruck ist ein Stadtstaaten-Artefakt. Berlin, Hamburg "
    "und Bremen verbinden struktur- und stadtbedingt hohe Ausgaben mit hohen Abiturquoten und ziehen die "
    "Trendlinie nach oben. Nimmt man die drei Stadtstaaten heraus, dreht der Zusammenhang unter den 13 "
    "Flächenländern ins Negative (r = −0,36) und ist nicht mehr signifikant. Wir haben die Punkte deshalb im "
-   "Live-Visual nach Stadtstaat und Flächenland eingefärbt, damit dieser Effekt unmittelbar sichtbar wird.")
+   "Live-Visual nach Stadtstaat und Flächenland eingefärbt und einen Stadtstaat/Flächenland-Slicer ergänzt: "
+   "Blendet man die drei Stadtstaaten aus, kippt die Trendlinie im Bericht unmittelbar sichtbar ins Negative. "
+   "Beide Achsen sind über getrennte Jahresfilter fest auf 2023 gepinnt – einen für die Ausgaben-Quelle (die die "
+   "Jahre 2010–2024 enthält) und einen für die Abgänge-Quelle (2022/2023); da nur letztere an der Zeit-Dimension "
+   "hängt, sind zwei Filter nötig und nicht redundant.")
 PL("Womit wir das belegen – und womit nicht:","Für einen belastbaren Beleg ist die Datenlage schlicht zu dünn. "
    "Ausgaben liegen nur je Bundesland vor, also nur 16 Datenpunkte. Entsprechend breit sind die "
    "Konfidenzintervalle: für alle 16 Länder reicht das 95%-Intervall von +0,17 bis +0,85, für die 13 "

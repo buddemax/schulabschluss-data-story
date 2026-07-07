@@ -29,7 +29,7 @@ Wir sind ein dreiköpfiges Team im Modul *Analytische Anwendungen* und haben die
 
 | 🧱 Modell | 📊 Bericht | 🎨 Gestaltung | ✅ Qualität |
 |:--:|:--:|:--:|:--:|
-| 9 Fakttabellen · 4 Dimensionen | 10 Seiten · 62 Visuals | Okabe-Ito-Farbvertrag | 109/109 Tests grün |
+| 9 Fakttabellen · 4 Dimensionen | 10 Seiten · 63 Visuals | Okabe-Ito-Farbvertrag | 110/110 Tests grün |
 | 34 Measures (23 analytisch + 11 Formatierung) | 1 Karte · 6 Slicer | CVD- & WCAG-geprüft | jede KPI rohdaten-nachgerechnet |
 
 </div>
@@ -80,7 +80,7 @@ Wir sind ein dreiköpfiges Team im Modul *Analytische Anwendungen* und haben die
 ![LF7](charts/pbi/pbi_lf7.png)
 
 #### LF8 — Mehr Geld = bessere Abschlüsse?
-**Unsere Antwort:** **Nein.** Der scheinbar positive Zusammenhang (r = **+0,61**) ist ein **Stadtstaaten-Artefakt**: Klammert man die drei Stadtstaaten aus, kippt er ins Nicht-Signifikante (r = **−0,36**, n. s.). Wir weisen den Confounder offen aus, statt einen bequemen Schluss zu ziehen.
+**Unsere Antwort:** **Nein.** Der scheinbar positive Zusammenhang (r = **+0,61**) ist ein **Stadtstaaten-Artefakt**: Klammert man die drei Stadtstaaten aus, kippt er ins Nicht-Signifikante (r = **−0,36**, n. s.). Wir weisen den Confounder offen aus, statt einen bequemen Schluss zu ziehen. Ein **Stadtstaat/Flächenland-Slicer** macht das interaktiv erlebbar – blendet man die Stadtstaaten aus, kippt die Trendlinie im Bericht sichtbar. (Beide Achsen sind über getrennte Jahresfilter auf 2023 fixiert – die Ausgaben-Quelle enthält 2010–2024, die Abgänge-Quelle 2022/2023; da nur letztere an der Zeit-Dimension hängt, sind bewusst zwei Filter nötig.)
 
 ![LF8](charts/pbi/pbi_lf8.png)
 

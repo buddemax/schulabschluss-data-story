@@ -373,6 +373,13 @@ check("LF4-Report: Bundesland-Slicer (Land) + Karten auf ebene IN (DE,BL) umgest
 _lf5pg=open(os.path.join(PBI,"SchulabschlussDataStory.Report","definition","pages","a0c706439d9e1475cc04","page.json"),encoding="utf-8").read()
 check("LF5-Report: Bundesland-Slicer filtert nur rechts (links Schuelerschaft = NoFilter, Runde 8)",
       '"5c55a0d500000000aa55"' in _lf5pg and '"79c517a0308302d76186"' in _lf5pg and '"NoFilter"' in _lf5pg)
+# LF8 (Runde 9): Stadtstaat-Slicer (Confounder umschaltbar) wieder aufgenommen; die ZWEI Jahresfilter sind bewusst noetig:
+# X=Ausgaben aus fact_ausgaben_je_schueler (2010-2024, keine dim_zeit-Beziehung -> eigener Pin) + Y=Abiturquote aus fact_abgaenge (2022/23) -> je 2023 gepinnt
+_lf8dir=os.path.join(PBI,"SchulabschlussDataStory.Report","definition","pages","9ae4b1f9710092199bca","visuals")
+_lf8sc=open(os.path.join(_lf8dir,"ae0c1c8278c9dd1a3a20","visual.json"),encoding="utf-8").read()
+check("LF8-Report: Stadtstaat-Slicer vorhanden + 2 bewusste Jahresfilter (Ausgaben- & Abgaenge-Fakttabelle, Runde 9)",
+      os.path.exists(os.path.join(_lf8dir,"b8stadtstaat00000001","visual.json"))
+      and "fact_ausgaben_je_schueler" in _lf8sc and "fact_abgaenge" in _lf8sc and _lf8sc.count('"jahr"')>=4)
 # LF9-Faerbung: Schwelle 5,5 muss exakt die Top-10 treffen (Marge 5,57 vs. 5,44 - Drift-Warnung bei Datenaenderung)
 _n_ueber = sum(1 for v in _score.values() if v >= 5.5)
 check("LF9 Top-10-Schwelle 5,5 trifft exakt 10 Kreise (Farbe Risiko LF9)", _n_ueber == 10, f"{_n_ueber} Kreise >= 5,5")
